@@ -14,19 +14,24 @@
 #import "QZPageNavButtonView.h"
 #include "QZPageNavRectView.h"
 
-@interface QZPageListView : UIView<QZPageToolTipImageViewDelegate>
+@protocol QZPageListViewDelegate <NSObject>
+
+- (void)skipPage:(QZ_INT)pageNum;
+@end
+
+@interface QZPageListView : UIView<QZPageToolTipImageViewDelegate,QZPageNavRectViewDelegate,QZPageNavButtonViewDelegate>
 
 {
     NSArray *array;
     QZEpubPage pageObj;
-    
     QZPageToolTipView *pageToolTip;
     QZToolTipImageview *pToolTipImageview;
     QZPageNavButtonView *pNavButtonView;
     QZPageNavRectView *pNavRectView;
+    id<QZPageListViewDelegate>delegate;
 }
 @property (nonatomic, copy)NSString *pageName;
-
+@property (nonatomic, assign)id<QZPageListViewDelegate>delegate;
 - (void)composition;
 - (void)initIncomingData:(NSArray *)imageName;
 

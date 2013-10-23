@@ -47,14 +47,14 @@
     if (pToolTip->rect.X0 <= DW/2.0 && pToolTip->rect.Y0 <= DH/2.0)
     {
         tRect = CGRectMake(0,SFSH,pToolTip->nWidth,pToolTip->nHeight);
-    }else if (pToolTip->rect.X0 <= DW/2.0 && pToolTip->rect.Y0 > DH/2.0)
-    {
-        tRect = CGRectMake(SFSW - pToolTip->nWidth,SFSH,pToolTip->nWidth,pToolTip->nHeight);
+    }else if (pToolTip->rect.X0 <= DW/2.0 && pToolTip->rect.Y0 > DH/2.0){
+        
+        tRect = CGRectMake(0,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
     }else if(pToolTip->rect.X0 > DW/2.0 && pToolTip->rect.Y0 <= DH/2.0)
     {
      tRect = CGRectMake(SFSW - pToolTip->nWidth,SFSH,pToolTip->nWidth,pToolTip->nHeight);
     }else{
-    tRect = CGRectMake(SFSW - pToolTip->nWidth,SFSH-pToolTip->nHeight,pToolTip->nWidth,pToolTip->nHeight);
+    tRect = CGRectMake(SFSW - pToolTip->nWidth,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
     }
     textView.frame = tRect;
     [self addSubview:textView];

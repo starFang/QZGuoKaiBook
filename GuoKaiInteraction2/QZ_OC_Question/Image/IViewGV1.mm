@@ -46,8 +46,8 @@
     self.closeImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.closeImageButton.frame = CGRectMake(20, 0, 44, 44);
     [self.closeImageButton addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.closeImageButton setImage:[UIImage imageNamed:@"2.png"] forState:UIControlStateNormal];
-    [self.closeImageButton setImage:[UIImage imageNamed:@"2.png"] forState:UIControlStateHighlighted];
+    [self.closeImageButton setImage:[UIImage imageNamed:@"a2.png"] forState:UIControlStateNormal];
+    [self.closeImageButton setImage:[UIImage imageNamed:@"a2.png"] forState:UIControlStateHighlighted];
     [self addSubview: self.closeImageButton ];
     
     self.ctV = [[CTView alloc]init];
@@ -59,7 +59,6 @@
 
 - (void)titleAndClose:(PageImage *)pageRichTextImage
 {
-    
     if (pageRichTextImage->stTitle.isRichText == YES)
     {
         [self isYesRichText:pageRichTextImage];
@@ -70,6 +69,7 @@
 
 - (void)isYesRichText:(PageImage *)pageRichTextImage
 {
+    
     NSMutableString *strBegin = [[NSMutableString alloc]initWithString:@""];
     NSMutableString *string = [[NSMutableString alloc]initWithString:@""];
     NSMutableString * strFont = [NSMutableString string];
@@ -79,25 +79,7 @@
     {
         switch (pageRichTextImage->stTitle.vTextItemList[i].pieceType)
         {
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_BEGIN:
-            {
-                if (![strBegin length]) {
-                    
-                }else{
-                    [strBegin appendString:@"\n"];
-                    [string appendString:@"\n"];
-                }
-                UIFont *font = [UIFont fontWithName:[NSString stringWithUTF8String:pageRichTextImage->stTitle.vTextItemList[i].fontFamily.c_str()] size:pageRichTextImage->stTitle.vTextItemList[i].fontSize];
-                
-                CGSize sizek = [@" " sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
-                NSInteger countK = (int)ceilf(pageRichTextImage->stTitle.vTextItemList[i].nLength/sizek.width);
-                for (int j =0 ; j < countK; j++)
-                {
-                    [strBegin appendString:@" "];
-                    [string appendString:@" "];
-                }
-            }
-                break;
+            
             case PAGE_RICH_TEXT_PIECE_TEXT:
             {
                 [string appendString:[NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:pageRichTextImage->stTitle.vTextItemList[i].strText.c_str()]]];
@@ -108,26 +90,18 @@
                 
             }
                 break;
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_END:
-            {
-                
-            }
-                break;
-            case PAGE_RICH_TEXT_PIECE_DOT:
-            {
-                
-            }
-                break;
             default:
                 break;
         }
      }
+    
+    NSLog(@"%@",[NSString stringWithUTF8String:pageRichTextImage->stTitle.strText.c_str()]);
     [p setFont:strFont];
     [p setSize:fontsize];
     UIFont *font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:33];
     CGSize size = [[NSString stringWithUTF8String:pageRichTextImage->stTitle.strText.c_str()] sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, 44) lineBreakMode:NSLineBreakByCharWrapping];
     if (size.width <= 1024-74) {
-        self.ctV.frame  = CGRectMake(74 + (1024-74-size.width)/2, 3, size.width, 44);
+        self.ctV.frame  = CGRectMake(74 + (DW-74-size.width)/2, 3, size.width, 44);
     }else{
         self.ctV.frame  = CGRectMake(74 , 3, size.width, 44);
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE03BE291817BDF700534403 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = CE03BE281817BDF700534403 /* play.png */; };
 		CE0EB1C3180FBA1F0043BA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0EB1C2180FBA1F0043BA33 /* UIKit.framework */; };
 		CE0EB1C5180FBA1F0043BA33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0EB1C4180FBA1F0043BA33 /* Foundation.framework */; };
 		CE0EB1C7180FBA1F0043BA33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0EB1C6180FBA1F0043BA33 /* CoreGraphics.framework */; };
@@ -107,6 +108,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE03BE281817BDF700534403 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		CE0EB1BF180FBA1F0043BA33 /* GuoKaiInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuoKaiInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0EB1C2180FBA1F0043BA33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE0EB1C4180FBA1F0043BA33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -289,6 +291,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE03BE271817BDF700534403 /* QZPicture */ = {
+			isa = PBXGroup;
+			children = (
+				CE03BE281817BDF700534403 /* play.png */,
+			);
+			path = QZPicture;
+			sourceTree = "<group>";
+		};
 		CE0EB1B6180FBA1F0043BA33 = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +433,7 @@
 		CE0EB31F180FE3D20043BA33 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				CE03BE271817BDF700534403 /* QZPicture */,
 				CE33E70B1810D85200DE0462 /* 2 */,
 				CE0EB320180FE3D20043BA33 /* 1222.png */,
 				CE0EB321180FE3D20043BA33 /* 1_1.jpg */,
@@ -795,6 +806,7 @@
 				CE657D0D1812700D006CA86F /* m3.png in Resources */,
 				CE657D0F1812700D006CA86F /* ShangHaiTan.mp3 in Resources */,
 				CEFE7A811816AAD1000BF21E /* GuoKai001.zip in Resources */,
+				CE03BE291817BDF700534403 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -123,6 +123,28 @@
                 break;
          }
     }
+    
+    NSLog(@" strFont : %@", strFont);
+    
+    BOOL isEqual;
+    for (int i = 0; i < [[UIFont familyNames] count]; i++)
+    {
+        if ([strFont isEqualToString:[[UIFont familyNames] objectAtIndex:i]])
+        {
+            isEqual = YES;
+            break;
+        }else{
+            isEqual = NO;
+        }
+    }
+    if (isEqual == NO)
+    {
+        [strFont setString:@"Arial Rounded MT Bold"];
+    }
+    else if( isEqual == YES && [strFont isEqualToString:@"Palatino"])
+    {
+        [strFont setString:@"Avenir"];
+    }
     [p setFont:strFont];
     [p setSize:fontsize];
     CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
@@ -195,8 +217,8 @@
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     [pressView addSubview:button];
     button.frame = CGRectMake(0, 0, 70, 70);
-    button.center = CGPointMake(frameMovie.size.width/2,frameMovie.size.height/2 );
-    [button setBackgroundImage:[UIImage imageNamed:@"1_1.jpg"] forState:UIControlStateNormal];
+    button.center = CGPointMake(frameMovie.size.width/2,frameMovie.size.height/2);
+    [button setBackgroundImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:pressView];
 }

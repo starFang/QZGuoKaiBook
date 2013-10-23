@@ -26,6 +26,7 @@
     UITapGestureRecognizer *_tapOneGesture;
     
 #pragma mark - 数据
+    NSMutableString *tit;
     PageImageList1 *_pageImageList;
     PageImageList *pImageList;
     CGFloat titHeight;

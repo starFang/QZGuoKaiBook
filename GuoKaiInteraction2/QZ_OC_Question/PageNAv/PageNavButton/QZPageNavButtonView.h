@@ -9,17 +9,23 @@
 #import <UIKit/UIKit.h>
 #include "QZEpubPageObjs.h"
 
+@protocol QZPageNavButtonViewDelegate <NSObject>
+-(void)popBtnView:(PageNavButton *)pageNavButton;
+-(void)closeBtnView:(PageNavButton *)pageNavButton;
+@end
 
 @interface QZPageNavButtonView : UIView
 {
     PageNavButton *pNavButton;
     UIButton *pressView;
-    UIView *popView;
-    NSInteger fist;    
+    
+    NSInteger fist;
+    CGRect startRect;
+    id<QZPageNavButtonViewDelegate>delegate;
 }
 
-@property (nonatomic, assign)NSInteger fist;
+@property (nonatomic, assign) NSInteger fist;
+@property (nonatomic, assign) id<QZPageNavButtonViewDelegate>delegate;
 - (void)initIncomingData:(PageNavButton *)pageNavButton;
 - (void)composition;
-- (void)closeThePopView;
 @end

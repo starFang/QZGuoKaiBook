@@ -7,16 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "QZPageListView.h"
 
 @interface QZRootViewController : UIViewController
-<UIScrollViewDelegate>
-
+<UIScrollViewDelegate,QZPageListViewDelegate>
 {
-    QZPageListView *pageListView;
+    UIScrollView *sc;
     NSMutableArray * arrayImage;
     NSInteger indexImage;
+    QZPageListView *pageListView;
 }
 
 @end

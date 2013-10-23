@@ -9,7 +9,7 @@
 #import "QZPageNavRectView.h"
 
 @implementation QZPageNavRectView
-
+@synthesize delegate;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -33,7 +33,8 @@
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"%d%d",pNavRect->nChapterIndex,pNavRect->nPageIndex);
+    NSLog(@"pageIndex : %d",pNavRect->nPageIndex);
+    [self.delegate skip:pNavRect->nPageIndex];
 }
 
 - (void)dealloc

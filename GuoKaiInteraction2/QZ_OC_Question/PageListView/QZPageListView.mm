@@ -20,9 +20,12 @@
 
 #import "XMLParserBookData.h"
 
+#define NVACHILDBUTTON 120
+
 @implementation QZPageListView
 
 @synthesize pageName;
+@synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,8 +37,8 @@
 }
 - (void)initIncomingData:(NSArray *)imageName
 {
-    array = [NSArray arrayWithObjects:[imageName objectAtIndex:0 ],[imageName objectAtIndex:1], nil];
-    NSString *bookPath = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[imageName objectAtIndex:0] objectForKey:@"0"]];
+    array = [NSArray arrayWithObjects:[imageName objectAtIndex:0],[imageName objectAtIndex:1], nil];
+    NSString *bookPath = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[[imageName objectAtIndex:0] objectForKey:@"0"] stringByReplacingOccurrencesOfString:@" " withString:@""]];
     UIImage * image = [UIImage imageWithContentsOfFile:bookPath];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
     imageView.frame = self.bounds;
@@ -232,6 +235,7 @@
     pNavRectView = [[QZPageNavRectView alloc]init];
     pNavRectView.frame = CGRectMake(pNavRect->rect.X0, pNavRect->rect.Y0, pNavRect->rect.X1 - pNavRect->rect.X0, pNavRect->rect.Y1 - pNavRect->rect.Y0);
     [pNavRectView initIncomingData:pNavRect];
+    pNavRectView.delegate = self;
     [pNavRectView composition];
     [self addSubview:pNavRectView];
 }
@@ -239,7 +243,7 @@
 - (void)navButton:(PageNavButton *)pNavButton
 {
     pNavButtonView = [[QZPageNavButtonView alloc]init];
-    
+    pNavButtonView.delegate = self;
     //    坐标
     CGFloat x0 = pNavButton->rect.X0;
     CGFloat x1 = pNavButton->rect.X1;
@@ -271,7 +275,7 @@
         [pNavButtonView setFist:4];
     }
     
-    pNavButtonView.frame =CGRectMake(toolX, toolY, toolW, toolH);
+    pNavButtonView.frame =CGRectMake(x0, toolY, toolW, toolH);
     [pNavButtonView initIncomingData:pNavButton];
     [pNavButtonView composition];
     [self addSubview:pNavButtonView];
@@ -347,7 +351,6 @@
 //web链接10
 - (void)webLink:(PageWebLink *)pageWebLink
 {
-    
     QZPageWebLinkView *page = [[QZPageWebLinkView alloc]initWithFrame:CGRectMake(pageWebLink->rect.X0,
             pageWebLink->rect.Y0,
             pageWebLink->rect.X1 - pageWebLink->rect.X0,
@@ -362,8 +365,8 @@
 {
     [pageToolTip closeTheTextViewWithToolTipView];
     [pToolTipImageview closeTheTextViewWithToolTipView];
-    [pNavButtonView closeThePopView];
-    
+    UIView *view = (UIView *)[self viewWithTag:500];
+    [view removeFromSuperview];
 }
 
 - (void)dealloc
@@ -372,6 +375,110 @@
     [pNavButtonView release];
     [pNavRectView release];
     [super dealloc];
- }
+}
 
+- (void)popBtnView:(PageNavButton *)pNavButton
+{
+
+    CGFloat x0 = pNavButton->rect.X0;
+    CGFloat x1 = pNavButton->rect.X1;
+    CGFloat y0 = pNavButton->rect.Y0;
+    CGFloat y1 = pNavButton->rect.Y1;
+    //    弹出视图的宽高
+    CGFloat toolX;
+    CGFloat toolY;
+    CGFloat toolW = pNavButton->nWidth;
+    CGFloat toolH = pNavButton->nHeight;
+    
+    NSInteger fist;
+    if (x0 <= DW/2 && y0 <= DW/2)
+    {
+        toolX = x0;
+        toolY = y0;
+        fist  = 1;
+    }else if (x0 <= DW/2 && y0 > DW/2){
+        toolX = x0;
+        toolY = y1-toolH;
+        fist = 3;
+    }else if (x0 > DW/2 && y0 <= DW/2){
+        toolX = x1 - pNavButton->nWidth;
+        toolY = y0;
+        fist = 2;
+    }else{
+        toolX = x1-pNavButton->nWidth;
+        toolY = y1-toolH;
+        fist = 4;
+    }
+    
+    UIView *popView = [[UIView alloc]init];;
+    CGRect rectPop;
+    if (fist == 1)
+    {
+        rectPop = CGRectMake(x0,y1+80,toolW,toolH);
+    }else if (fist == 2){
+        rectPop = CGRectMake(x1-toolW,y1+80,toolW,toolH);
+        
+    }else if (fist == 3){
+            rectPop = CGRectMake(x0,y0-80-toolH,toolW,toolH);
+    }else{
+            rectPop = CGRectMake(x1-toolW,y0-80-toolH,toolW,toolH);
+    }
+    popView.backgroundColor = [UIColor whiteColor];
+    popView.tag = 500;
+    [popView.layer setShadowOffset:CGSizeMake(1, 1)];
+    [popView.layer setShadowRadius:10.0];
+    [popView.layer setShadowColor:[UIColor blackColor].CGColor];
+    [popView.layer setShadowOpacity:1.0];
+    popView.frame = rectPop;
+    [self addSubview:popView];
+    [popView release];
+    
+    [self pressButton:pNavButton];
+}
+
+- (void)pressButton:(PageNavButton *)pNavButton
+{
+    UIView *popView = (UIView *)[self viewWithTag:500];
+    CGSize size = [[NSString stringWithUTF8String:pNavButton->strTipText.c_str()] sizeWithFont:[UIFont systemFontOfSize:21] constrainedToSize:CGSizeMake(popView.FSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    UILabel * textCont = [[UILabel alloc]init];
+    textCont.backgroundColor = [UIColor clearColor];
+    textCont.numberOfLines = 0;
+    textCont.text = [NSString stringWithUTF8String:pNavButton->strTipText.c_str()];
+    textCont.font = [UIFont systemFontOfSize:21];
+    textCont.frame = CGRectMake(0, 0, popView.FSW, size.height);
+    UIScrollView * svc = [[UIScrollView alloc]init];
+    svc.frame = popView.bounds;
+    svc.contentSize = CGSizeMake(popView.FSW, size.height+120);
+    [svc addSubview:textCont];
+    [textCont release];
+    for (int i = 0; i < pNavButton->vBtnList.size(); i++)
+    {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        button.backgroundColor = [UIColor orangeColor];
+        button.tag =  NVACHILDBUTTON + pNavButton->vBtnList[i].nPageIndex; 
+        [button setTitle:[NSString stringWithUTF8String:pNavButton->vBtnList[i].strBtnText.c_str()] forState:UIControlStateNormal];
+        button.frame = CGRectMake((popView.FSW/pNavButton->vBtnList.size())*i, size.height+30, popView.FSW/pNavButton->vBtnList.size(), 80);
+        [button addTarget:self action:@selector(pressSkip:) forControlEvents:UIControlEventTouchUpInside];
+        [svc addSubview:button];
+    }
+    [popView addSubview:svc];
+}
+- (void)pressSkip:(UIButton *)button
+{
+    [self.delegate skipPage: button.tag - NVACHILDBUTTON];
+    UIView *view = (UIView *)[self viewWithTag:500];
+    [view removeFromSuperview];
+}
+
+
+- (void)closeBtnView:(PageNavButton *)pageNavButton
+{
+    UIView *view = (UIView *)[self viewWithTag:500];
+    [view removeFromSuperview];
+}
+
+-(void)skip:(QZ_INT)pageNum
+{
+    [self.delegate skipPage:pageNum];
+}
 @end

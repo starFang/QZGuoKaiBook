@@ -176,7 +176,6 @@ static int indexTap;
 {
     self.ctV.hidden = NO;
     [self endOneState:nil];
-    
 }
 -(void)initImage
 {
@@ -189,12 +188,12 @@ static int indexTap;
 
 - (void)loadImage
 {
-    NSString *path = [[NSBundle mainBundle]pathForResource:[NSString stringWithUTF8String:pImage->strImgPath.c_str()] ofType:nil];
+    NSString *imagepath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"images"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pImage->strImgPath.c_str()]];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagepath];
     NSFileManager * fileManager = [NSFileManager defaultManager];
-    
-    if ([fileManager fileExistsAtPath:path])
+    if ([fileManager fileExistsAtPath:imagepath])
     {
-        NSData * imageData = [NSData dataWithContentsOfFile:path];
+    NSData * imageData = [NSData dataWithContentsOfFile:imagepath];
     UIImage * image = [UIImage imageWithData:imageData];
     [self.imageView setImage:image];
     }else{
@@ -205,7 +204,6 @@ static int indexTap;
 
 -(void)endOneState:(UIGestureRecognizer *)gestureRecoginzer
 {
-    
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5f];
@@ -218,11 +216,10 @@ static int indexTap;
 
 -(void)endTwoState:(UIGestureRecognizer *)gestureRecoginzer
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5f];
-    self.frame = CGRectMake(ZERO, ZERO, DW, DH);
-    self.imageView.frame = CGRectMake(ZERO, ZERO, DW, DH);
+    self.frame = CGRectMake(ZERO, ZERO, DW, DH-20);
+    self.imageView.frame = CGRectMake(ZERO, ZERO, DW, DH-20);
     self.imageView.center = self.center;
     self.ctV.hidden = YES;
     isImageBig = YES;

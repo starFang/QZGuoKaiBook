@@ -9,11 +9,19 @@
 #import <UIKit/UIKit.h>
 #include "QZEpubPageObjs.h"
 
+@protocol QZPageNavRectViewDelegate <NSObject>
+
+- (void)skip:(QZ_INT)pageNum;
+
+@end
+
 @interface QZPageNavRectView : UIView
 {
     PageNavRect *pNavRect;
-    UITapGestureRecognizer * oneTap;
+    UITapGestureRecognizer *oneTap;
+    id<QZPageNavRectViewDelegate>delegate;
 }
+@property (nonatomic, assign)id<QZPageNavRectViewDelegate>delegate;
 - (void)initIncomingData:(PageNavRect *)pageNavRect;
 - (void)composition;
 

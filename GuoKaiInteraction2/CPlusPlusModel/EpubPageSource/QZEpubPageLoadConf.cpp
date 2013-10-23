@@ -155,9 +155,7 @@ vector<QZ_LONG> QZEpubPageLoadConf::GetDrawableObjList()
 	vector<QZ_LONG>	vList;
 	for (QZ_LONG i = 0; i < (QZ_LONG)m_vPosList.size();i++)
 	{
-		if (m_vPosList[i]->m_elementType != PAGE_OBJECT_CHARACTER &&
-			m_vPosList[i]->m_elementType != PAGE_OBJECT_WEB_LINK &&
-			m_vPosList[i]->m_elementType != PAGE_OBJECT_NAV_RECT)
+		if (m_vPosList[i]->m_elementType != PAGE_OBJECT_CHARACTER)
 		{
 			vList.push_back(i);
 		}

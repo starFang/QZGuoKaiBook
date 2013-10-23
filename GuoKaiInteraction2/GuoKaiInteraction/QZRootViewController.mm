@@ -31,35 +31,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
-    
+    self.view.backgroundColor = [UIColor underPageBackgroundColor];
     
     QZParsingAndExtractingData * pEData = [[QZParsingAndExtractingData alloc]init];
     [pEData initIncomingData:BOOKNAME];
     [pEData composition];
     [pEData release];
-    
-    
-   [arrayImage setArray:[DataManager getArrayFromPlist:[NSString stringWithFormat:@"%@/content/imageArray.plist",BOOKNAME]]];    
-    UIScrollView *sc = [[UIScrollView alloc]initWithFrame:CGRectMake(ZERO, ZERO , DW, DH - 20)];
+   [arrayImage setArray:[DataManager getArrayFromPlist:[NSString stringWithFormat:@"%@/content/imageArray.plist",BOOKNAME]]];
+    indexImage = 42;
+    sc = [[UIScrollView alloc]initWithFrame:CGRectMake(ZERO, ZERO , DW, DH - 20)];
     sc.delegate = self;
     sc.contentSize = CGSizeMake(DW+1,DH-20);
-    indexImage = 54;
-    pageListView = [[QZPageListView alloc]init];
-    pageListView.frame = CGRectMake(0, 0, 1024, 748);
-    [pageListView initIncomingData:[arrayImage objectAtIndex:indexImage]];
+    [self.view addSubview:sc];
+    [self pageNum:indexImage];
+}
+
+
+- (void)pageNum:(NSInteger)pNumber
+{
+    pageListView= [[QZPageListView alloc]init];
+    pageListView.frame = CGRectMake(ZERO , ZERO , DW , DH-20);
+    pageListView.tag = 200;
+    pageListView.delegate = self;
+    [pageListView initIncomingData:[arrayImage objectAtIndex:pNumber]];
     [pageListView composition];
     [sc addSubview:pageListView];
     [pageListView release];
-    
-    [self.view addSubview:sc];
-    [sc release];
-}
-
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
-{
-    NSLog(@"%d",[scrollView.subviews count]);
-}
+    }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
@@ -67,7 +65,6 @@
     {
         if (indexImage >= [arrayImage count] - 1)
         {
-            
             indexImage = [arrayImage count] - 1;
         }else{
             
@@ -87,12 +84,17 @@
         {
             indexImage--;
         }
-        
         [pageListView initIncomingData:[arrayImage objectAtIndex:indexImage]];
         [pageListView composition];
     }
-    
+}
 
+- (void)skipPage:(QZ_INT)pageNum
+{
+    indexImage = pageNum;
+    [pageListView initIncomingData:[arrayImage objectAtIndex:indexImage]];
+    [pageListView composition];
+  
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,6 +105,7 @@
 
 - (void)dealloc
 {
+    [sc release];
     [super dealloc];
 }
 

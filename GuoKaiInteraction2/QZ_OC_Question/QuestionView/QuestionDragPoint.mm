@@ -137,9 +137,12 @@
 
 - (void)viewDisPlayWithBackImage
 {
-    UIImage *image = [UIImage imageNamed:self.dragQuestion.strBackGroundImage];
+    NSString *imagepath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"images"] stringByAppendingPathComponent:self.dragQuestion.strBackGroundImage];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagepath];
     backImageView = [[UIImageView alloc]initWithImage:image];
-    backImageView.frame = CGRectMake(0,titleContent.frame.size.height + titleNumber.frame.size.height + 55 , self.frame.size.width, self.frame.size.height - 120 -(titleContent.frame.size.height + titleNumber.frame.size.height + 55));
+    backImageView.frame = CGRectMake(0,titleContent.FSH + titleNumber.FSH + 55 , SFSW, SFSH - 120 -(titleContent.FSH + titleNumber.FSH + 55));
+    backImageView.layer.borderColor = [UIColor grayColor].CGColor;
+    backImageView.layer.borderWidth =1.0;
     [self addSubview:backImageView];
     
     for (int i = 0; i < [self.dragQuestion.vImageSide count]; i++)
