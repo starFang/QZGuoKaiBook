@@ -19,11 +19,11 @@
     self = [super init];
     if (self) {
         
-        self.font = @"Academy Engraved LET";
+        self.font = @"Arial";
         self.color = [UIColor blackColor];
         self.strokeColor = [UIColor whiteColor];
         self.strokeWidth = 0.0;
-        self.size = 66;
+        self.size = 25;
         self.images = [NSMutableArray array];
         
     }

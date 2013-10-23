@@ -56,7 +56,6 @@
     [self initPressPlay:self.frame];
     [self loadMovie];
     [self pressViewImage];
-    
 }
 
 - (void)initTitle:(CGRect)frame
@@ -83,9 +82,8 @@
         {
             case PAGE_RICH_TEXT_PIECE_PARAGRAPH_BEGIN:
             {
-                if (![strBegin length]) {
-                    
-                }else{
+                if (![strBegin length])
+                {}else{
                     [strBegin appendString:@"\n"];
                     [string appendString:@"\n"];
                 }
@@ -123,13 +121,14 @@
                 break;
             default:
                 break;
-        }
+         }
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    CGSize size = [string sizeWithFont:[UIFont systemFontOfSize:35] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
-    ctv = [[CTView alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    ctv = [[CTView alloc]initWithFrame:CGRectMake(0, 0, SFSW, size.height)];
+    ctv.backgroundColor = [UIColor clearColor];
     [ctv setAttString:attString];
     [self addSubview:ctv];
     titHeight = size.height;
@@ -178,23 +177,6 @@
     isMovieBig = NO;
   }
 
-- (void)initGesture
-{
-
-    _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGestureForImage:)];
-    _panGesture.delegate = self;
-//    [self.fRView addGestureRecognizer:_panGesture];
-    
-    _pinchGesture = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchGestureForImage:)];
-    _pinchGesture.delegate = self;
-//    [self.fRView addGestureRecognizer:_pinchGesture];
-    
-    _rotationGesture = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(rotationGestureForImage:)];
-    _rotationGesture.delegate = self;
-//    [self.fRView addGestureRecognizer:_rotationGesture];
-    
-}
-
 - (void)initPressPlay:(CGRect)frame
 {
     CGRect frameMovie;
@@ -217,12 +199,11 @@
     [button setBackgroundImage:[UIImage imageNamed:@"1_1.jpg"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:pressView];
-//    if (TARGET_IPHONE_SIMULATOR) 判断是否是模拟器
 }
 
 - (void)pressViewImage
 {
-    NSString *bookPath = [[[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"images"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pVideo->strStartImage.c_str()]];
+    NSString *bookPath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME]  stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"images"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pVideo->strStartImage.c_str()]];
     UIImage *image = [UIImage imageWithContentsOfFile:bookPath];
     [pressView setImage:image];
 }
@@ -233,14 +214,13 @@
     pressView.alpha = 0;
     pressView.hidden = YES;
     [self.fRView bringSubviewToFront:self];
-//    [self.moviePlayer play];
+    [self.moviePlayer play];
 }
 
 - (void)loadMovie
 {
-    NSString *bookPath = [[[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"medias"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pVideo->strPath.c_str()]];
+    NSString *bookPath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"medias"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pVideo->strPath.c_str()]];
     NSURL *url = [NSURL fileURLWithPath:bookPath];
-    NSLog(@"%@",bookPath);
     self.moviePlayer = [[MPMoviePlayerController  alloc]initWithContentURL:url];
     [self playMovie];
 }
@@ -248,13 +228,12 @@
 -(void)playMovie
 {
     self.moviePlayer.scalingMode = MPMovieScalingModeAspectFill;
-    self.moviePlayer.view.backgroundColor = [UIColor cyanColor];
+    self.moviePlayer.view.backgroundColor = [UIColor clearColor];
 //    设置播放器风格
     [self.moviePlayer setControlStyle:MPMovieControlStyleEmbedded];
     [self.moviePlayer.view setFrame:self.fRView.bounds];
     self.moviePlayer.initialPlaybackTime = -1;
     [self.fRView addSubview:self.moviePlayer.view];
-    [self.moviePlayer play];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 

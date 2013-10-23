@@ -32,17 +32,15 @@
     }
     return self;
 }
-- (void)initIncomingData:(NSArray *)pageName
+- (void)initIncomingData:(NSArray *)imageName
 {
-    
-    array = [NSArray arrayWithObjects:[pageName objectAtIndex:0 ],[pageName objectAtIndex:1], nil];
-    NSString *bookPath0 = [[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:BOOKNAME];
-    NSString *bookPath = [[bookPath0 stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[pageName objectAtIndex:0]objectForKey:@"0"]];
-    
+    array = [NSArray arrayWithObjects:[imageName objectAtIndex:0 ],[imageName objectAtIndex:1], nil];
+    NSString *bookPath = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[imageName objectAtIndex:0] objectForKey:@"0"]];
     UIImage * image = [UIImage imageWithContentsOfFile:bookPath];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
     imageView.frame = self.bounds;
     [self addSubview:imageView];
+    [imageView release];
 }
 
 - (void)composition
@@ -52,8 +50,8 @@
 
 - (void)inputPageData
 {
-    NSString *bookPath0 = [[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:BOOKNAME];
-    NSString *bookPath = [[bookPath0 stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[array objectAtIndex:1] objectForKey:@"0"]];
+    NSString *bookPath0 = [DOCUMENT stringByAppendingPathComponent:BOOKNAME];
+    NSString *bookPath = [[bookPath0 stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[array objectAtIndex:1] objectForKey:@"1"]];
     pageObj.LoadData([bookPath UTF8String]);
     vector<const PageBaseElements*> vObjs = pageObj.GetDrawableObjList();
     for (int i = 0; i < vObjs.size(); i++)
@@ -65,72 +63,86 @@
             case PAGE_OBJECT_QUESTION_LIST:// 题目列表
             {
             PageQuestionList* pQuestionList = (PageQuestionList*)pObj;
+                NSLog(@"题目列表");
             [self selfDetect:pQuestionList];
-         }
+            }
             break;
+                
                 case PAGE_OBJECT_TOOL_TIP:
             {
             PageToolTip *pToolTip = (PageToolTip *)pObj;
+                NSLog(@"点击文字提示");
                 [self ToolTip:pToolTip];
             }
                 break;
+                
                 case PAGE_OBJECT_TOOL_IMAGE_TIP:
             {
             PageToolImageTip *pToolImageTip = (PageToolImageTip *)pObj;
+                
+                NSLog(@"点击图片提示");
                 [self ToolImageTip:pToolImageTip];
             }
                 break;
+                
                 case PAGE_OBJECT_NAV_RECT:
             {
                 PageNavRect *pNavRect = (PageNavRect *)pObj;
+                NSLog(@"点击跳转");
                 [self navRect:pNavRect];
             }
                 break;
+                
                 case PAGE_OBJECT_NAV_BUTTON:
             {
                 PageNavButton *pNavButton = (PageNavButton *)pObj;
+                NSLog(@"点击多项跳转提示");
                 [self navButton:pNavButton];
              }
+                break;
+                
                 case PAGE_OBJECT_VIDEO:
             {
                 PageVideo *pVideo = (PageVideo *)pObj;
-                
+                NSLog(@"视频");
                 [self video:pVideo];
             }
                 break;
                 case PAGE_OBJECT_IMAGE:
             {
                 PageImage * pImage = (PageImage *)pObj;
+                NSLog(@"单张图片");
                 [self image:pImage];
             }
                 break;
                 case PAGE_OBJECT_IMAGE_LIST:
             {
                 PageImageList *pImageList = (PageImageList *)pObj;
+                NSLog(@"画廊");
                 [self imageList:pImageList];
             }
                 break;
             case PAGE_OBJECT_VOICE:
             {
                 PageVoice *pVoice = (PageVoice *)pObj;
-                
+                NSLog(@"音频");
                 [self voice:pVoice];
             }
                 break;
             case PAGE_OBJECT_TEXT_ROLL:
             {
             PageTextRoll *pTextRoll = (PageTextRoll *)pObj;
+                NSLog(@"文字滚动视图");
                 [self TextRoll:pTextRoll];
             }
                 break;
             case PAGE_OBJECT_WEB_LINK:
             {
             PageWebLink *pageWebLink = (PageWebLink *)pObj;
+                NSLog(@"浏览器跳转");
                 [self webLink:pageWebLink];
              }
                 break;
-                
-            
         default:
             break;
     
@@ -146,10 +158,8 @@
            pToolTip->rect.X1 - pToolTip->rect.X0,
            pToolTip->rect.Y1 - pToolTip->rect.Y0)
                                       ];
-    pageToolTip.delegate = self;
     [pageToolTip initIncomingData:pToolTip];
     [pageToolTip composition];
-    pageToolTip.backgroundColor = [UIColor cyanColor];
     [self addSubview:pageToolTip];
  }
 //文字图片提示
@@ -215,6 +225,7 @@
     [pToolTipImageview composition];
     [self addSubview:pToolTipImageview];
  }
+
 //导航点击区域
 - (void)navRect:(PageNavRect *)pNavRect
 {
@@ -227,7 +238,6 @@
 //点击区域按钮的
 - (void)navButton:(PageNavButton *)pNavButton
 {
-    
     pNavButtonView = [[QZPageNavButtonView alloc]init];
     
     //    坐标
@@ -246,13 +256,12 @@
         toolX = x0;
         toolY = y0;
         [pNavButtonView setFist:1];
-    }else if (x0 <= DW/2 && y0 > DW/2)
-    {
+    }else if (x0 <= DW/2 && y0 > DW/2){
         toolX = x0;
         toolY = y1-toolH;
         [pNavButtonView setFist:3];
-    }else if (x0 > DW/2 && y0 <= DW/2)
-    {
+    }else if (x0 > DW/2 && y0 <= DW/2){
+        
         toolX = x1 - pNavButton->nWidth;
         toolY = y0;
         [pNavButtonView setFist:2];
@@ -261,7 +270,6 @@
         toolY = y1-toolH;
         [pNavButtonView setFist:4];
     }
-    
     
     pNavButtonView.frame =CGRectMake(toolX, toolY, toolW, toolH);
     [pNavButtonView initIncomingData:pNavButton];
@@ -352,7 +360,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [pageToolTip closeTheTextView];
+    [pageToolTip closeTheTextViewWithToolTipView];
     [pToolTipImageview closeTheTextViewWithToolTipView];
     [pNavButtonView closeThePopView];
     

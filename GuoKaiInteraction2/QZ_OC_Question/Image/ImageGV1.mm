@@ -117,8 +117,9 @@
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    CGSize size = [string sizeWithFont:QUESTION_TITLE_FONT constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByTruncatingTail];
+    CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByTruncatingTail];
     self.ctV.frame  = CGRectMake(0, 0, SFSW , size.height);
+    self.ctV.backgroundColor = [UIColor clearColor];
       NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
     [self.ctV setAttString:attString];
 }
@@ -131,7 +132,6 @@
     [p setSize:44];
     [p setColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]];
     NSAttributedString * attString = [p attrStringFromMarkup:[NSString stringWithUTF8String:pageRichTextImage->stTitle.strText.c_str()]];
-    
     UIFont *font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:33];
     CGSize size = [[NSString stringWithUTF8String:pageRichTextImage->stTitle.strText.c_str()] sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, 44) lineBreakMode:NSLineBreakByCharWrapping];
     if (size.width <= 1024-74) {

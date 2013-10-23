@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #include "QZEpubPage.h"
+
 #import "QZPageToolTipView.h"
 #import "QZToolTipImageview.h"
 #import "QZPageNavButtonView.h"
 #include "QZPageNavRectView.h"
 
-@interface QZPageListView : UIView<QZPageToolTipViewDelegate,QZPageToolTipImageViewDelegate>
+@interface QZPageListView : UIView<QZPageToolTipImageViewDelegate>
 
 {
     NSArray *array;
@@ -27,6 +28,6 @@
 @property (nonatomic, copy)NSString *pageName;
 
 - (void)composition;
-- (void)initIncomingData:(NSArray *)pageName;
+- (void)initIncomingData:(NSArray *)imageName;
 
 @end

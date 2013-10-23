@@ -8,22 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #include "QZEpubPageObjs.h"
+#import "CTView.h"
 
-@protocol QZPageToolTipViewDelegate <NSObject>
 
-- (void)closeTheTextView;
-
-@end
-
-@interface QZPageToolTipView : UIView<QZPageToolTipViewDelegate>
+@interface QZPageToolTipView : UIView
 
 {
     PageToolTip *pToolTip;
     UIView *textView;
-    id<QZPageToolTipViewDelegate>delegate;
     UIButton *button;
 }
-@property (nonatomic, assign)id<QZPageToolTipViewDelegate>delegate;
+@property (nonatomic, retain) CTView *ctv;
 - (void)composition;
 - (void)initIncomingData:(PageToolTip *)pageToolTip;
 - (void)closeTheTextViewWithToolTipView;

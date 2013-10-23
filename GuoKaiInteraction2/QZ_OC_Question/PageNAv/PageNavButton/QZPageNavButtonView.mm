@@ -26,10 +26,12 @@
 - (void)initIncomingData:(PageNavButton *)pageNavButton
 {
     pNavButton = pageNavButton;
+    NSLog(@"strTip : %@",[NSString stringWithUTF8String:pNavButton->strTipText.c_str()]);
 }
 
 - (void)composition
 {
+    
     [self popTheView];
     [self pressButton];
 }
@@ -75,6 +77,7 @@
     [self addSubview:pressView];
     
     popView = [[UIView alloc]init];
+    popView.backgroundColor = [UIColor greenColor];
     popView.frame = rectPop;
     popView.hidden = YES;
     [self addSubview:popView];
@@ -83,18 +86,27 @@
 - (void)pressButton
 {
     CGSize size = [[NSString stringWithUTF8String:pNavButton->strTipText.c_str()] sizeWithFont:QUESTION_TITLE_FONT constrainedToSize:CGSizeMake(popView.FSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    UILabel * textCont = [[UILabel alloc]init];
+    textCont.backgroundColor = [UIColor clearColor];
+    textCont.numberOfLines = 0;
+    textCont.text = [NSString stringWithUTF8String:pNavButton->strTipText.c_str()];
+    textCont.font = QUESTION_TITLE_FONT;
+    textCont.frame = CGRectMake(0, 0, popView.FSW, size.height);
     
     UIScrollView * svc = [[UIScrollView alloc]init];
     svc.frame = popView.bounds;
     svc.contentSize = CGSizeMake(popView.FSW, size.height+120);
+    
+    [svc addSubview:textCont];
+    [textCont release];
+    
     for (int i = 0; i < pNavButton->vBtnList.size(); i++)
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         button.tag =  NVACHILDBUTTON + i;
         [button setTitle:[NSString stringWithUTF8String:pNavButton->vBtnList[i].strBtnText.c_str()] forState:UIControlStateNormal];
-        button.frame = CGRectMake((pressView.FSW/pNavButton->vBtnList.size())*i, size.height+30, pressView.FSW/pNavButton->vBtnList.size(), 80);
+        button.frame = CGRectMake((popView.FSW/pNavButton->vBtnList.size())*i, size.height+30, popView.FSW/pNavButton->vBtnList.size(), 80);
         [button addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
-        
         [svc addSubview:button];
     }
     [popView addSubview:svc];
@@ -119,8 +131,6 @@
 
 - (void)closeThePopView
 {
-    
-    NSLog(@"closePopView");
     popView.hidden = YES;
 }
 

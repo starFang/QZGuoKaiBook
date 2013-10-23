@@ -63,12 +63,12 @@
         {
             case PAGE_RICH_TEXT_PIECE_PARAGRAPH_BEGIN:
             {
-                if (![strBegin length]) {
-                    
-                }else{
-                    [strBegin appendString:@"\n"];
-                    [string appendString:@"\n"];
-                }
+//                if (![strBegin length]) {
+//                    
+//                }else{
+//                    [strBegin appendString:@"\n"];
+//                    [string appendString:@"\n"];
+//                }
                 UIFont *font = [UIFont fontWithName:[NSString stringWithUTF8String:pQuestionList->stTitle.vTextItemList[i].fontFamily.c_str()] size:pQuestionList->stTitle.vTextItemList[i].fontSize];
                 CGSize sizek = [@" " sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
                 NSInteger countK = (int)ceilf(pQuestionList->stTitle.vTextItemList[i].nLength/sizek.width);
@@ -85,10 +85,8 @@
                 [string appendString:[NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:pQuestionList->stTitle.vTextItemList[i].strText.c_str()]]];
                 NSString * strText = [NSString stringWithFormat:@"<font color=\"%d,%d,%d,%d\">%@",pQuestionList->stTitle.vTextItemList[i].fontColor.rgbRed,pQuestionList->stTitle.vTextItemList[i].fontColor.rgbGreen,pQuestionList->stTitle.vTextItemList[i].fontColor.rgbBlue,pQuestionList->stTitle.vTextItemList[i].fontColor.rgbAlpha,[NSString stringWithUTF8String:pQuestionList->stTitle.vTextItemList[i].strText.c_str()]];
                 [strBegin appendString:strText];
-                
                 [strFont setString:[NSString stringWithUTF8String:pQuestionList->stTitle.vTextItemList[i].fontFamily.c_str()]];
                 fontsize = (float)pQuestionList->stTitle.vTextItemList[i].fontSize;
-                
             }
                 break;
             case PAGE_RICH_TEXT_PIECE_PARAGRAPH_END:
@@ -107,9 +105,10 @@
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    CGSize size = [string sizeWithFont:[UIFont systemFontOfSize:35] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
     ctv = [[CTView alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    ctv.backgroundColor = [UIColor clearColor];
     [ctv setAttString:attString];
     [self addSubview:ctv];
     

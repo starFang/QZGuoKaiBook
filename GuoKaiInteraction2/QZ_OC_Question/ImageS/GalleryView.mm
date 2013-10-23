@@ -165,9 +165,10 @@
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    CGSize size = [string sizeWithFont:[UIFont systemFontOfSize:35] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
     ctv.frame = CGRectMake(0, 0, size.width, size.height);
+    ctv.backgroundColor = [UIColor clearColor];
     [ctv setAttString:attString];
     
 }
@@ -222,7 +223,10 @@
         imageView.tag = 300 + i;
         imageView.userInteractionEnabled = YES;
         PageImageListSubImage1 *pageFirst = (PageImageListSubImage1 *)[self.pageImageList.vImages objectAtIndex:i];
-        [imageView setImage:[UIImage imageNamed:pageFirst.strImgPath]];
+        
+        NSString *imagepath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"images"] stringByAppendingPathComponent:pageFirst.strImgPath];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagepath];
+        [imageView setImage:image];
         UITapGestureRecognizer *tapOneGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
         [imageView addGestureRecognizer:tapOneGesture];
         [self.gallerySCV addSubview:imageView];
@@ -272,12 +276,12 @@
 {
     if (self.pageImageList.isSmallImage == NO)
     {
-        CGRect tipRect = CGRectMake(0, self.frame.size.height-30, self.frame.size.width, 30);
+        CGRect tipRect = CGRectMake(0, SFSH-30, SFSW, 30);
         _mTipView = [[UIView alloc]initWithFrame:tipRect];
         [_mTipView setAlpha:0.7];
         [self addSubview:_mTipView];
         _mTipView.backgroundColor = [UIColor clearColor];
-        _mPageCtrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 10, 400, 20)];
+        _mPageCtrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 10, SFSW, 20)];
         _mPageCtrol.currentPage = 0;
         [_mPageCtrol addTarget:self action:@selector(pageControlWithSC:) forControlEvents:UIControlEventValueChanged];
         [_mPageCtrol setNumberOfPages:[self.pageImageList.vImages count]];
@@ -295,23 +299,23 @@
         [imageView1 release];
         [imageView2 release];
         
-    
     }else{
-        CGRect tipRect = CGRectMake(0, self.frame.size.height-85, self.frame.size.width, 85);
+        
+        CGRect tipRect = CGRectMake(0, SFSH-85, SFSW, 85);
         _mTipView = [[UIView alloc]initWithFrame:tipRect];
         [_mTipView setAlpha:1.0];
         [self addSubview:_mTipView];
         _mTipView.backgroundColor = [UIColor clearColor];
-        _mPageCtrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 65, 400, 20)];
+        _mPageCtrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 65, SFSW, 20)];
         _mPageCtrol.currentPage = 0;
         [_mPageCtrol addTarget:self action:@selector(pageControlWithSC:) forControlEvents:UIControlEventValueChanged];
         [_mPageCtrol setNumberOfPages:[self.imageArray count]];
         _mPageCtrol.hidesForSinglePage = NO;
         [_mTipView addSubview:_mPageCtrol]; 
-        UIImage *image1 = [UIImage imageNamed:@"m2.png"];
-        UIImage *image2 = [UIImage imageNamed:@"m1.png"];
+        UIImage *image1 = [UIImage imageNamed:@"a1.png"];
+        UIImage *image2 = [UIImage imageNamed:@"a2.png"];
         UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 65, 20,20)];
-        UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(_mTipView.frame.size.width-20, 65, 20, 20)];
+        UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(SFSW-20, 65, 20, 20)];
         [imageView1 setImage:image1];
         [imageView2 setImage:image2];
         [_mTipView addSubview:imageView1];

@@ -27,7 +27,6 @@
 
 - (void)composition
 {
-
     if (pVoice->stTitle.isRichText == YES)
     {
         [self isYesRichText];
@@ -53,7 +52,6 @@
     [self initButton:frame];
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(myTimer:) userInfo:nil repeats:YES];
     [self sliderVolume:frame];
-    
     [self mp3Player:[NSString stringWithUTF8String:pVoice->strVoicePath.c_str()]];
 }
 
@@ -113,7 +111,7 @@
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    CGSize size = [string sizeWithFont:[UIFont systemFontOfSize:35] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
     ctv = [[CTView alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     [ctv setAttString:attString];
@@ -228,8 +226,9 @@ static float value;
 
 -(void)mp3Player:(NSString *)musicName
 {
+    NSString *path = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"medias"] stringByAppendingPathComponent:musicName];
+    NSLog(@"path : %@",path);
     //    1.取得mp3文件的绝对路径 ShangHaiTan.mp3
-    NSString * path = [[NSBundle mainBundle]pathForResource:musicName ofType:nil];
     NSURL * url = [NSURL fileURLWithPath:path];
     //    url 表示文件的网址
     //    把path做成统一网址
@@ -251,13 +250,13 @@ static int pressIndexNum;
     else if(pressIndexNum % 2 == 0 && pressIndexNum != 0)
     {
         UIButton *pauseButton = (UIButton *)[self viewWithTag:MUSICTOOLVIEW_STARTBUTTON_TAG];
-        [pauseButton setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
+        [pauseButton setImage:[UIImage imageNamed:@"n1.png"] forState:UIControlStateNormal];
         [pauseButton addTarget:self action:@selector(pauseClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     else if (pressIndexNum % 2 == 1)
     {
         UIButton *continueButton = (UIButton *)[self viewWithTag:MUSICTOOLVIEW_STARTBUTTON_TAG];
-        [continueButton setImage:[UIImage imageNamed:@"2.png"] forState:UIControlStateNormal];
+        [continueButton setImage:[UIImage imageNamed:@"n2.png"] forState:UIControlStateNormal];
         [continueButton addTarget:self action:@selector(continueClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     pressIndexNum++;

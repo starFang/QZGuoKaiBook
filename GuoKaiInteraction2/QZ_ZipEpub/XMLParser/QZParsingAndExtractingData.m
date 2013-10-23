@@ -81,7 +81,7 @@
 
 #pragma mark - 文件解析第四步：NCX文件解析1
     NSArray * arrayNCX=[xmlParser GetBookDirectory:[aOPSPath stringByAppendingPathComponent:ncxPath]];
-    NSLog(@"arrayNcx _ %@",arrayNCX);
+
 #pragma mark - 保存解析的目录和html顺序数组
     //    目录
     NSMutableArray *contentArr = [[NSMutableArray alloc]initWithCapacity:0];
@@ -111,7 +111,6 @@
         NSString * strKey = [arrayHTML objectAtIndex:i];
         //      下面是用来解析HTML，取得内容的
         NSArray *contentImageData = [[NSArray alloc]initWithArray:[xmlParser getHTMLData:[aOPSPath stringByAppendingPathComponent:strKey]]];
-        NSLog(@"contentImage : Data : %@",contentImageData);
             [imageArray addObject:contentImageData ];
     }
     [imageArray writeToFile:[dataManager fileContentImagePath:bookName] atomically:YES];

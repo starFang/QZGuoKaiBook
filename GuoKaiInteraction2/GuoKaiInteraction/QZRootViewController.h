@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "QZPageListView.h"
 
 @interface QZRootViewController : UIViewController
 <UIScrollViewDelegate>
+
+{
+    QZPageListView *pageListView;
+    NSMutableArray * arrayImage;
+    NSInteger indexImage;
+}
+
 @end

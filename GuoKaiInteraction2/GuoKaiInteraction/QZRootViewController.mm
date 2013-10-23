@@ -8,7 +8,6 @@
 //
 
 #import "QZRootViewController.h"
-#import "QZPageListView.h"
 #import "QZParsingAndExtractingData.h"
 #import "DataManager.h"
 
@@ -23,6 +22,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        indexImage = 0;
+        arrayImage = [[NSMutableArray alloc]init];
     }
         return self;
 }
@@ -38,26 +39,59 @@
     [pEData composition];
     [pEData release];
     
-    NSMutableArray * array = [DataManager getArrayFromPlist:[NSString stringWithFormat:@"%@/content/imageArray.plist",BOOKNAME]];
     
-    UIScrollView *sc = [[UIScrollView alloc]initWithFrame:CGRectMake(ZERO, ZERO , DW+1, DH - 19)];
+   [arrayImage setArray:[DataManager getArrayFromPlist:[NSString stringWithFormat:@"%@/content/imageArray.plist",BOOKNAME]]];    
+    UIScrollView *sc = [[UIScrollView alloc]initWithFrame:CGRectMake(ZERO, ZERO , DW, DH - 20)];
     sc.delegate = self;
-    sc.contentSize = CGSizeMake(DW,DH-20);
+    sc.contentSize = CGSizeMake(DW+1,DH-20);
+    indexImage = 54;
+    pageListView = [[QZPageListView alloc]init];
+    pageListView.frame = CGRectMake(0, 0, 1024, 748);
+    [pageListView initIncomingData:[arrayImage objectAtIndex:indexImage]];
+    [pageListView composition];
+    [sc addSubview:pageListView];
+    [pageListView release];
+    
     [self.view addSubview:sc];
     [sc release];
-    
-//    QZPageListView *pageListView = [[QZPageListView alloc]init];
-//    pageListView.backgroundColor = [UIColor redColor];
-//    pageListView.frame = CGRectMake(0, 0, 1024, 748);
-//    [pageListView initIncomingData:array];
-//    [pageListView composition];
-//    [self.view addSubview:pageListView];
-//    [pageListView release]; 
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    NSLog(@"%d",[scrollView.subviews count]);
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-
+    if (scrollView.contentOffset.x > 100)
+    {
+        if (indexImage >= [arrayImage count] - 1)
+        {
+            
+            indexImage = [arrayImage count] - 1;
+        }else{
+            
+        indexImage++;
+        }
+        
+        [pageListView initIncomingData:[arrayImage objectAtIndex:indexImage]];
+        [pageListView composition];
+    }
+    else if (scrollView.contentOffset.x < -100)
+    {
+        if (indexImage <= 0)
+        {
+            indexImage = 0;
+        }
+        else
+        {
+            indexImage--;
+        }
+        
+        [pageListView initIncomingData:[arrayImage objectAtIndex:indexImage]];
+        [pageListView composition];
+    }
+    
 
 }
 
