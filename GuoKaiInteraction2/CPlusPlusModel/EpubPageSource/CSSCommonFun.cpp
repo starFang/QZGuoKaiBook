@@ -370,3 +370,31 @@ QZ_ARGBCOLOR StringToARGBColor(string color)
 
 	return argbColor;
 }
+
+string Base16Encode(string str)
+{
+    string strTem = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string strResult;
+    for (long i = 0; i < str.length(); i++)
+    {
+        short int val = str[i];
+        short int val1 = (val >> 4)&15;
+        short int val2 = val & 15;
+        
+        strResult = strResult + strTem[val1] + strTem[val2];
+    }
+    
+    return strResult;
+}
+
+string GetBase16Name(string filename)
+{
+    vector<string> vs = split(filename,'.');
+    string newFile = Base16Encode(vs[0]);
+    if (filename.size() > 1)
+    {
+        newFile += "."+vs[1];
+    }
+    
+    return  newFile;
+}

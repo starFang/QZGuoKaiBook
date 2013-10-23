@@ -46,4 +46,6 @@ QZ_INT	StringToInt(std::string strInt);
 
 QZ_ARGBCOLOR StringToARGBColor(std::string strColor);
 
+std::string GetBase16Name(std::string filename);
+
 #endif//_QZKERNEL_EPUBKIT_EPUBLIB_INCLUDE_CSSCOMMONFUN_H_

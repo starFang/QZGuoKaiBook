@@ -442,7 +442,8 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadToolTip(const QZ_CHAR *ch)
 		else if (m_vStack[5]=="bgcolor")
 			pPosObj->bgColor = StringToARGBColor(ch);
 		else if (m_vStack[5]=="buttonimage")
-			pPosObj->strBtnImage = ch;
+			pPosObj->strBtnImage = GetBase16Name(ch);
+            //pPosObj->strBtnImage = ch;
 		else if (m_vStack[5]=="buttontext")
 			pPosObj->strBtnText = ch;
 	}
@@ -472,9 +473,9 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadToolImageTip(const QZ_CHAR *ch)
 		else if (m_vStack[5]=="height")
 			pPosObj->nHeight = StringToLongInt(ch);
 		else if (m_vStack[5]=="htmlfile")
-			pPosObj->filePath= ch;
+			pPosObj->filePath= GetBase16Name(ch);
 		else if (m_vStack[5]=="buttonimage")
-			pPosObj->strBtnImage = ch;
+			pPosObj->strBtnImage = GetBase16Name(ch);
 		else if (m_vStack[5]=="buttontext")
 			pPosObj->strBtnText = ch;
 	}
@@ -560,11 +561,11 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadVideo(const QZ_CHAR *ch)
 	{
 		if (m_vStack[5]=="path")
 		{
-			pPosObj->strPath = ch;
+			pPosObj->strPath = GetBase16Name(ch);
 		}
 		else if (m_vStack[5]=="startimage")
 		{
-			pPosObj->strStartImage = ch;
+			pPosObj->strStartImage = GetBase16Name(ch);
 		}		
 	}
 	else if (nStackSize == 7)
@@ -611,7 +612,7 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadQuestionList(const QZ_CHAR *ch)
 			}
 			else if (nStackSize == 8 && m_vStack[6]=="images" && m_vStack.back() == "image")
 			{
-				pQuestion->vStrImage.push_back(ch);
+				pQuestion->vStrImage.push_back(GetBase16Name(ch));
 			}
 			else if (nStackSize == 8 && m_vStack[6]=="answers" && m_vStack.back() == "answer")
 			{
@@ -706,7 +707,7 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadQuestionList(const QZ_CHAR *ch)
 			}
 			else if (m_vStack.back() == "backimage")
 			{
-				pQuestion->strBackGroundImage = ch;
+				pQuestion->strBackGroundImage = GetBase16Name(ch);
 			}
 			else if (m_vStack.back() == "rect")
 			{
@@ -777,7 +778,7 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadImage(const QZ_CHAR *ch)
 	{
 		if (m_vStack[5]=="path")
 		{
-			pPosObj->strImgPath = ch;
+			pPosObj->strImgPath = GetBase16Name(ch);
 		}
 	}
 	else if (nStackSize == 7)
@@ -829,7 +830,7 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadImageList(const QZ_CHAR *ch)
 		if (m_vStack[7] == "path")
 		{
 			PageImageListSubImage img;
-			img.strImgPath = ch;
+			img.strImgPath = GetBase16Name(ch);
 			pPosObj->vImages.push_back(img);
 		}
 	}
@@ -861,7 +862,7 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadVoice(const QZ_CHAR *ch)
 	{
 		if (m_vStack[5]=="path")
 		{
-			pPosObj->strVoicePath = ch;
+			pPosObj->strVoicePath = GetBase16Name(ch);
 		}
 	}
 	else if (nStackSize == 7)
@@ -891,7 +892,7 @@ QZ_ReturnCode QZEpubPageLoadConf::ReadTextRoll(const QZ_CHAR *ch)
 	{
 		if (m_vStack[5]=="content")
 		{
-			pPosObj->strFilePath = ch;
+			pPosObj->strFilePath = GetBase16Name(ch);
 		}
 	}
 	return QZR_OK;
