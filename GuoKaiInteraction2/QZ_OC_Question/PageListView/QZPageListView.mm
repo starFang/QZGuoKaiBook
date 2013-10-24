@@ -6,7 +6,9 @@
 //  Copyright (c) 2013年 star. All rights reserved.
 //
 
+
 #import "QZPageListView.h"
+#import <QuartzCore/QuartzCore.h>
 
 #import "QuestionRootView.h"
 #import "QZPageTextRollWebView.h"
@@ -31,24 +33,82 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self index];
     }
     return self;
+}
+
+- (void)index
+{
+    indexToolTip = 0;
+    indexToolImageTip = 0;
+    indexNavRect  = 0;
+    indexNavButton = 0;
+    indexVideo = 0;
+    indexQuestion = 0;
+    indexImage = 0;
+    indeximageList = 0;
+    indexVoice = 0;
+    indexTextRoll = 0;
+    indexWebLink = 0;
 }
 - (void)initIncomingData:(NSArray *)imageName
 {
     array = [NSArray arrayWithObjects:[imageName objectAtIndex:0],[imageName objectAtIndex:1], nil];
-    NSString *bookPath = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[[imageName objectAtIndex:0] objectForKey:@"0"] stringByReplacingOccurrencesOfString:@" " withString:@""]];
-    UIImage * image = [UIImage imageWithContentsOfFile:bookPath];
+    
+    
+    NSString *path = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[[imageName objectAtIndex:0] objectForKey:@"0"] stringByReplacingOccurrencesOfString:@" " withString:@""]];
+    UIImage * image = [UIImage imageWithContentsOfFile:path];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
-    imageView.frame = self.bounds;
     [self addSubview:imageView];
     [imageView release];
 }
 
 - (void)composition
 {
+    [self updateWithPress];
     [self inputPageData];
+}
+
+- (void)updateWithPress
+{
+
+    leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftButton addTarget:self action:@selector(upPage:) forControlEvents:UIControlEventTouchUpInside];
+    [rightButton addTarget:self action:@selector(downPage:) forControlEvents:UIControlEventTouchUpInside];
+    leftButton.frame = CGRectMake(ZERO, ZERO  , 50, SFSH);
+    rightButton.frame = CGRectMake(SFSW-50, ZERO, 50, SFSH);
+    [self addSubview:leftButton];
+    [self addSubview:rightButton];
+}
+
+- (void)upPage:(id)sender
+{
+    if (indexVoice != 0)
+    {
+        for (int i = 0; i < indexVoice; i++)
+        {
+            MusicToolView *musciView = (MusicToolView *)[self viewWithTag:VOICE+i];
+            [musciView stop];
+        }
+        
+    }
+    [self.delegate up:sender];
+}
+
+- (void)downPage:(id)sender
+{
+    if (indexVoice != 0)
+    {
+        for (int i = 0; i < indexVoice; i++)
+        {
+            MusicToolView *musciView = (MusicToolView *)[self viewWithTag:VOICE+i];
+            [musciView stop];
+        }
+        
+    }
+    [self.delegate down:sender];
 }
 
 - (void)inputPageData
@@ -62,80 +122,64 @@
     const PageBaseElements* pObj = vObjs[i];
     switch (pObj->m_elementType)
         {
-        
             case PAGE_OBJECT_QUESTION_LIST:// 题目列表
             {
             PageQuestionList* pQuestionList = (PageQuestionList*)pObj;
-                NSLog(@"题目列表");
             [self selfDetect:pQuestionList];
             }
             break;
-                
                 case PAGE_OBJECT_TOOL_TIP:
             {
             PageToolTip *pToolTip = (PageToolTip *)pObj;
-                NSLog(@"点击文字提示");
                 [self ToolTip:pToolTip];
             }
                 break;
-                
                 case PAGE_OBJECT_TOOL_IMAGE_TIP:
             {
             PageToolImageTip *pToolImageTip = (PageToolImageTip *)pObj;
-                
-                NSLog(@"点击图片提示");
                 [self ToolImageTip:pToolImageTip];
             }
                 break;
-                
                 case PAGE_OBJECT_NAV_RECT:
             {
                 PageNavRect *pNavRect = (PageNavRect *)pObj;
-                NSLog(@"点击跳转");
                 [self navRect:pNavRect];
             }
                 break;
-                
                 case PAGE_OBJECT_NAV_BUTTON:
             {
                 PageNavButton *pNavButton = (PageNavButton *)pObj;
-                NSLog(@"点击多项跳转提示");
                 [self navButton:pNavButton];
              }
                 break;
-                
                 case PAGE_OBJECT_VIDEO:
             {
                 PageVideo *pVideo = (PageVideo *)pObj;
-                NSLog(@"视频");
+                m_vpVideo.push_back(pVideo);
                 [self video:pVideo];
             }
                 break;
                 case PAGE_OBJECT_IMAGE:
             {
                 PageImage * pImage = (PageImage *)pObj;
-                NSLog(@"单张图片");
                 [self image:pImage];
             }
                 break;
                 case PAGE_OBJECT_IMAGE_LIST:
             {
                 PageImageList *pImageList = (PageImageList *)pObj;
-                NSLog(@"画廊");
                 [self imageList:pImageList];
             }
                 break;
             case PAGE_OBJECT_VOICE:
             {
                 PageVoice *pVoice = (PageVoice *)pObj;
-                NSLog(@"音频");
                 [self voice:pVoice];
             }
                 break;
             case PAGE_OBJECT_TEXT_ROLL:
             {
             PageTextRoll *pTextRoll = (PageTextRoll *)pObj;
-                NSLog(@"文字滚动视图");
                 [self TextRoll:pTextRoll];
             }
                 break;
@@ -148,23 +192,28 @@
                 break;
         default:
             break;
-    
         }
     }
 }
+
 //文字提示
 - (void)ToolTip:(PageToolTip *)pToolTip
 {
-    pageToolTip = [[QZPageToolTipView alloc]initWithFrame:CGRectMake(
+    QZPageToolTipView *pageToolTip = [[QZPageToolTipView alloc]initWithFrame:CGRectMake(
            pToolTip->rect.X0,
            pToolTip->rect.Y0,
            pToolTip->rect.X1 - pToolTip->rect.X0,
            pToolTip->rect.Y1 - pToolTip->rect.Y0)
                                       ];
+    pageToolTip.tag = TOOLTIP + indexToolTip;
+    pageToolTip.delegate = self;
     [pageToolTip initIncomingData:pToolTip];
     [pageToolTip composition];
     [self addSubview:pageToolTip];
- }
+    [pageToolTip release];
+    indexToolTip++;
+}
+
 //文字图片提示
 - (void)ToolImageTip:(PageToolImageTip *)pToolImageTip
 {
@@ -207,7 +256,7 @@
         b = 0;
      }
    
-    pToolTipImageview = [[QZToolTipImageview alloc]init];
+   QZToolTipImageview *pToolTipImageview = [[QZToolTipImageview alloc]init];
     pToolTipImageview.delegate = self;
     pToolTipImageview.frame = CGRectMake(toolX , toolY , toolW  ,toolH);
     pToolTipImageview.backgroundColor = [UIColor grayColor];
@@ -224,62 +273,46 @@
     {
         [pToolTipImageview setFist:4];
     }
+    pToolTipImageview.tag = TOOLIMAGETIP + indexToolImageTip;
     [pToolTipImageview initIncomingData:pToolImageTip];
     [pToolTipImageview composition];
     [self addSubview:pToolTipImageview];
- }
+    [pToolTipImageview release];
+    indexToolImageTip++;
+}
 
 //导航点击区域
 - (void)navRect:(PageNavRect *)pNavRect
 {
-    pNavRectView = [[QZPageNavRectView alloc]init];
+   QZPageNavRectView *pNavRectView = [[QZPageNavRectView alloc]init];
     pNavRectView.frame = CGRectMake(pNavRect->rect.X0, pNavRect->rect.Y0, pNavRect->rect.X1 - pNavRect->rect.X0, pNavRect->rect.Y1 - pNavRect->rect.Y0);
     [pNavRectView initIncomingData:pNavRect];
     pNavRectView.delegate = self;
+    pNavRectView.tag = NAVRECT + indexNavRect;
     [pNavRectView composition];
     [self addSubview:pNavRectView];
+    indexNavRect++;
 }
+
 //点击区域按钮的
 - (void)navButton:(PageNavButton *)pNavButton
 {
-    pNavButtonView = [[QZPageNavButtonView alloc]init];
+   QZPageNavButtonView *pNavButtonView = [[QZPageNavButtonView alloc]init];
+    pNavButtonView.tag = NAVBUTTON + indexNavButton;
     pNavButtonView.delegate = self;
     //    坐标
     CGFloat x0 = pNavButton->rect.X0;
     CGFloat x1 = pNavButton->rect.X1;
     CGFloat y0 = pNavButton->rect.Y0;
     CGFloat y1 = pNavButton->rect.Y1;
-    //    弹出视图的宽高
-    CGFloat toolX;
-    CGFloat toolY;
-    CGFloat toolW = pNavButton->nWidth;
-    CGFloat toolH = (y1-y0)+80+pNavButton->nHeight;
-    
-    if (x0 <= DW/2 && y0 <= DW/2)
-    {
-        toolX = x0;
-        toolY = y0;
-        [pNavButtonView setFist:1];
-    }else if (x0 <= DW/2 && y0 > DW/2){
-        toolX = x0;
-        toolY = y1-toolH;
-        [pNavButtonView setFist:3];
-    }else if (x0 > DW/2 && y0 <= DW/2){
-        
-        toolX = x1 - pNavButton->nWidth;
-        toolY = y0;
-        [pNavButtonView setFist:2];
-    }else{
-        toolX = x1-pNavButton->nWidth;
-        toolY = y1-toolH;
-        [pNavButtonView setFist:4];
-    }
-    
-    pNavButtonView.frame =CGRectMake(x0, toolY, toolW, toolH);
+    pNavButtonView.frame =CGRectMake(x0, y0, x1-x0, y1-y0);
     [pNavButtonView initIncomingData:pNavButton];
     [pNavButtonView composition];
     [self addSubview:pNavButtonView];
+    [pNavButtonView release];
+    indexNavButton++;
 }
+
 //题
 - (void)selfDetect:(PageQuestionList *)pQuestionList
 {
@@ -290,50 +323,75 @@
         pQuestionList->rect.X1 - pQuestionList->rect.X0,
         pQuestionList->rect.Y1 - pQuestionList->rect.Y0
                             );
+    qView.tag = QUESTION + indexQuestion;
     [qView initIncomingData:pQuestionList];
     [qView composition];
     [self addSubview:qView];
-
+    indexQuestion++;
 }
 //视频
 - (void)video:(PageVideo *)pVideo
 {
     MovieView *movieView = [[MovieView alloc]init];
     movieView.frame = CGRectMake(pVideo->rect.X0, pVideo->rect.Y0, pVideo->rect.X1 - pVideo->rect.X0, pVideo->rect.Y1 - pVideo->rect.Y0);
+    movieView.delegate = self;
+    movieView.tag = VIDEO + indexVideo;
     [movieView initIncomingData:pVideo];
     [movieView composition];
     [self addSubview:movieView];
     [movieView release];
+    indexVideo++;
 }
+
+- (void)newMovieView
+{
+    if (indexVideo > 1)
+    {
+        for (int i = 0; i < indexVideo; i++)
+        {
+            MovieView *movieView = (MovieView *)[self viewWithTag:VIDEO + i];
+            [movieView removeFromSuperview];
+//            PageVideo *pVideo = m_vpVideo[i];
+//            [self video:pVideo];
+        }
+    }
+}
+
 //单张图片
 - (void)image:(PageImage *)pImage
 {
     ImageGV1 *image = [[ImageGV1 alloc]init];
     image.frame = CGRectMake(pImage->rect.X0, pImage->rect.Y0, pImage->rect.X1 - pImage->rect.X0, pImage->rect.Y1 - pImage->rect.Y0);
+    image.tag  = IMAGE + indexImage;
     [image initIncomingData:pImage];
     [image composition];
     [self addSubview:image];
     [image release];
+    indexImage++;
 }
 //画廊
 - (void)imageList:(PageImageList *)pImageList
 {
     GalleryView * gallView = [[GalleryView alloc]init];
     gallView.frame = CGRectMake(pImageList->rect.X0, pImageList->rect.Y0, pImageList->rect.X1 - pImageList->rect.X0, pImageList->rect.Y1 - pImageList->rect.Y0);
+    gallView.tag = IMAGELIST + indeximageList;
     [gallView initIncomingData:pImageList];
     [gallView composition];
     [self addSubview:gallView];
     [gallView release];
+    indeximageList++;
 }
 //声音8
 - (void)voice:(PageVoice *)pVoice
 {
     MusicToolView *musciView = [[MusicToolView alloc]init];
     musciView.frame = CGRectMake(pVoice->rect.X0, pVoice->rect.Y0, pVoice->rect.X1 - pVoice->rect.X0, pVoice->rect.Y1 - pVoice->rect.Y0);
+    musciView.tag = VOICE + indexVoice;
     [musciView initIncomingData:pVoice];
     [musciView composition];
     [self addSubview:musciView];
     [musciView release];
+    indexVoice++;
 }
 //文字滚动视图 9
 - (void)TextRoll:(PageTextRoll *)pTextRoll
@@ -344,9 +402,12 @@
         pTextRoll->rect.Y0,
         pTextRoll->rect.X1 - pTextRoll->rect.X0,
         pTextRoll->rect.Y1 - pTextRoll->rect.Y0);
+    pageTextRoll.tag = TOOLTIP + indexTextRoll;
     [pageTextRoll initIncomingData:pTextRoll];
     [pageTextRoll composition];
     [self addSubview:pageTextRoll];
+    indexTextRoll++;
+    
 }
 //web链接10
 - (void)webLink:(PageWebLink *)pageWebLink
@@ -355,25 +416,33 @@
             pageWebLink->rect.Y0,
             pageWebLink->rect.X1 - pageWebLink->rect.X0,
             pageWebLink->rect.Y1 - pageWebLink->rect.Y0)];
+    page.tag = WEBLINK + indexWebLink;
     [page initIncomingData:pageWebLink];
     [page composition];
     [self addSubview:page];
     [page release];
+    indexWebLink++;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [pageToolTip closeTheTextViewWithToolTipView];
-    [pToolTipImageview closeTheTextViewWithToolTipView];
+    
+    if (indexToolTip > 0)
+    {
+        for (int i = 0; i < indexToolTip ; i++)
+        {
+            QZPageToolTipView *pageToolTip = (QZPageToolTipView *)[self viewWithTag:TOOLTIP+i];
+            [pageToolTip closeTheTextViewWithToolTipView]; 
+        }
+    }
+    
     UIView *view = (UIView *)[self viewWithTag:500];
     [view removeFromSuperview];
 }
 
 - (void)dealloc
 {
-    [pageToolTip release];
-    [pNavButtonView release];
-    [pNavRectView release];
+  
     [super dealloc];
 }
 
@@ -463,13 +532,26 @@
     }
     [popView addSubview:svc];
 }
+
+- (void)closeOtherToolTip
+{
+    if (indexToolTip > 0)
+    {
+        for (int i = 0; i < indexToolTip ; i++)
+        {
+            QZPageToolTipView *pageToolTip = (QZPageToolTipView *)[self viewWithTag:TOOLTIP+i];
+            [pageToolTip closeTheTextViewWithToolTipView];
+        }
+    }
+}
+
+
 - (void)pressSkip:(UIButton *)button
 {
     [self.delegate skipPage: button.tag - NVACHILDBUTTON];
     UIView *view = (UIView *)[self viewWithTag:500];
     [view removeFromSuperview];
 }
-
 
 - (void)closeBtnView:(PageNavButton *)pageNavButton
 {
@@ -481,4 +563,5 @@
 {
     [self.delegate skipPage:pageNum];
 }
+
 @end

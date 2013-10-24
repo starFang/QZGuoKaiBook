@@ -24,4 +24,5 @@
 
 - (void)initIncomingData:(PageVoice *)pageVoice;
 - (void)composition;
+- (void)stop;
 @end

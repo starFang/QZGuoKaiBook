@@ -36,15 +36,12 @@
 
 - (void)popTheView
 {
-    
     pressView = [UIButton buttonWithType:UIButtonTypeCustom];
     pressView.frame = self.bounds;
     [pressView addTarget:self action:@selector(handleSingleTap:) forControlEvents:UIControlEventTouchUpInside];
     pressView.selected = NO;
     [self addSubview:pressView];
 }
-
-
 
 - (void)handleSingleTap:(UIButton *)button
 {

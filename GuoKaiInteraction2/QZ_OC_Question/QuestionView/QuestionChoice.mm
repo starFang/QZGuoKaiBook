@@ -79,7 +79,7 @@
     titleContent.numberOfLines = 0;
     titleContent.backgroundColor = [UIColor clearColor];
     titleContent.text = self.qChoice.strQuestion;
-    CGSize sizeTt = [self.questionTitleNumber sizeWithFont:QUESTION_TOPIC_FONT constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize sizeTt = [self.qChoice.strQuestion sizeWithFont:QUESTION_TOPIC_FONT constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     titleContent.frame = CGRectMake(0,titleNumber.FSH + 25, SFSW, sizeTt.height);
     titleContent.font = QUESTION_TOPIC_FONT;
     [self addSubview:titleContent];

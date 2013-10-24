@@ -160,6 +160,7 @@
     startButton.backgroundColor  = [UIColor grayColor];
     startButton.frame = CGRectMake(0, ctv.frame.size.height + (frame.size.height - ctv.frame.size.height-MUSICTOOLVIEW_BUTTON_HEIGHT_AND_WEIGHT + MUSICTOOLVIEW_DISTANT)/2, MUSICTOOLVIEW_BUTTON_HEIGHT_AND_WEIGHT, MUSICTOOLVIEW_BUTTON_HEIGHT_AND_WEIGHT);
     [startButton addTarget:self action:@selector(playMusic:) forControlEvents:UIControlEventTouchUpInside];
+    startButton.selected = NO;
     [startButton setImage:[UIImage imageNamed:@"m1.png"] forState:UIControlStateNormal
      ];
     [self addSubview:startButton];
@@ -214,12 +215,8 @@ static float value;
 }
 -(void)myTimer:(id)arg
 {
-    //取得当前播放器已经播放的时间
-    //    mp3Player.duration取得总时间 单位是s
     float t = mp3Player.duration;
-    //    mp3Player.currentTime 当前播放的时间
     float t2 = mp3Player.currentTime;
-
     UISlider * slider = (UISlider *)[self viewWithTag:521];
     slider.value = t2/t;
 }
@@ -227,33 +224,26 @@ static float value;
 -(void)mp3Player:(NSString *)musicName
 {
     NSString *path = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"medias"] stringByAppendingPathComponent:musicName];
-    NSLog(@"path : %@",path);
-    //    1.取得mp3文件的绝对路径 ShangHaiTan.mp3
     NSURL * url = [NSURL fileURLWithPath:path];
-    //    url 表示文件的网址
-    //    把path做成统一网址
-    //    3.创建一个音乐播放器
-    //    根据url创建一个播放器
     mp3Player = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
 }
 
 static int pressIndexNum;
--(void)playMusic:(id)sender
+-(void)playMusic:(UIButton *)button
 {
-    if (pressIndexNum == 0)
+    button.selected = !button.selected;
+    if (button.selected && pressIndexNum == 0)
     {
-       //    准备播放
     [mp3Player prepareToPlay];
-    //    播放
     [mp3Player play];
     }
-    else if(pressIndexNum % 2 == 0 && pressIndexNum != 0)
+    else if(!button.selected)
     {
         UIButton *pauseButton = (UIButton *)[self viewWithTag:MUSICTOOLVIEW_STARTBUTTON_TAG];
         [pauseButton setImage:[UIImage imageNamed:@"n1.png"] forState:UIControlStateNormal];
         [pauseButton addTarget:self action:@selector(pauseClick:) forControlEvents:UIControlEventTouchUpInside];
     }
-    else if (pressIndexNum % 2 == 1)
+    else if (button.selected)
     {
         UIButton *continueButton = (UIButton *)[self viewWithTag:MUSICTOOLVIEW_STARTBUTTON_TAG];
         [continueButton setImage:[UIImage imageNamed:@"n2.png"] forState:UIControlStateNormal];
@@ -270,6 +260,11 @@ static int pressIndexNum;
 -(void)continueClick:(id)sender
 {
     [mp3Player play];
+}
+
+- (void)stop
+{
+[mp3Player pause];
 }
 
 @end

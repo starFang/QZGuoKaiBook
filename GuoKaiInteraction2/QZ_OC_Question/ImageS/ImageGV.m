@@ -156,12 +156,10 @@ static int indexTap;
 
 - (void)panBegan:(UIPanGestureRecognizer*)gestureRecognizer
 {
-    NSLog(@"PanBegan : 1");
     [self startState:gestureRecognizer];
 }
 - (void)panMoved:(UIPanGestureRecognizer*)gestureRecognizer
 {
-    NSLog(@"PanMoved : 2");
     CGPoint location = [gestureRecognizer locationInView:self];
     gestureRecognizer.view.center = CGPointMake(location.x +distancePoint.x,  location.y +distancePoint.y);
 }

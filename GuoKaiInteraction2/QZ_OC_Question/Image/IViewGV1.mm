@@ -95,7 +95,6 @@
         }
      }
     
-    NSLog(@"%@",[NSString stringWithUTF8String:pageRichTextImage->stTitle.strText.c_str()]);
     [p setFont:strFont];
     [p setSize:fontsize];
     UIFont *font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:33];

@@ -8,10 +8,11 @@
 
 #import "QZPageToolTipView.h"
 #import "MarkupParser.h"
-
+#import <QuartzCore/QuartzCore.h>
 @implementation QZPageToolTipView
 
 @synthesize ctv = _ctv;
+@synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -29,6 +30,7 @@
 
 - (void)composition
 {
+    return;
     [self createView];
     [self text];
     [self createPress];
@@ -43,18 +45,47 @@
                                 green:pToolTip->bgColor.rgbGreen/255.0
                                 blue:pToolTip->bgColor.rgbBlue/255.0
                                 alpha:pToolTip->bgColor.rgbAlpha/255.0];
+    
+    [textView.layer setShadowOffset:CGSizeMake(1, 1)];
+    [textView.layer setShadowRadius:10.0];
+    [textView.layer setShadowColor:[UIColor blackColor].CGColor];
+    [textView.layer setShadowOpacity:1.0];
     CGRect tRect;
     if (pToolTip->rect.X0 <= DW/2.0 && pToolTip->rect.Y0 <= DH/2.0)
     {
+        if (pToolTip->rect.X0 < 0)
+        {
+           tRect = CGRectMake(-pToolTip->rect.X0+20 ,SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        }else{
         tRect = CGRectMake(0,SFSH,pToolTip->nWidth,pToolTip->nHeight);
-    }else if (pToolTip->rect.X0 <= DW/2.0 && pToolTip->rect.Y0 > DH/2.0){
+        }
         
-        tRect = CGRectMake(0,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
+     }else if (pToolTip->rect.X0 <= DW/2.0 && pToolTip->rect.Y0 > DH/2.0){
+        
+        if (pToolTip->rect.X0 < 0)
+        {
+            tRect = CGRectMake(-pToolTip->rect.X0+20,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        }else{
+            tRect = CGRectMake(0,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        }
+        
     }else if(pToolTip->rect.X0 > DW/2.0 && pToolTip->rect.Y0 <= DH/2.0)
     {
-     tRect = CGRectMake(SFSW - pToolTip->nWidth,SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        if (pToolTip->rect.X1 > DW)
+        {
+          tRect = CGRectMake(SFSW - pToolTip->nWidth + (DW - pToolTip->rect.X1)-20,SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        }else{
+           tRect = CGRectMake(SFSW - pToolTip->nWidth,SFSH,pToolTip->nWidth,pToolTip->nHeight); 
+        }
+     
     }else{
-    tRect = CGRectMake(SFSW - pToolTip->nWidth,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        if (pToolTip->rect.X1 > DW)
+        {
+            tRect = CGRectMake(SFSW - pToolTip->nWidth + (DW - pToolTip->rect.X1)-20,-SFSH,pToolTip->nWidth,pToolTip->nHeight);
+        }else{
+         tRect = CGRectMake(SFSW - pToolTip->nWidth,-SFSH,pToolTip->nWidth,pToolTip->nHeight);   
+        }
+    
     }
     textView.frame = tRect;
     [self addSubview:textView];
@@ -126,9 +157,31 @@
                 break;
         }
     }
+    
+    BOOL isEqual;
+    for (int i = 0; i < [[UIFont familyNames] count]; i++)
+    {
+        if ([strFont isEqualToString:[[UIFont familyNames] objectAtIndex:i]])
+        {
+            isEqual = YES;
+            break;
+        }else{
+            isEqual = NO;
+        }
+    }
+    if (isEqual == NO)
+    {
+        [strFont setString:@"Arial Rounded MT Bold"];
+    }
+    else if( isEqual == YES && [strFont isEqualToString:@"Palatino"])
+    {
+        [strFont setString:@"Avenir"];
+    }
     [p setFont:strFont];
     [p setSize:fontsize];
-    UIFont *font = [UIFont fontWithName:strFont size:fontsize];
+    
+    
+    UIFont *font = [UIFont fontWithName:strFont size:fontsize*1.1];
     CGSize size = [string sizeWithFont:font constrainedToSize:CGSizeMake(textView.FSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByTruncatingTail];
     UILabel *label = [[UILabel alloc]init];
     label.frame = textView.bounds;
@@ -140,7 +193,7 @@
     [label release];
     
 //    暂时用UILabel显示
-//    self.ctv.frame  = CGRectMake(0, 0, textView.FSW , size.height);
+//    self.ctv.frame  = CGRectMake(0, 0, textView.FSW , textView.FSH);
 //    NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
 //    [self.ctv setAttString:attString];
 //    [textView addSubview:self.ctv];
@@ -169,13 +222,15 @@
 
 - (void)handleSingleTap:(UIButton *)btn
 {
+    [self.delegate closeOtherToolTip];
     btn.selected = !btn.selected;
     if (btn.selected)
     {
-        textView.hidden = NO;
+            textView.hidden = NO;
     }else{
-        textView.hidden = YES;
+            textView.hidden = YES;
     }
+    
 }
 
 - (void)closeTheTextViewWithToolTipView

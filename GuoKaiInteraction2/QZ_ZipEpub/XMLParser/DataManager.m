@@ -15,7 +15,7 @@
 {
     NSString *filepath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/content/contentDict.plist",bookName];
     NSFileManager * fileManager = [NSFileManager defaultManager];
-    NSString * contentFilePath = [DOCUMENT stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/content",bookName,bookName]];
+    NSString * contentFilePath = [DOCUMENT stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/content",bookName]];
     if (![fileManager contentsOfDirectoryAtPath:contentFilePath error:nil])
     {
         

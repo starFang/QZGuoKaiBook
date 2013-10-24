@@ -10,12 +10,11 @@
 #import "QZPageListView.h"
 
 @interface QZRootViewController : UIViewController
-<UIScrollViewDelegate,QZPageListViewDelegate>
+<QZPageListViewDelegate>
 {
-    UIScrollView *sc;
     NSMutableArray * arrayImage;
     NSInteger indexImage;
-    QZPageListView *pageListView;
+   
 }
 
 @end

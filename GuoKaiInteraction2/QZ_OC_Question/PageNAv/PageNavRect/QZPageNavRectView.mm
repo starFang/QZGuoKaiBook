@@ -33,7 +33,6 @@
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"pageIndex : %d",pNavRect->nPageIndex);
     [self.delegate skip:pNavRect->nPageIndex];
 }
 

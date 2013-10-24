@@ -2,6 +2,19 @@
 #define DOCUMENT [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 #define BOOKNAME @"GuoKai001"
 
+#pragma mark - 单页显示的TAG值
+#define TOOLTIP 40
+#define TOOLIMAGETIP 90
+#define NAVRECT 140
+#define NAVBUTTON 190
+#define VIDEO 240
+#define QUESTION 290
+#define IMAGE 340
+#define IMAGELIST 390
+#define VOICE 440
+#define TEXTROLL 490
+#define WEBLINK 540
+
 #pragma mark - 简单的替换
 #define SFSW self.frame.size.width
 #define SFSH self.frame.size.height

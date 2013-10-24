@@ -12,6 +12,8 @@
 
 @implementation MovieView
 
+@synthesize delegate;
+
 @synthesize lastRotation = _lastRotation;
 @synthesize scale = _scalel;
 @synthesize moviePlayer = _moviePlayer;
@@ -54,7 +56,7 @@
     [self initTitle:self.frame];
     [self initSelfInfo:self.frame];
     [self initPressPlay:self.frame];
-    [self loadMovie];
+    
     [self pressViewImage];
 }
 
@@ -123,9 +125,7 @@
                 break;
          }
     }
-    
-    NSLog(@" strFont : %@", strFont);
-    
+        
     BOOL isEqual;
     for (int i = 0; i < [[UIFont familyNames] count]; i++)
     {
@@ -139,11 +139,11 @@
     }
     if (isEqual == NO)
     {
-        [strFont setString:@"Arial Rounded MT Bold"];
+        [strFont setString:@"ArialMT"];
     }
     else if( isEqual == YES && [strFont isEqualToString:@"Palatino"])
     {
-        [strFont setString:@"Avenir"];
+        [strFont setString:@"ArialMT"];
     }
     [p setFont:strFont];
     [p setSize:fontsize];
@@ -195,7 +195,6 @@
     [self.fRView.layer setShadowColor:[UIColor clearColor].CGColor];
     [self.fRView.layer setShadowOpacity:0.0];
     [self addSubview:self.fRView];
-    
     isMovieBig = NO;
   }
 
@@ -232,11 +231,14 @@
 
 -(void)pressButton:(id)sender
 {
+//    return;
     [pressView sendSubviewToBack:self];
     pressView.alpha = 0;
     pressView.hidden = YES;
     [self.fRView bringSubviewToFront:self];
-    [self.moviePlayer play];
+//    [self.delegate newMovieView];
+    
+    [self loadMovie];
 }
 
 - (void)loadMovie
@@ -256,6 +258,8 @@
     [self.moviePlayer.view setFrame:self.fRView.bounds];
     self.moviePlayer.initialPlaybackTime = -1;
     [self.fRView addSubview:self.moviePlayer.view];
+    [self.moviePlayer prepareToPlay];
+    [self.moviePlayer play];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
@@ -279,7 +283,6 @@
 
 - (void)endStateTwoCase:(UIGestureRecognizer *)gestureRecognizer
 {
-    
     [self.moviePlayer setControlStyle:MPMovieControlStyleEmbedded];
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5f];
@@ -293,16 +296,6 @@
     isMovieBig = YES;
     self.backgroundColor = [UIColor clearColor];
     [UIView commitAnimations];
-    
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-    return  YES;
-}
-
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    return YES;
-}
 @end

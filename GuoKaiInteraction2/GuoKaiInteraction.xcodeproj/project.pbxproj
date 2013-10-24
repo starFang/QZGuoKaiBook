@@ -78,20 +78,17 @@
 		CE33E75818112C7E00DE0462 /* QZToolTipImageview.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE33E75718112C7E00DE0462 /* QZToolTipImageview.mm */; };
 		CE44F8EF18117C1700409A46 /* QZPageNavRectView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE44F8EE18117C1700409A46 /* QZPageNavRectView.mm */; };
 		CE44F8F518117C5700409A46 /* QZPageNavButtonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE44F8F418117C5700409A46 /* QZPageNavButtonView.mm */; };
-		CE657D0A1812700D006CA86F /* 17_12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE657D031812700D006CA86F /* 17_12.jpg */; };
 		CE657D0B1812700D006CA86F /* m1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE657D041812700D006CA86F /* m1.png */; };
 		CE657D0C1812700D006CA86F /* m2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE657D051812700D006CA86F /* m2.png */; };
 		CE657D0D1812700D006CA86F /* m3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE657D061812700D006CA86F /* m3.png */; };
 		CE657D0E1812700D006CA86F /* MusicToolView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D081812700D006CA86F /* MusicToolView.mm */; };
-		CE657D0F1812700D006CA86F /* ShangHaiTan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE657D091812700D006CA86F /* ShangHaiTan.mp3 */; };
 		CE657D111812702D006CA86F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE657D101812702C006CA86F /* AVFoundation.framework */; };
 		CE657D1C18127BBB006CA86F /* MovieView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D1718127BBB006CA86F /* MovieView.mm */; };
 		CE657D2018128356006CA86F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE657D1F18128356006CA86F /* MediaPlayer.framework */; };
 		CE657D27181285BE006CA86F /* GalleryView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D24181285BE006CA86F /* GalleryView.mm */; };
-		CE657D2B181286BA006CA86F /* IViewGV.m in Sources */ = {isa = PBXBuildFile; fileRef = CE657D2A181286BA006CA86F /* IViewGV.m */; };
 		CE657D311812E1C4006CA86F /* ImageGV1.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D2E1812E1C4006CA86F /* ImageGV1.mm */; };
 		CE657D321812E1C4006CA86F /* IViewGV1.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D301812E1C4006CA86F /* IViewGV1.mm */; };
-		CE657D351812E2F7006CA86F /* ImageGV.m in Sources */ = {isa = PBXBuildFile; fileRef = CE657D341812E2F7006CA86F /* ImageGV.m */; };
+		CE9693A81818B9E5001F8873 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9693A71818B9E4001F8873 /* QuartzCore.framework */; };
 		CEFB425B18125C4600988117 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425818125C4600988117 /* CTView.m */; };
 		CEFB425C18125C4600988117 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425A18125C4600988117 /* MarkupParser.m */; };
 		CEFB425E18125C5A00988117 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFB425D18125C5A00988117 /* CoreText.framework */; };
@@ -225,27 +222,22 @@
 		CE44F8EE18117C1700409A46 /* QZPageNavRectView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QZPageNavRectView.mm; sourceTree = "<group>"; };
 		CE44F8F318117C5700409A46 /* QZPageNavButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZPageNavButtonView.h; sourceTree = "<group>"; };
 		CE44F8F418117C5700409A46 /* QZPageNavButtonView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QZPageNavButtonView.mm; sourceTree = "<group>"; };
-		CE657D031812700D006CA86F /* 17_12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17_12.jpg; sourceTree = "<group>"; };
 		CE657D041812700D006CA86F /* m1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m1.png; sourceTree = "<group>"; };
 		CE657D051812700D006CA86F /* m2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m2.png; sourceTree = "<group>"; };
 		CE657D061812700D006CA86F /* m3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m3.png; sourceTree = "<group>"; };
 		CE657D071812700D006CA86F /* MusicToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicToolView.h; sourceTree = "<group>"; };
 		CE657D081812700D006CA86F /* MusicToolView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MusicToolView.mm; sourceTree = "<group>"; };
-		CE657D091812700D006CA86F /* ShangHaiTan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShangHaiTan.mp3; sourceTree = "<group>"; };
 		CE657D101812702C006CA86F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CE657D1618127BBB006CA86F /* MovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieView.h; sourceTree = "<group>"; };
 		CE657D1718127BBB006CA86F /* MovieView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MovieView.mm; sourceTree = "<group>"; };
 		CE657D1F18128356006CA86F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CE657D23181285BE006CA86F /* GalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryView.h; sourceTree = "<group>"; };
 		CE657D24181285BE006CA86F /* GalleryView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GalleryView.mm; sourceTree = "<group>"; };
-		CE657D29181286BA006CA86F /* IViewGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IViewGV.h; sourceTree = "<group>"; };
-		CE657D2A181286BA006CA86F /* IViewGV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IViewGV.m; sourceTree = "<group>"; };
 		CE657D2D1812E1C4006CA86F /* ImageGV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGV1.h; sourceTree = "<group>"; };
 		CE657D2E1812E1C4006CA86F /* ImageGV1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageGV1.mm; sourceTree = "<group>"; };
 		CE657D2F1812E1C4006CA86F /* IViewGV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IViewGV1.h; sourceTree = "<group>"; };
 		CE657D301812E1C4006CA86F /* IViewGV1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IViewGV1.mm; sourceTree = "<group>"; };
-		CE657D331812E2F7006CA86F /* ImageGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGV.h; sourceTree = "<group>"; };
-		CE657D341812E2F7006CA86F /* ImageGV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGV.m; sourceTree = "<group>"; };
+		CE9693A71818B9E4001F8873 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFB425718125C4600988117 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
 		CEFB425818125C4600988117 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
 		CEFB425918125C4600988117 /* MarkupParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkupParser.h; sourceTree = "<group>"; };
@@ -277,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9693A81818B9E5001F8873 /* QuartzCore.framework in Frameworks */,
 				CEFE7A4618160F58000BF21E /* libz.1.2.5.dylib in Frameworks */,
 				CE657D2018128356006CA86F /* MediaPlayer.framework in Frameworks */,
 				CE657D111812702D006CA86F /* AVFoundation.framework in Frameworks */,
@@ -326,6 +319,7 @@
 		CE0EB1C1180FBA1F0043BA33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9693A71818B9E4001F8873 /* QuartzCore.framework */,
 				CE0EB1C2180FBA1F0043BA33 /* UIKit.framework */,
 				CE0EB1C4180FBA1F0043BA33 /* Foundation.framework */,
 				CE0EB1C6180FBA1F0043BA33 /* CoreGraphics.framework */,
@@ -603,13 +597,11 @@
 			isa = PBXGroup;
 			children = (
 				CE657D101812702C006CA86F /* AVFoundation.framework */,
-				CE657D031812700D006CA86F /* 17_12.jpg */,
 				CE657D041812700D006CA86F /* m1.png */,
 				CE657D051812700D006CA86F /* m2.png */,
 				CE657D061812700D006CA86F /* m3.png */,
 				CE657D071812700D006CA86F /* MusicToolView.h */,
 				CE657D081812700D006CA86F /* MusicToolView.mm */,
-				CE657D091812700D006CA86F /* ShangHaiTan.mp3 */,
 			);
 			name = music8;
 			path = music;
@@ -645,12 +637,8 @@
 		CE657D22181285BE006CA86F /* ImageS */ = {
 			isa = PBXGroup;
 			children = (
-				CE657D331812E2F7006CA86F /* ImageGV.h */,
-				CE657D341812E2F7006CA86F /* ImageGV.m */,
 				CE657D23181285BE006CA86F /* GalleryView.h */,
 				CE657D24181285BE006CA86F /* GalleryView.mm */,
-				CE657D29181286BA006CA86F /* IViewGV.h */,
-				CE657D2A181286BA006CA86F /* IViewGV.m */,
 			);
 			path = ImageS;
 			sourceTree = "<group>";
@@ -800,11 +788,9 @@
 				CE33E7151810D85200DE0462 /* 2_3.jpg in Resources */,
 				CE33E7161810D85200DE0462 /* 2_4.jpg in Resources */,
 				CE33E7171810D85200DE0462 /* 2_5.jpg in Resources */,
-				CE657D0A1812700D006CA86F /* 17_12.jpg in Resources */,
 				CE657D0B1812700D006CA86F /* m1.png in Resources */,
 				CE657D0C1812700D006CA86F /* m2.png in Resources */,
 				CE657D0D1812700D006CA86F /* m3.png in Resources */,
-				CE657D0F1812700D006CA86F /* ShangHaiTan.mp3 in Resources */,
 				CEFE7A811816AAD1000BF21E /* GuoKai001.zip in Resources */,
 				CE03BE291817BDF700534403 /* play.png in Resources */,
 			);
@@ -859,10 +845,8 @@
 				CE657D0E1812700D006CA86F /* MusicToolView.mm in Sources */,
 				CE657D1C18127BBB006CA86F /* MovieView.mm in Sources */,
 				CE657D27181285BE006CA86F /* GalleryView.mm in Sources */,
-				CE657D2B181286BA006CA86F /* IViewGV.m in Sources */,
 				CE657D311812E1C4006CA86F /* ImageGV1.mm in Sources */,
 				CE657D321812E1C4006CA86F /* IViewGV1.mm in Sources */,
-				CE657D351812E2F7006CA86F /* ImageGV.m in Sources */,
 				CEFE7A3E18160F2F000BF21E /* ioapi.c in Sources */,
 				CEFE7A3F18160F2F000BF21E /* mztools.c in Sources */,
 				CEFE7A4018160F2F000BF21E /* unzip.c in Sources */,

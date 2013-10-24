@@ -10,7 +10,7 @@
 
 #import "QZAppDelegate.h"
 #import "QZRootViewController.h"
-
+#import "QZParsingAndExtractingData.h"
 @implementation QZAppDelegate
 
 - (void)dealloc
@@ -24,6 +24,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    QZParsingAndExtractingData * pEData = [[QZParsingAndExtractingData alloc]init];
+    [pEData initIncomingData:BOOKNAME];
+    [pEData composition];
+    [pEData release];
+    
     [[UIApplication sharedApplication]setStatusBarHidden:NO];
     QZRootViewController * qzRVC = [[QZRootViewController alloc]init];
     [self.window setRootViewController:qzRVC];

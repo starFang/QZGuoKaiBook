@@ -10,7 +10,14 @@
 #import <MediaPlayer/MediaPlayer.h>
 #include "QZEpubPageObjs.h"
 #import "CTView.h"
-@interface MovieView : UIView<UIGestureRecognizerDelegate>
+
+@protocol MoviePlayDelegate <NSObject>
+
+- (void)newMovieView;
+
+@end
+
+@interface MovieView : UIView<MoviePlayDelegate>
 {
     PageVideo *pVideo;
     CTView *ctv;
@@ -18,15 +25,9 @@
     
 //    标题
     UILabel * musicTitle;
-    
-    UIRotationGestureRecognizer *_rotationGesture;
-    UIPanGestureRecognizer *_panGesture;
-    UIPinchGestureRecognizer *_pinchGesture;
-    
     CGRect startRect;
     CGRect endRect;
     CGPoint firstPoint;
-    
     UIView *fRView;
     CGPoint distancePoint;
     
@@ -40,12 +41,14 @@
     
 //    是否是最大屏幕显示
     BOOL isMovieBig;
-}
+    
+    id<MoviePlayDelegate>delegate;
+ }
 @property (nonatomic, retain) MPMoviePlayerController *moviePlayer;
 @property (nonatomic, retain) UIView *fRView;
 @property (nonatomic, assign) CGFloat lastRotation;
 @property (nonatomic, assign) CGFloat scale;
-
+@property (nonatomic, assign) id<MoviePlayDelegate>delegate;
 
 - (void)initIncomingData:(PageVideo *)pageVideo;
 - (void)composition;
