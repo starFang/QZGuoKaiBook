@@ -44,7 +44,11 @@ const PageBaseElements* QZEpubPage::HitTestElement(QZ_POS pt)
 QZ_ReturnCode QZEpubPage::LoadData(string strPath)
 {
 	QZEpubPageLoadConf pageLoad;
-	pageLoad.Load(strPath.c_str());
+	if (QZR_EPUBLIB_OPENFILE_FAIL == pageLoad.Load(strPath.c_str()))
+	{
+		return QZR_EPUBLIB_OPENFILE_FAIL;
+	}
+
 	pageLoad.GetPostionList(m_vPosList);
 	m_vObjectiveList = pageLoad.GetDrawableObjList();
 	m_strContent = pageLoad.GetContentStr();
