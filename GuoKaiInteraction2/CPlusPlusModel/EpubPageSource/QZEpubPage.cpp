@@ -127,10 +127,10 @@ std::string QZEpubPage::GetCharacterByIndex(QZ_LONG lIndex)
 		return "";
 	}
 
-	if (length < m_strContent.length())
+	if (length < (QZ_LONG)m_strContent.length())
 	{
 		QZ_LONG lenChar = GetCharSize(m_strContent[length]);
-		if (length + lenChar - 1< m_strContent.length())
+		if (length + lenChar - 1< (QZ_LONG)m_strContent.length())
 		{
 			return m_strContent.substr(length,lenChar);
 		}
@@ -165,7 +165,7 @@ QZ_LONG QZEpubPage::GetCharacterBeginPos(QZ_LONG index)
 
 	for (QZ_LONG nCount = 0; nCount < index;nCount++)
 	{
-		if (length < m_strContent.length())
+		if (length < (QZ_LONG)m_strContent.length())
 		{
 			length += GetCharSize(m_strContent[length]);
 		}

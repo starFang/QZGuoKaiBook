@@ -375,7 +375,7 @@ string Base16Encode(string str)
 {
     string strTem = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string strResult;
-    for (long i = 0; i < str.length(); i++)
+    for (long i = 0; i < (long)str.length(); i++)
     {
         short int val = str[i];
         short int val1 = (val >> 4)&15;
