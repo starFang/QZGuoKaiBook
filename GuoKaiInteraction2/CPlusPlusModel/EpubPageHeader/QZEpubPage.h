@@ -74,8 +74,20 @@ public:
 	//-------------------------------------------
 	vector<const PageBaseElements*> GetDrawableObjList();
 
+
+	//通过字符index获取该字符
+	std::string GetCharacterByIndex(QZ_LONG lIndex);
+
+	//通过字符开始index和字符结束index获取字符串
+	std::string GetCharacterPiece(QZ_LONG lBegin,QZ_LONG lEnd);
 private:
 	QZ_BOOL HasVerticalIntersection(QZ_BOX rect1,QZ_BOX rect2);
+
+	//通过首字节获取字符长度
+	QZ_UINT GetCharSize(QZ_BYTE ch);
+
+	//通过字符index获取字符在字符串中的起始位置
+	QZ_LONG GetCharacterBeginPos(QZ_LONG index);
 };
 
 #endif //_QZKERNEL_EPUBKIT_EPUBLIB_EXPORT_QZEPUBPAGE_H_
