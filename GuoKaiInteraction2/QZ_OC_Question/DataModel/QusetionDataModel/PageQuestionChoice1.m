@@ -17,7 +17,9 @@
 - (void)dealloc
 {
     [self.vChoices release];
+    self.vChoices = nil;
     [self.vAnswer release];
+    self.vAnswer = nil;
     [super dealloc];
 }
 

@@ -1,0 +1,101 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>测验 4.5</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 自我检测</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_5">
+	<rect>196 103 825 653</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<questionobj type="selector">
+<question>【单选题】张雪门认为清末效仿日本办理的蒙养院的目标是（     ）</question>
+<options>
+<option>培养宗教信徒</option>
+<option>培养士大夫</option>
+<option>发展儿童个性</option>
+<option>改造中华民族</option>
+</options>
+<answers>
+<answer>1</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】下列哪个选项不属于张雪门幼稚园行为课程的观点（     ）</question>
+<options>
+<option>课程应根据于儿童自己直接的经验</option>
+<option>课程实施时，应打破学科的界限</option>
+<option>课程应兼顾社会和个体两方面的需求</option>
+<option>编制课程时应该系统、清晰，分科明确</option>
+</options>
+<answers>
+<answer>3</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】张雪门提出的幼稚园实习进行步骤正确的是（     ）</question>
+<options>
+<option>参观-辅导-见习-试教</option>
+<option>辅导-参观-见习-试教</option>
+<option>参观-见习-试教-辅导</option>
+<option>见习-参观-试教-辅导</option>
+</options>
+<answers>
+<answer>2</answer>
+</answers>
+</questionobj> 
+</epubPageObject> 
+</position>
+
+<position type="obj_type_3">
+	<rect>915 623 1002 718</rect>
+<epubPageObject>
+<text>您已经学完了“近代学前教育理论流派——张雪门”的所有内容。接下来，我们提供了三种路径，请您进行选择：</text>
+<width>538</width>
+<height>198</height>
+<subbutton>
+<chapter>2</chapter>
+<page>37</page>
+<text>复习本知识点</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>1</page>
+<text>返回导页图</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>38</page>
+<text>进入下一知识点</text>
+</subbutton>
+</epubPageObject>
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

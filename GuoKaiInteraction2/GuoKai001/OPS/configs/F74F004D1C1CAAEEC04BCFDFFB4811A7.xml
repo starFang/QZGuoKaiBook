@@ -1,0 +1,171 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>画廊 6.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 国外蒙台梭利幼儿园教育活动</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="simpletext">
+<text></text>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>18</font_size>
+<font_family>Helvetica</font_family>
+<text>录音 6.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>18</font_size>
+<font_family>Helvetica</font_family>
+<text> 热点话题——给蒙氏教育降降温</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>40 20 196 75</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_2">
+	<rect>351 20 501 74</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>56</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_2">
+	<rect>506 20 656 74</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>57</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_7">
+	<rect>59 158 499 578</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<iscomment>false</iscomment>
+<issmallimage>true</issmallimage>
+<images>
+<image> 
+<path>c2p55case1.jpg</path>
+<comment><richTextIndex>1</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case2.jpg</path>
+<comment><richTextIndex>2</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case3.jpg</path>
+<comment><richTextIndex>3</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case4.jpg</path>
+<comment><richTextIndex>4</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case5.jpg</path>
+<comment><richTextIndex>5</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case6.jpg</path>
+<comment><richTextIndex>6</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case7.jpg</path>
+<comment><richTextIndex>7</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case8.jpg</path>
+<comment><richTextIndex>8</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case9.jpg</path>
+<comment><richTextIndex>9</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p55case10.jpg</path>
+<comment><richTextIndex>10</richTextIndex></comment>
+</image> 
+</images>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_8">
+	<rect>525 153 965 239</rect>
+<epubPageObject>
+<path>c2p55热点话题.mp3</path>
+<title><richTextIndex>11</richTextIndex></title>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_9">
+	<rect>525 242 965 571</rect>
+<epubPageObject>
+<content>webPage20131020035522.html</content>
+</epubPageObject> 
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

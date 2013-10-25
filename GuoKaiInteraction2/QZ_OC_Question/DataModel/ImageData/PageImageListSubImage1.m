@@ -17,8 +17,7 @@
 {
     [self.strImgPath release];
     [self.stImgComment release];
-    self.stImgComment = nil;
-    self.strImgPath = nil;
+ 
     [super dealloc];
 }
 @end

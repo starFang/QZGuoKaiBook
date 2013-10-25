@@ -1,0 +1,950 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>画廊 4.2</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 儿童之家实施的学前教育的内容</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#dc1603</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>肌肉训练：</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>3 至6 岁是练习肌肉最重要的时期。通过肌肉练习，不仅有益于健康，而且可以训练儿童动作灵活，培养儿童独立自由的性格与能力，使他们养成适应周围环境的本 领。</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#dc1603</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>实际生活练习：</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>清洁练习，包括个人卫生和环境卫生、秩序、安静、会话。</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#dc1603</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>感官训练：</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>3-6岁是感官发展的关键时期，对幼儿的每一种感官进行单独的训练，可以使他们的感觉更加敏锐，观察力得到发展，从而为高级智力活动打下基础。</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#dc1603</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>初步知识教育：</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Palatino</font_family>
+<text>蒙台梭利认为，幼儿具有学习初步知识的能力，可以教他们学习阅读、书写和计算。（1）书写先于阅读练习；（2）学习计算时，先利用幼儿接触到的物体练习计算，再用图形数字进行认数和记数练习，最后教幼儿学会1到20的加减乘除。</text>
+<is_italic>true</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>图像 4.3</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 学前教育教师</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_text">
+	<rect>46 94 69 122</rect>
+	<index>0</index>
+</position>
+<position type="obj_type_text">
+	<rect>70 94 93 122</rect>
+	<index>1</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 94 117 122</rect>
+	<index>2</index>
+</position>
+<position type="obj_type_text">
+	<rect>118 94 141 122</rect>
+	<index>3</index>
+</position>
+<position type="obj_type_text">
+	<rect>142 94 165 122</rect>
+	<index>4</index>
+</position>
+<position type="obj_type_text">
+	<rect>166 94 176 122</rect>
+	<index>5</index>
+</position>
+<position type="obj_type_text">
+	<rect>177 94 200 122</rect>
+	<index>6</index>
+</position>
+<position type="obj_type_text">
+	<rect>201 94 224 122</rect>
+	<index>7</index>
+</position>
+<position type="obj_type_text">
+	<rect>225 94 248 122</rect>
+	<index>8</index>
+</position>
+<position type="obj_type_text">
+	<rect>249 94 272 122</rect>
+	<index>9</index>
+</position>
+<position type="obj_type_text">
+	<rect>273 94 296 122</rect>
+	<index>10</index>
+</position>
+<position type="obj_type_text">
+	<rect>297 94 320 122</rect>
+	<index>11</index>
+</position>
+<position type="obj_type_text">
+	<rect>321 94 344 122</rect>
+	<index>12</index>
+</position>
+<position type="obj_type_text">
+	<rect>345 94 355 122</rect>
+	<index>13</index>
+</position>
+<position type="obj_type_text">
+	<rect>86 141 105 162</rect>
+	<index>14</index>
+</position>
+<position type="obj_type_text">
+	<rect>106 141 125 162</rect>
+	<index>15</index>
+</position>
+<position type="obj_type_text">
+	<rect>126 141 145 162</rect>
+	<index>16</index>
+</position>
+<position type="obj_type_text">
+	<rect>146 141 165 162</rect>
+	<index>17</index>
+</position>
+<position type="obj_type_text">
+	<rect>166 141 185 162</rect>
+	<index>18</index>
+</position>
+<position type="obj_type_text">
+	<rect>186 141 205 162</rect>
+	<index>19</index>
+</position>
+<position type="obj_type_text">
+	<rect>206 141 225 162</rect>
+	<index>20</index>
+</position>
+<position type="obj_type_text">
+	<rect>226 141 245 162</rect>
+	<index>21</index>
+</position>
+<position type="obj_type_text">
+	<rect>246 141 265 162</rect>
+	<index>22</index>
+</position>
+<position type="obj_type_text">
+	<rect>266 141 285 162</rect>
+	<index>23</index>
+</position>
+<position type="obj_type_text">
+	<rect>286 141 305 162</rect>
+	<index>24</index>
+</position>
+<position type="obj_type_text">
+	<rect>306 141 325 162</rect>
+	<index>25</index>
+</position>
+<position type="obj_type_text">
+	<rect>326 141 345 162</rect>
+	<index>26</index>
+</position>
+<position type="obj_type_text">
+	<rect>346 141 365 162</rect>
+	<index>27</index>
+</position>
+<position type="obj_type_text">
+	<rect>366 141 385 162</rect>
+	<index>28</index>
+</position>
+<position type="obj_type_text">
+	<rect>386 141 405 162</rect>
+	<index>29</index>
+</position>
+<position type="obj_type_text">
+	<rect>406 141 425 162</rect>
+	<index>30</index>
+</position>
+<position type="obj_type_text">
+	<rect>426 141 445 162</rect>
+	<index>31</index>
+</position>
+<position type="obj_type_text">
+	<rect>446 141 465 162</rect>
+	<index>32</index>
+</position>
+<position type="obj_type_text">
+	<rect>46 180 65 201</rect>
+	<index>33</index>
+</position>
+<position type="obj_type_text">
+	<rect>66 180 85 201</rect>
+	<index>34</index>
+</position>
+<position type="obj_type_text">
+	<rect>86 180 105 201</rect>
+	<index>35</index>
+</position>
+<position type="obj_type_text">
+	<rect>106 180 125 201</rect>
+	<index>36</index>
+</position>
+<position type="obj_type_text">
+	<rect>126 180 145 201</rect>
+	<index>37</index>
+</position>
+<position type="obj_type_text">
+	<rect>146 180 165 201</rect>
+	<index>38</index>
+</position>
+<position type="obj_type_text">
+	<rect>166 180 185 201</rect>
+	<index>39</index>
+</position>
+<position type="obj_type_text">
+	<rect>186 180 205 201</rect>
+	<index>40</index>
+</position>
+<position type="obj_type_text">
+	<rect>206 180 225 201</rect>
+	<index>41</index>
+</position>
+<position type="obj_type_text">
+	<rect>226 180 245 201</rect>
+	<index>42</index>
+</position>
+<position type="obj_type_text">
+	<rect>246 180 265 201</rect>
+	<index>43</index>
+</position>
+<position type="obj_type_text">
+	<rect>266 180 285 201</rect>
+	<index>44</index>
+</position>
+<position type="obj_type_text">
+	<rect>286 180 305 201</rect>
+	<index>45</index>
+</position>
+<position type="obj_type_text">
+	<rect>306 180 325 201</rect>
+	<index>46</index>
+</position>
+<position type="obj_type_text">
+	<rect>326 180 345 201</rect>
+	<index>47</index>
+</position>
+<position type="obj_type_text">
+	<rect>346 180 365 201</rect>
+	<index>48</index>
+</position>
+<position type="obj_type_text">
+	<rect>366 180 385 201</rect>
+	<index>49</index>
+</position>
+<position type="obj_type_text">
+	<rect>386 180 405 201</rect>
+	<index>50</index>
+</position>
+<position type="obj_type_text">
+	<rect>406 180 425 201</rect>
+	<index>51</index>
+</position>
+<position type="obj_type_text">
+	<rect>426 180 445 201</rect>
+	<index>52</index>
+</position>
+<position type="obj_type_text">
+	<rect>446 180 465 201</rect>
+	<index>53</index>
+</position>
+<position type="obj_type_text">
+	<rect>46 219 65 240</rect>
+	<index>54</index>
+</position>
+<position type="obj_type_text">
+	<rect>66 219 85 240</rect>
+	<index>55</index>
+</position>
+<position type="obj_type_text">
+	<rect>86 219 105 240</rect>
+	<index>56</index>
+</position>
+<position type="obj_type_text">
+	<rect>106 219 125 240</rect>
+	<index>57</index>
+</position>
+<position type="obj_type_text">
+	<rect>126 219 145 240</rect>
+	<index>58</index>
+</position>
+<position type="obj_type_text">
+	<rect>146 219 165 240</rect>
+	<index>59</index>
+</position>
+<position type="obj_type_text">
+	<rect>166 219 185 240</rect>
+	<index>60</index>
+</position>
+<position type="obj_type_text">
+	<rect>186 219 205 240</rect>
+	<index>61</index>
+</position>
+<position type="obj_type_text">
+	<rect>206 219 225 240</rect>
+	<index>62</index>
+</position>
+<position type="obj_type_text">
+	<rect>226 219 245 240</rect>
+	<index>63</index>
+</position>
+<position type="obj_type_text">
+	<rect>246 219 265 240</rect>
+	<index>64</index>
+</position>
+<position type="obj_type_7">
+	<rect>92 264 438 687</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<iscomment>true</iscomment>
+<issmallimage>true</issmallimage>
+<images>
+<image> 
+<path>c2p22肌肉训练2.jpg</path>
+<comment><richTextIndex>1</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p22实际生活练习1.jpg</path>
+<comment><richTextIndex>2</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p22感官训练1.jpg</path>
+<comment><richTextIndex>3</richTextIndex></comment>
+</image> 
+<image> 
+<path>c2p22初步知识教育1.jpg</path>
+<comment><richTextIndex>4</richTextIndex></comment>
+</image> 
+</images>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_text">
+	<rect>544 94 567 122</rect>
+	<index>65</index>
+</position>
+<position type="obj_type_text">
+	<rect>568 94 591 122</rect>
+	<index>66</index>
+</position>
+<position type="obj_type_text">
+	<rect>592 94 615 122</rect>
+	<index>67</index>
+</position>
+<position type="obj_type_text">
+	<rect>616 94 639 122</rect>
+	<index>68</index>
+</position>
+<position type="obj_type_text">
+	<rect>640 94 663 122</rect>
+	<index>69</index>
+</position>
+<position type="obj_type_text">
+	<rect>664 94 674 122</rect>
+	<index>70</index>
+</position>
+<position type="obj_type_text">
+	<rect>675 94 698 122</rect>
+	<index>71</index>
+</position>
+<position type="obj_type_text">
+	<rect>699 94 722 122</rect>
+	<index>72</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 94 746 122</rect>
+	<index>73</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 94 770 122</rect>
+	<index>74</index>
+</position>
+<position type="obj_type_text">
+	<rect>771 94 794 122</rect>
+	<index>75</index>
+</position>
+<position type="obj_type_text">
+	<rect>795 94 818 122</rect>
+	<index>76</index>
+</position>
+<position type="obj_type_text">
+	<rect>819 94 829 122</rect>
+	<index>77</index>
+</position>
+<position type="obj_type_6">
+	<rect>542 135 836 467</rect>
+<epubPageObject>
+<title><richTextIndex>5</richTextIndex></title>
+<path>c2p22学前教育教师.jpg</path>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_text">
+	<rect>875 167 895 188</rect>
+	<index>78</index>
+</position>
+<position type="obj_type_text">
+	<rect>896.25 167 916.25 188</rect>
+	<index>79</index>
+</position>
+<position type="obj_type_text">
+	<rect>917.5 167 937.5 188</rect>
+	<index>80</index>
+</position>
+<position type="obj_type_text">
+	<rect>938.75 167 958.75 188</rect>
+	<index>81</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 167 979 188</rect>
+	<index>82</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 206 863 227</rect>
+	<index>83</index>
+</position>
+<position type="obj_type_text">
+	<rect>863.75 206 891.75 227</rect>
+	<index>84</index>
+</position>
+<position type="obj_type_text">
+	<rect>892.5 206 920.5 227</rect>
+	<index>85</index>
+</position>
+<position type="obj_type_text">
+	<rect>921.25 206 930.25 227</rect>
+	<index>86</index>
+</position>
+<position type="obj_type_text">
+	<rect>931.25 206 959.25 227</rect>
+	<index>87</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 206 979 227</rect>
+	<index>88</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 245 857 266</rect>
+	<index>89</index>
+</position>
+<position type="obj_type_text">
+	<rect>858 245 867 266</rect>
+	<index>90</index>
+</position>
+<position type="obj_type_text">
+	<rect>868 245 890 266</rect>
+	<index>91</index>
+</position>
+<position type="obj_type_text">
+	<rect>891 245 913 266</rect>
+	<index>92</index>
+</position>
+<position type="obj_type_text">
+	<rect>914 245 936 266</rect>
+	<index>93</index>
+</position>
+<position type="obj_type_text">
+	<rect>937 245 959 266</rect>
+	<index>94</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 245 979 266</rect>
+	<index>95</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 284 855 305</rect>
+	<index>96</index>
+</position>
+<position type="obj_type_text">
+	<rect>856 284 876 305</rect>
+	<index>97</index>
+</position>
+<position type="obj_type_text">
+	<rect>877 284 897 305</rect>
+	<index>98</index>
+</position>
+<position type="obj_type_text">
+	<rect>898 284 917 305</rect>
+	<index>99</index>
+</position>
+<position type="obj_type_text">
+	<rect>918 284 938 305</rect>
+	<index>100</index>
+</position>
+<position type="obj_type_text">
+	<rect>939 284 959 305</rect>
+	<index>101</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 284 979 305</rect>
+	<index>102</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 323 855 344</rect>
+	<index>103</index>
+</position>
+<position type="obj_type_text">
+	<rect>855.83332824707 323 875.83332824707 344</rect>
+	<index>104</index>
+</position>
+<position type="obj_type_text">
+	<rect>876.66667175293 323 896.66667175293 344</rect>
+	<index>105</index>
+</position>
+<position type="obj_type_text">
+	<rect>897.5 323 917.5 344</rect>
+	<index>106</index>
+</position>
+<position type="obj_type_text">
+	<rect>918.33332824707 323 938.33332824707 344</rect>
+	<index>107</index>
+</position>
+<position type="obj_type_text">
+	<rect>939.16667175293 323 959.16667175293 344</rect>
+	<index>108</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 323 979 344</rect>
+	<index>109</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 362 855 383</rect>
+	<index>110</index>
+</position>
+<position type="obj_type_text">
+	<rect>856 362 876 383</rect>
+	<index>111</index>
+</position>
+<position type="obj_type_text">
+	<rect>877 362 897 383</rect>
+	<index>112</index>
+</position>
+<position type="obj_type_text">
+	<rect>898 362 918 383</rect>
+	<index>113</index>
+</position>
+<position type="obj_type_text">
+	<rect>919 362 939 383</rect>
+	<index>114</index>
+</position>
+<position type="obj_type_text">
+	<rect>940 362 959 383</rect>
+	<index>115</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 362 979 383</rect>
+	<index>116</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 401 855 422</rect>
+	<index>117</index>
+</position>
+<position type="obj_type_text">
+	<rect>855.83332824707 401 875.83332824707 422</rect>
+	<index>118</index>
+</position>
+<position type="obj_type_text">
+	<rect>876.66667175293 401 896.66667175293 422</rect>
+	<index>119</index>
+</position>
+<position type="obj_type_text">
+	<rect>897.5 401 917.5 422</rect>
+	<index>120</index>
+</position>
+<position type="obj_type_text">
+	<rect>918.33332824707 401 938.33332824707 422</rect>
+	<index>121</index>
+</position>
+<position type="obj_type_text">
+	<rect>939.16667175293 401 959.16667175293 422</rect>
+	<index>122</index>
+</position>
+<position type="obj_type_text">
+	<rect>960 401 979 422</rect>
+	<index>123</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 440 854 461</rect>
+	<index>124</index>
+</position>
+<position type="obj_type_text">
+	<rect>855 440 874 461</rect>
+	<index>125</index>
+</position>
+<position type="obj_type_text">
+	<rect>875 440 894 461</rect>
+	<index>126</index>
+</position>
+<position type="obj_type_text">
+	<rect>895 440 914 461</rect>
+	<index>127</index>
+</position>
+<position type="obj_type_text">
+	<rect>915 440 934 461</rect>
+	<index>128</index>
+</position>
+<position type="obj_type_text">
+	<rect>935 440 954 461</rect>
+	<index>129</index>
+</position>
+<position type="obj_type_text">
+	<rect>955 440 974 461</rect>
+	<index>130</index>
+</position>
+<position type="obj_type_text">
+	<rect>544 480 563 501</rect>
+	<index>131</index>
+</position>
+<position type="obj_type_text">
+	<rect>564 480 583 501</rect>
+	<index>132</index>
+</position>
+<position type="obj_type_text">
+	<rect>584 480 603 501</rect>
+	<index>133</index>
+</position>
+<position type="obj_type_text">
+	<rect>604 480 623 501</rect>
+	<index>134</index>
+</position>
+<position type="obj_type_text">
+	<rect>624 480 643 501</rect>
+	<index>135</index>
+</position>
+<position type="obj_type_text">
+	<rect>644 480 663 501</rect>
+	<index>136</index>
+</position>
+<position type="obj_type_text">
+	<rect>664 480 683 501</rect>
+	<index>137</index>
+</position>
+<position type="obj_type_text">
+	<rect>684 480 703 501</rect>
+	<index>138</index>
+</position>
+<position type="obj_type_text">
+	<rect>704 480 723 501</rect>
+	<index>139</index>
+</position>
+<position type="obj_type_text">
+	<rect>724 480 743 501</rect>
+	<index>140</index>
+</position>
+<position type="obj_type_text">
+	<rect>744 480 763 501</rect>
+	<index>141</index>
+</position>
+<position type="obj_type_text">
+	<rect>764 480 783 501</rect>
+	<index>142</index>
+</position>
+<position type="obj_type_text">
+	<rect>784 480 803 501</rect>
+	<index>143</index>
+</position>
+<position type="obj_type_text">
+	<rect>804 480 823 501</rect>
+	<index>144</index>
+</position>
+<position type="obj_type_text">
+	<rect>824 480 843 501</rect>
+	<index>145</index>
+</position>
+<position type="obj_type_text">
+	<rect>844 480 863 501</rect>
+	<index>146</index>
+</position>
+<position type="obj_type_text">
+	<rect>864 480 883 501</rect>
+	<index>147</index>
+</position>
+<position type="obj_type_text">
+	<rect>884 480 903 501</rect>
+	<index>148</index>
+</position>
+<position type="obj_type_text">
+	<rect>904 480 923 501</rect>
+	<index>149</index>
+</position>
+<position type="obj_type_text">
+	<rect>924 480 943 501</rect>
+	<index>150</index>
+</position>
+<position type="obj_type_text">
+	<rect>944 480 963 501</rect>
+	<index>151</index>
+</position>
+<position type="obj_type_text">
+	<rect>964 480 983 501</rect>
+	<index>152</index>
+</position>
+<position type="obj_type_text">
+	<rect>544 519 563 540</rect>
+	<index>153</index>
+</position>
+<position type="obj_type_text">
+	<rect>564 519 583 540</rect>
+	<index>154</index>
+</position>
+<position type="obj_type_text">
+	<rect>584 519 603 540</rect>
+	<index>155</index>
+</position>
+<position type="obj_type_text">
+	<rect>604 519 623 540</rect>
+	<index>156</index>
+</position>
+<position type="obj_type_text">
+	<rect>624 519 643 540</rect>
+	<index>157</index>
+</position>
+<position type="obj_type_text">
+	<rect>644 519 663 540</rect>
+	<index>158</index>
+</position>
+<position type="obj_type_text">
+	<rect>664 519 683 540</rect>
+	<index>159</index>
+</position>
+<position type="obj_type_text">
+	<rect>684 519 703 540</rect>
+	<index>160</index>
+</position>
+<position type="obj_type_text">
+	<rect>704 519 723 540</rect>
+	<index>161</index>
+</position>
+<position type="obj_type_text">
+	<rect>724 519 743 540</rect>
+	<index>162</index>
+</position>
+<position type="obj_type_text">
+	<rect>744 519 763 540</rect>
+	<index>163</index>
+</position>
+<position type="obj_type_text">
+	<rect>764 519 783 540</rect>
+	<index>164</index>
+</position>
+<position type="obj_type_text">
+	<rect>784 519 803 540</rect>
+	<index>165</index>
+</position>
+<position type="obj_type_text">
+	<rect>804 519 823 540</rect>
+	<index>166</index>
+</position>
+<position type="obj_type_text">
+	<rect>824 519 843 540</rect>
+	<index>167</index>
+</position>
+<position type="obj_type_text">
+	<rect>844 519 863 540</rect>
+	<index>168</index>
+</position>
+<position type="obj_type_text">
+	<rect>864 519 883 540</rect>
+	<index>169</index>
+</position>
+<position type="obj_type_text">
+	<rect>884 519 903 540</rect>
+	<index>170</index>
+</position>
+<position type="obj_type_text">
+	<rect>904 519 923 540</rect>
+	<index>171</index>
+</position>
+<position type="obj_type_text">
+	<rect>924 519 943 540</rect>
+	<index>172</index>
+</position>
+<position type="obj_type_text">
+	<rect>944 519 963 540</rect>
+	<index>173</index>
+</position>
+<position type="obj_type_text">
+	<rect>964 519 983 540</rect>
+	<index>174</index>
+</position>
+<position type="obj_type_text">
+	<rect>544 558 563 579</rect>
+	<index>175</index>
+</position>
+<position type="obj_type_text">
+	<rect>564 558 583 579</rect>
+	<index>176</index>
+</position>
+<position type="obj_type_text">
+	<rect>584 558 603 579</rect>
+	<index>177</index>
+</position>
+<position type="obj_type_text">
+	<rect>604 558 623 579</rect>
+	<index>178</index>
+</position>
+<position type="obj_type_text">
+	<rect>624 558 643 579</rect>
+	<index>179</index>
+</position>
+<position type="obj_type_text">
+	<rect>644 558 663 579</rect>
+	<index>180</index>
+</position>
+<position type="obj_type_text">
+	<rect>664 558 683 579</rect>
+	<index>181</index>
+</position>
+<position type="obj_type_text">
+	<rect>684 558 703 579</rect>
+	<index>182</index>
+</position>
+<position type="obj_type_text">
+	<rect>704 558 723 579</rect>
+	<index>183</index>
+</position>
+<position type="obj_type_text">
+	<rect>724 558 743 579</rect>
+	<index>184</index>
+</position>
+<position type="obj_type_text">
+	<rect>744 558 763 579</rect>
+	<index>185</index>
+</position>
+<position type="obj_type_text">
+	<rect>764 558 783 579</rect>
+	<index>186</index>
+</position>
+<position type="obj_type_text">
+	<rect>784 558 803 579</rect>
+	<index>187</index>
+</position>
+<position type="obj_type_text">
+	<rect>804 558 823 579</rect>
+	<index>188</index>
+</position>
+<position type="obj_type_text">
+	<rect>824 558 843 579</rect>
+	<index>189</index>
+</position>
+<position type="obj_type_text">
+	<rect>844 558 863 579</rect>
+	<index>190</index>
+</position>
+<position type="obj_type_text">
+	<rect>864 558 883 579</rect>
+	<index>191</index>
+</position>
+<position type="obj_type_text">
+	<rect>884 558 903 579</rect>
+	<index>192</index>
+</position>
+<position type="obj_type_text">
+	<rect>904 558 923 579</rect>
+	<index>193</index>
+</position>
+<position type="obj_type_text">
+	<rect>924 558 943 579</rect>
+	<index>194</index>
+</position>
+<position type="obj_type_text">
+	<rect>944 558 963 579</rect>
+	<index>195</index>
+</position>
+<position type="obj_type_text">
+	<rect>964 558 983 579</rect>
+	<index>196</index>
+</position>
+<position type="obj_type_text">
+	<rect>544 597 563 618</rect>
+	<index>197</index>
+</position>
+<position type="obj_type_text">
+	<rect>564 597 583 618</rect>
+	<index>198</index>
+</position>
+</positions>
+<epubPageText>蒙台梭利论“学前教育的内容”蒙台梭利在儿童之家对幼儿所实施的教育包括四个方面，即肌肉训练、实际生活练习、感官训练以及初步知识教育。蒙台梭利论“学前教育教师”儿童之家的教师称“指导员”。在蒙台梭利看来，教师是儿童活动的观察者、引导者，教师的任务是观察和引导。在蒙台梭利看来，幼儿要有自由活动的空间，才能使他的精神胚胎得到充分发展，所以，幼儿教师最紧迫的任务就是去了解儿童，把他从所有的障碍中解放出来。</epubPageText>
+</epubPage>
+</epubChapter>

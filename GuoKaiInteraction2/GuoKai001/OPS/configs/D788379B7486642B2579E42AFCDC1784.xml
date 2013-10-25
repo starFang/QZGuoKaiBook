@@ -1,0 +1,149 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>测验 7.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 本章测试</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>40 23 190 77</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_2">
+	<rect>196 23 346 77</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>55</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_2">
+	<rect>505 23 655 77</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>57</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_5">
+	<rect>152 144 871 660</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<questionobj type="selector">
+<question>【单选题】欧文学前教育理论流派是以欧文等人的幼儿学校理论的传播和应用为特征而形成的，理论代表是欧文和 （     ）。</question>
+<options>
+<option>福禄贝尔</option>
+<option>柏拉图</option>
+<option>蒙台梭利</option>
+<option>怀尔德斯平</option>
+</options>
+<answers>
+<answer>3</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】为进步主义学前教育理论流派的形成提供思想指导的是 （     ）。</question>
+<options>
+<option>杜威</option>
+<option>福禄贝尔</option>
+<option>蒙台梭利</option>
+<option>欧文</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】苏联学前教育理论流派的代表是乌索娃、福辽莉娜、（     ）。 </question>
+<options>
+<option>列宁</option>
+<option>克鲁普斯卡娅</option>
+<option>蒙台梭利</option>
+<option>欧文</option>
+</options>
+<answers>
+<answer>1</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】近现代中国学前教育理论流派的典型代表人物是 （     ）。 </question>
+<options>
+<option>陶行知</option>
+<option>张宗麟</option>
+<option>陈鹤琴</option>
+<option>张雪门</option>
+</options>
+<answers>
+<answer>2</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】提出教育的本质是使人们能够自由自觉地发展和表现他的本质即上帝的精神的教育家是 （     ）。 </question>
+<options>
+<option>福禄贝尔</option>
+<option>柏拉图</option>
+<option>蒙台梭利</option>
+<option>怀尔德斯平</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】福禄贝尔幼儿园教育的基本原则是 （     ）。 </question>
+<options>
+<option>自我活动</option>
+<option>艺术活动</option>
+<option>学习活动</option>
+<option>保育活动</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】蒙台梭利倾向于强调环境的主导作用以及有机体与环境之间的相互作用是在她的（     ）。 </question>
+<options>
+<option>晚年</option>
+<option>早年</option>
+<option>中年</option>
+<option>不确定</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+</epubPageObject> 
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

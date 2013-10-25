@@ -32,8 +32,8 @@
     UIButton *rightButton;
     NSArray *array;
     QZEpubPage pageObj;
-    
     id<QZPageListViewDelegate>delegate;
+    
 //    用来记录各种交互的数量的TAG值
     NSInteger indexToolTip;
     NSInteger indexToolImageTip;
@@ -47,9 +47,13 @@
     NSInteger indexTextRoll;
     NSInteger indexWebLink;
     
+//    控制播放视屏的参数
+    BOOL isPlay;
+    
 }
 @property (nonatomic, copy)NSString *pageName;
 @property (nonatomic, assign)id<QZPageListViewDelegate>delegate;
+@property (nonatomic, assign) NSInteger pageNumbder;
 - (void)composition;
 - (void)initIncomingData:(NSArray *)imageName;
 

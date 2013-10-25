@@ -23,9 +23,11 @@
     UIView *textView;
     UIButton *button;
     id<QZPageToolTipDelegate>delegate;
+    BOOL isApp;
 }
 @property (nonatomic, retain) CTView *ctv;
 @property (nonatomic, assign) id<QZPageToolTipDelegate>delegate;
+
 - (void)composition;
 - (void)initIncomingData:(PageToolTip *)pageToolTip;
 - (void)closeTheTextViewWithToolTipView;

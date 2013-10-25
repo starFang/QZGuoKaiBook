@@ -1,0 +1,444 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>影片 5.2</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 维果茨基</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_text">
+	<rect>94 92 113 113</rect>
+	<index>0</index>
+</position>
+<position type="obj_type_text">
+	<rect>114 92 133 113</rect>
+	<index>1</index>
+</position>
+<position type="obj_type_text">
+	<rect>134 92 153 113</rect>
+	<index>2</index>
+</position>
+<position type="obj_type_text">
+	<rect>154 92 173 113</rect>
+	<index>3</index>
+</position>
+<position type="obj_type_text">
+	<rect>174 92 193 113</rect>
+	<index>4</index>
+</position>
+<position type="obj_type_text">
+	<rect>194 92 213 113</rect>
+	<index>5</index>
+</position>
+<position type="obj_type_text">
+	<rect>214 92 233 113</rect>
+	<index>6</index>
+</position>
+<position type="obj_type_text">
+	<rect>234 92 253 113</rect>
+	<index>7</index>
+</position>
+<position type="obj_type_text">
+	<rect>254 92 273 113</rect>
+	<index>8</index>
+</position>
+<position type="obj_type_text">
+	<rect>274 92 293 113</rect>
+	<index>9</index>
+</position>
+<position type="obj_type_text">
+	<rect>294 92 313 113</rect>
+	<index>10</index>
+</position>
+<position type="obj_type_text">
+	<rect>314 92 333 113</rect>
+	<index>11</index>
+</position>
+<position type="obj_type_text">
+	<rect>334 92 353 113</rect>
+	<index>12</index>
+</position>
+<position type="obj_type_text">
+	<rect>354 92 373 113</rect>
+	<index>13</index>
+</position>
+<position type="obj_type_text">
+	<rect>374 92 393 113</rect>
+	<index>14</index>
+</position>
+<position type="obj_type_text">
+	<rect>394 92 413 113</rect>
+	<index>15</index>
+</position>
+<position type="obj_type_text">
+	<rect>414 92 433 113</rect>
+	<index>16</index>
+</position>
+<position type="obj_type_text">
+	<rect>434 92 453 113</rect>
+	<index>17</index>
+</position>
+<position type="obj_type_text">
+	<rect>454 92 473 113</rect>
+	<index>18</index>
+</position>
+<position type="obj_type_text">
+	<rect>474 92 493 113</rect>
+	<index>19</index>
+</position>
+<position type="obj_type_text">
+	<rect>494 92 513 113</rect>
+	<index>20</index>
+</position>
+<position type="obj_type_text">
+	<rect>514 92 533 113</rect>
+	<index>21</index>
+</position>
+<position type="obj_type_text">
+	<rect>534 92 553 113</rect>
+	<index>22</index>
+</position>
+<position type="obj_type_text">
+	<rect>554 92 573 113</rect>
+	<index>23</index>
+</position>
+<position type="obj_type_text">
+	<rect>574 92 593 113</rect>
+	<index>24</index>
+</position>
+<position type="obj_type_text">
+	<rect>594 92 613 113</rect>
+	<index>25</index>
+</position>
+<position type="obj_type_text">
+	<rect>614 92 633 113</rect>
+	<index>26</index>
+</position>
+<position type="obj_type_text">
+	<rect>634 92 653 113</rect>
+	<index>27</index>
+</position>
+<position type="obj_type_text">
+	<rect>654 92 673 113</rect>
+	<index>28</index>
+</position>
+<position type="obj_type_text">
+	<rect>674 92 693 113</rect>
+	<index>29</index>
+</position>
+<position type="obj_type_text">
+	<rect>694 92 713 113</rect>
+	<index>30</index>
+</position>
+<position type="obj_type_text">
+	<rect>714 92 733 113</rect>
+	<index>31</index>
+</position>
+<position type="obj_type_text">
+	<rect>734 92 743 113</rect>
+	<index>32</index>
+</position>
+<position type="obj_type_text">
+	<rect>744 92 763 113</rect>
+	<index>33</index>
+</position>
+<position type="obj_type_text">
+	<rect>764 92 783 113</rect>
+	<index>34</index>
+</position>
+<position type="obj_type_text">
+	<rect>784 92 803 113</rect>
+	<index>35</index>
+</position>
+<position type="obj_type_text">
+	<rect>804 92 823 113</rect>
+	<index>36</index>
+</position>
+<position type="obj_type_text">
+	<rect>824 92 843 113</rect>
+	<index>37</index>
+</position>
+<position type="obj_type_text">
+	<rect>844 92 863 113</rect>
+	<index>38</index>
+</position>
+<position type="obj_type_text">
+	<rect>864 92 873 113</rect>
+	<index>39</index>
+</position>
+<position type="obj_type_text">
+	<rect>874 92 893 113</rect>
+	<index>40</index>
+</position>
+<position type="obj_type_text">
+	<rect>894 92 913 113</rect>
+	<index>41</index>
+</position>
+<position type="obj_type_text">
+	<rect>914 92 933 113</rect>
+	<index>42</index>
+</position>
+<position type="obj_type_text">
+	<rect>934 92 943 113</rect>
+	<index>43</index>
+</position>
+<position type="obj_type_text">
+	<rect>944 92 963 113</rect>
+	<index>44</index>
+</position>
+<position type="obj_type_text">
+	<rect>54 131 73 152</rect>
+	<index>45</index>
+</position>
+<position type="obj_type_text">
+	<rect>74 131 93 152</rect>
+	<index>46</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 131 113 152</rect>
+	<index>47</index>
+</position>
+<position type="obj_type_text">
+	<rect>114 131 133 152</rect>
+	<index>48</index>
+</position>
+<position type="obj_type_text">
+	<rect>134 131 143 152</rect>
+	<index>49</index>
+</position>
+<position type="obj_type_text">
+	<rect>144 131 163 152</rect>
+	<index>50</index>
+</position>
+<position type="obj_type_text">
+	<rect>164 131 183 152</rect>
+	<index>51</index>
+</position>
+<position type="obj_type_text">
+	<rect>184 131 203 152</rect>
+	<index>52</index>
+</position>
+<position type="obj_type_text">
+	<rect>204 131 223 152</rect>
+	<index>53</index>
+</position>
+<position type="obj_type_text">
+	<rect>224 131 243 152</rect>
+	<index>54</index>
+</position>
+<position type="obj_type_text">
+	<rect>244 131 253 152</rect>
+	<index>55</index>
+</position>
+<position type="obj_type_text">
+	<rect>254 131 273 152</rect>
+	<index>56</index>
+</position>
+<position type="obj_type_text">
+	<rect>274 131 293 152</rect>
+	<index>57</index>
+</position>
+<position type="obj_type_text">
+	<rect>294 131 313 152</rect>
+	<index>58</index>
+</position>
+<position type="obj_type_text">
+	<rect>314 131 333 152</rect>
+	<index>59</index>
+</position>
+<position type="obj_type_text">
+	<rect>334 131 343 152</rect>
+	<index>60</index>
+</position>
+<position type="obj_type_text">
+	<rect>344 131 363 152</rect>
+	<index>61</index>
+</position>
+<position type="obj_type_text">
+	<rect>364 131 383 152</rect>
+	<index>62</index>
+</position>
+<position type="obj_type_text">
+	<rect>384 131 403 152</rect>
+	<index>63</index>
+</position>
+<position type="obj_type_text">
+	<rect>404 131 423 152</rect>
+	<index>64</index>
+</position>
+<position type="obj_type_text">
+	<rect>424 131 443 152</rect>
+	<index>65</index>
+</position>
+<position type="obj_type_text">
+	<rect>444 131 463 152</rect>
+	<index>66</index>
+</position>
+<position type="obj_type_text">
+	<rect>464 131 483 152</rect>
+	<index>67</index>
+</position>
+<position type="obj_type_text">
+	<rect>484 131 503 152</rect>
+	<index>68</index>
+</position>
+<position type="obj_type_text">
+	<rect>504 131 523 152</rect>
+	<index>69</index>
+</position>
+<position type="obj_type_text">
+	<rect>524 131 543 152</rect>
+	<index>70</index>
+</position>
+<position type="obj_type_text">
+	<rect>544 131 563 152</rect>
+	<index>71</index>
+</position>
+<position type="obj_type_text">
+	<rect>564 131 583 152</rect>
+	<index>72</index>
+</position>
+<position type="obj_type_text">
+	<rect>584 131 603 152</rect>
+	<index>73</index>
+</position>
+<position type="obj_type_text">
+	<rect>604 131 623 152</rect>
+	<index>74</index>
+</position>
+<position type="obj_type_text">
+	<rect>624 131 643 152</rect>
+	<index>75</index>
+</position>
+<position type="obj_type_text">
+	<rect>644 131 663 152</rect>
+	<index>76</index>
+</position>
+<position type="obj_type_text">
+	<rect>664 131 683 152</rect>
+	<index>77</index>
+</position>
+<position type="obj_type_text">
+	<rect>684 131 703 152</rect>
+	<index>78</index>
+</position>
+<position type="obj_type_text">
+	<rect>704 131 723 152</rect>
+	<index>79</index>
+</position>
+<position type="obj_type_text">
+	<rect>724 131 743 152</rect>
+	<index>80</index>
+</position>
+<position type="obj_type_text">
+	<rect>744 131 763 152</rect>
+	<index>81</index>
+</position>
+<position type="obj_type_text">
+	<rect>764 131 783 152</rect>
+	<index>82</index>
+</position>
+<position type="obj_type_text">
+	<rect>784 131 803 152</rect>
+	<index>83</index>
+</position>
+<position type="obj_type_text">
+	<rect>804 131 823 152</rect>
+	<index>84</index>
+</position>
+<position type="obj_type_text">
+	<rect>824 131 843 152</rect>
+	<index>85</index>
+</position>
+<position type="obj_type_text">
+	<rect>844 131 863 152</rect>
+	<index>86</index>
+</position>
+<position type="obj_type_text">
+	<rect>864 131 883 152</rect>
+	<index>87</index>
+</position>
+<position type="obj_type_text">
+	<rect>884 131 903 152</rect>
+	<index>88</index>
+</position>
+<position type="obj_type_text">
+	<rect>904 131 923 152</rect>
+	<index>89</index>
+</position>
+<position type="obj_type_text">
+	<rect>924 131 943 152</rect>
+	<index>90</index>
+</position>
+<position type="obj_type_text">
+	<rect>944 131 963 152</rect>
+	<index>91</index>
+</position>
+<position type="obj_type_text">
+	<rect>54 170 73 191</rect>
+	<index>92</index>
+</position>
+<position type="obj_type_text">
+	<rect>74 170 93 191</rect>
+	<index>93</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 170 113 191</rect>
+	<index>94</index>
+</position>
+<position type="obj_type_text">
+	<rect>114 170 133 191</rect>
+	<index>95</index>
+</position>
+<position type="obj_type_text">
+	<rect>134 170 153 191</rect>
+	<index>96</index>
+</position>
+<position type="obj_type_text">
+	<rect>154 170 173 191</rect>
+	<index>97</index>
+</position>
+<position type="obj_type_text">
+	<rect>174 170 193 191</rect>
+	<index>98</index>
+</position>
+<position type="obj_type_text">
+	<rect>194 170 213 191</rect>
+	<index>99</index>
+</position>
+<position type="obj_type_4">
+	<rect>253 239 771 685</rect>
+<epubPageObject>
+<title>
+<richTextIndex>0</richTextIndex></title>
+<path>c2p41维果茨基1.mp4</path>
+<startimage>c2p41维果茨基1.png</startimage>
+</epubPageObject>
+</position>
+
+</positions>
+<epubPageText>前苏联心理学家维果茨基也是结构主义的重要代表，他提出了儿童发展的“社会建构理论”和儿童“最近发展区”假说，倡导“支架教学”。在教育领域，以布鲁纳结构主义教育思想为代表，强调知识的结构，倡导发现学习法。</epubPageText>
+</epubPage>
+</epubChapter>

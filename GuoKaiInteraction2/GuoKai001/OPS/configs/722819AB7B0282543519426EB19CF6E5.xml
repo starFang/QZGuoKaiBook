@@ -1,0 +1,1801 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_text">
+	<rect>39 89 62 117</rect>
+	<index>0</index>
+</position>
+<position type="obj_type_text">
+	<rect>63 89 86 117</rect>
+	<index>1</index>
+</position>
+<position type="obj_type_text">
+	<rect>87 89 110 117</rect>
+	<index>2</index>
+</position>
+<position type="obj_type_text">
+	<rect>111 89 121 117</rect>
+	<index>3</index>
+</position>
+<position type="obj_type_text">
+	<rect>122 89 145 117</rect>
+	<index>4</index>
+</position>
+<position type="obj_type_text">
+	<rect>146 89 169 117</rect>
+	<index>5</index>
+</position>
+<position type="obj_type_text">
+	<rect>170 89 180 117</rect>
+	<index>6</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 131 98 152</rect>
+	<index>7</index>
+</position>
+<position type="obj_type_text">
+	<rect>99 131 118 152</rect>
+	<index>8</index>
+</position>
+<position type="obj_type_text">
+	<rect>119 131 138 152</rect>
+	<index>9</index>
+</position>
+<position type="obj_type_text">
+	<rect>139 131 158 152</rect>
+	<index>10</index>
+</position>
+<position type="obj_type_text">
+	<rect>159 131 178 152</rect>
+	<index>11</index>
+</position>
+<position type="obj_type_text">
+	<rect>179 131 198 152</rect>
+	<index>12</index>
+</position>
+<position type="obj_type_text">
+	<rect>199 131 218 152</rect>
+	<index>13</index>
+</position>
+<position type="obj_type_text">
+	<rect>219 131 238 152</rect>
+	<index>14</index>
+</position>
+<position type="obj_type_text">
+	<rect>239 131 258 152</rect>
+	<index>15</index>
+</position>
+<position type="obj_type_text">
+	<rect>259 131 278 152</rect>
+	<index>16</index>
+</position>
+<position type="obj_type_text">
+	<rect>279 131 298 152</rect>
+	<index>17</index>
+</position>
+<position type="obj_type_text">
+	<rect>299 131 318 152</rect>
+	<index>18</index>
+</position>
+<position type="obj_type_text">
+	<rect>319 131 338 152</rect>
+	<index>19</index>
+</position>
+<position type="obj_type_text">
+	<rect>339 131 358 152</rect>
+	<index>20</index>
+</position>
+<position type="obj_type_text">
+	<rect>359 131 378 152</rect>
+	<index>21</index>
+</position>
+<position type="obj_type_text">
+	<rect>379 131 398 152</rect>
+	<index>22</index>
+</position>
+<position type="obj_type_text">
+	<rect>399 131 418 152</rect>
+	<index>23</index>
+</position>
+<position type="obj_type_text">
+	<rect>419 131 438 152</rect>
+	<index>24</index>
+</position>
+<position type="obj_type_text">
+	<rect>439 131 458 152</rect>
+	<index>25</index>
+</position>
+<position type="obj_type_text">
+	<rect>459 131 478 152</rect>
+	<index>26</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 170 58 191</rect>
+	<index>27</index>
+</position>
+<position type="obj_type_text">
+	<rect>59 170 78 191</rect>
+	<index>28</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 170 98 191</rect>
+	<index>29</index>
+</position>
+<position type="obj_type_text">
+	<rect>99 170 118 191</rect>
+	<index>30</index>
+</position>
+<position type="obj_type_text">
+	<rect>119 170 138 191</rect>
+	<index>31</index>
+</position>
+<position type="obj_type_text">
+	<rect>139 170 158 191</rect>
+	<index>32</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 209 88 230</rect>
+	<index>33</index>
+</position>
+<position type="obj_type_text">
+	<rect>89 209 93 230</rect>
+	<index>34</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 209 113 230</rect>
+	<index>35</index>
+</position>
+<position type="obj_type_text">
+	<rect>114 209 133 230</rect>
+	<index>36</index>
+</position>
+<position type="obj_type_text">
+	<rect>134 209 153 230</rect>
+	<index>37</index>
+</position>
+<position type="obj_type_text">
+	<rect>154 209 173 230</rect>
+	<index>38</index>
+</position>
+<position type="obj_type_text">
+	<rect>174 209 193 230</rect>
+	<index>39</index>
+</position>
+<position type="obj_type_text">
+	<rect>194 209 213 230</rect>
+	<index>40</index>
+</position>
+<position type="obj_type_text">
+	<rect>214 209 233 230</rect>
+	<index>41</index>
+</position>
+<position type="obj_type_text">
+	<rect>234 209 253 230</rect>
+	<index>42</index>
+</position>
+<position type="obj_type_text">
+	<rect>254 209 273 230</rect>
+	<index>43</index>
+</position>
+<position type="obj_type_text">
+	<rect>274 209 293 230</rect>
+	<index>44</index>
+</position>
+<position type="obj_type_text">
+	<rect>294 209 313 230</rect>
+	<index>45</index>
+</position>
+<position type="obj_type_text">
+	<rect>314 209 333 230</rect>
+	<index>46</index>
+</position>
+<position type="obj_type_text">
+	<rect>334 209 353 230</rect>
+	<index>47</index>
+</position>
+<position type="obj_type_text">
+	<rect>354 209 373 230</rect>
+	<index>48</index>
+</position>
+<position type="obj_type_text">
+	<rect>374 209 393 230</rect>
+	<index>49</index>
+</position>
+<position type="obj_type_text">
+	<rect>394 209 413 230</rect>
+	<index>50</index>
+</position>
+<position type="obj_type_text">
+	<rect>414 209 433 230</rect>
+	<index>51</index>
+</position>
+<position type="obj_type_text">
+	<rect>434 209 453 230</rect>
+	<index>52</index>
+</position>
+<position type="obj_type_text">
+	<rect>454 209 473 230</rect>
+	<index>53</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 248 88 269</rect>
+	<index>54</index>
+</position>
+<position type="obj_type_text">
+	<rect>89 248 93 269</rect>
+	<index>55</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 248 113 269</rect>
+	<index>56</index>
+</position>
+<position type="obj_type_text">
+	<rect>114 248 133 269</rect>
+	<index>57</index>
+</position>
+<position type="obj_type_text">
+	<rect>134 248 153 269</rect>
+	<index>58</index>
+</position>
+<position type="obj_type_text">
+	<rect>154 248 173 269</rect>
+	<index>59</index>
+</position>
+<position type="obj_type_text">
+	<rect>174 248 193 269</rect>
+	<index>60</index>
+</position>
+<position type="obj_type_text">
+	<rect>194 248 213 269</rect>
+	<index>61</index>
+</position>
+<position type="obj_type_text">
+	<rect>214 248 233 269</rect>
+	<index>62</index>
+</position>
+<position type="obj_type_text">
+	<rect>234 248 253 269</rect>
+	<index>63</index>
+</position>
+<position type="obj_type_text">
+	<rect>254 248 273 269</rect>
+	<index>64</index>
+</position>
+<position type="obj_type_text">
+	<rect>274 248 293 269</rect>
+	<index>65</index>
+</position>
+<position type="obj_type_text">
+	<rect>294 248 313 269</rect>
+	<index>66</index>
+</position>
+<position type="obj_type_text">
+	<rect>314 248 333 269</rect>
+	<index>67</index>
+</position>
+<position type="obj_type_text">
+	<rect>334 248 353 269</rect>
+	<index>68</index>
+</position>
+<position type="obj_type_text">
+	<rect>354 248 373 269</rect>
+	<index>69</index>
+</position>
+<position type="obj_type_text">
+	<rect>374 248 393 269</rect>
+	<index>70</index>
+</position>
+<position type="obj_type_text">
+	<rect>394 248 413 269</rect>
+	<index>71</index>
+</position>
+<position type="obj_type_text">
+	<rect>414 248 433 269</rect>
+	<index>72</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 288 62 316</rect>
+	<index>73</index>
+</position>
+<position type="obj_type_text">
+	<rect>63 288 86 316</rect>
+	<index>74</index>
+</position>
+<position type="obj_type_text">
+	<rect>87 288 110 316</rect>
+	<index>75</index>
+</position>
+<position type="obj_type_text">
+	<rect>111 288 134 316</rect>
+	<index>76</index>
+</position>
+<position type="obj_type_text">
+	<rect>135 288 158 316</rect>
+	<index>77</index>
+</position>
+<position type="obj_type_text">
+	<rect>159 288 182 316</rect>
+	<index>78</index>
+</position>
+<position type="obj_type_text">
+	<rect>183 288 206 316</rect>
+	<index>79</index>
+</position>
+<position type="obj_type_text">
+	<rect>207 288 230 316</rect>
+	<index>80</index>
+</position>
+<position type="obj_type_text">
+	<rect>231 288 254 316</rect>
+	<index>81</index>
+</position>
+<position type="obj_type_text">
+	<rect>255 288 278 316</rect>
+	<index>82</index>
+</position>
+<position type="obj_type_text">
+	<rect>279 288 302 316</rect>
+	<index>83</index>
+</position>
+<position type="obj_type_text">
+	<rect>303 288 326 316</rect>
+	<index>84</index>
+</position>
+<position type="obj_type_text">
+	<rect>327 288 350 316</rect>
+	<index>85</index>
+</position>
+<position type="obj_type_text">
+	<rect>351 288 374 316</rect>
+	<index>86</index>
+</position>
+<position type="obj_type_text">
+	<rect>375 288 398 316</rect>
+	<index>87</index>
+</position>
+<position type="obj_type_text">
+	<rect>399 288 422 316</rect>
+	<index>88</index>
+</position>
+<position type="obj_type_text">
+	<rect>423 288 446 316</rect>
+	<index>89</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 327 103 348</rect>
+	<index>90</index>
+</position>
+<position type="obj_type_text">
+	<rect>103.63333129883 327 127.63333129883 348</rect>
+	<index>91</index>
+</position>
+<position type="obj_type_text">
+	<rect>128.2833404541 327 152.2833404541 348</rect>
+	<index>92</index>
+</position>
+<position type="obj_type_text">
+	<rect>152.91667175293 327 176.91667175293 348</rect>
+	<index>93</index>
+</position>
+<position type="obj_type_text">
+	<rect>177.56666564941 327 201.56666564941 348</rect>
+	<index>94</index>
+</position>
+<position type="obj_type_text">
+	<rect>202.19999694824 327 226.19999694824 348</rect>
+	<index>95</index>
+</position>
+<position type="obj_type_text">
+	<rect>226.85000610352 327 235.85000610352 348</rect>
+	<index>96</index>
+</position>
+<position type="obj_type_text">
+	<rect>236.85000610352 327 260.85000610352 348</rect>
+	<index>97</index>
+</position>
+<position type="obj_type_text">
+	<rect>261.5 327 285.5 348</rect>
+	<index>98</index>
+</position>
+<position type="obj_type_text">
+	<rect>286.13333129883 327 310.13333129883 348</rect>
+	<index>99</index>
+</position>
+<position type="obj_type_text">
+	<rect>310.78332519531 327 319.78332519531 348</rect>
+	<index>100</index>
+</position>
+<position type="obj_type_text">
+	<rect>320.78332519531 327 344.78332519531 348</rect>
+	<index>101</index>
+</position>
+<position type="obj_type_text">
+	<rect>345.41668701172 327 369.41668701172 348</rect>
+	<index>102</index>
+</position>
+<position type="obj_type_text">
+	<rect>370.06665039062 327 389.06665039062 348</rect>
+	<index>103</index>
+</position>
+<position type="obj_type_text">
+	<rect>390.06665039062 327 414.06665039062 348</rect>
+	<index>104</index>
+</position>
+<position type="obj_type_text">
+	<rect>414.70001220703 327 438.70001220703 348</rect>
+	<index>105</index>
+</position>
+<position type="obj_type_text">
+	<rect>439.35000610352 327 463.35000610352 348</rect>
+	<index>106</index>
+</position>
+<position type="obj_type_text">
+	<rect>464 327 483 348</rect>
+	<index>107</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 366 58 387</rect>
+	<index>108</index>
+</position>
+<position type="obj_type_text">
+	<rect>59 366 70 387</rect>
+	<index>109</index>
+</position>
+<position type="obj_type_text">
+	<rect>71.016662597656 366 78.016662597656 387</rect>
+	<index>110</index>
+</position>
+<position type="obj_type_text">
+	<rect>78.550003051758 366 88.550003051758 387</rect>
+	<index>111</index>
+</position>
+<position type="obj_type_text">
+	<rect>89.466659545898 366 93.466659545898 387</rect>
+	<index>112</index>
+</position>
+<position type="obj_type_text">
+	<rect>94.133331298828 366 103.13333129883 387</rect>
+	<index>113</index>
+</position>
+<position type="obj_type_text">
+	<rect>103.69999694824 366 111.69999694824 387</rect>
+	<index>114</index>
+</position>
+<position type="obj_type_text">
+	<rect>112.56666564941 366 118.56666564941 387</rect>
+	<index>115</index>
+</position>
+<position type="obj_type_text">
+	<rect>119.08332824707 366 138.08332824707 387</rect>
+	<index>116</index>
+</position>
+<position type="obj_type_text">
+	<rect>139.08332824707 366 158.08332824707 387</rect>
+	<index>117</index>
+</position>
+<position type="obj_type_text">
+	<rect>159.39999389648 366 178.39999389648 387</rect>
+	<index>118</index>
+</position>
+<position type="obj_type_text">
+	<rect>179.73333740234 366 198.73333740234 387</rect>
+	<index>119</index>
+</position>
+<position type="obj_type_text">
+	<rect>199.73333740234 366 218.73333740234 387</rect>
+	<index>120</index>
+</position>
+<position type="obj_type_text">
+	<rect>220.06666564941 366 239.06666564941 387</rect>
+	<index>121</index>
+</position>
+<position type="obj_type_text">
+	<rect>240.38333129883 366 259.38333129883 387</rect>
+	<index>122</index>
+</position>
+<position type="obj_type_text">
+	<rect>260.7166595459 366 279.7166595459 387</rect>
+	<index>123</index>
+</position>
+<position type="obj_type_text">
+	<rect>281.05000305176 366 300.05000305176 387</rect>
+	<index>124</index>
+</position>
+<position type="obj_type_text">
+	<rect>301.36666870117 366 320.36666870117 387</rect>
+	<index>125</index>
+</position>
+<position type="obj_type_text">
+	<rect>321.70001220703 366 340.70001220703 387</rect>
+	<index>126</index>
+</position>
+<position type="obj_type_text">
+	<rect>342.03332519531 366 361.03332519531 387</rect>
+	<index>127</index>
+</position>
+<position type="obj_type_text">
+	<rect>362.35000610352 366 381.35000610352 387</rect>
+	<index>128</index>
+</position>
+<position type="obj_type_text">
+	<rect>382.68334960938 366 401.68334960938 387</rect>
+	<index>129</index>
+</position>
+<position type="obj_type_text">
+	<rect>403.01666259766 366 422.01666259766 387</rect>
+	<index>130</index>
+</position>
+<position type="obj_type_text">
+	<rect>423.33331298828 366 442.33331298828 387</rect>
+	<index>131</index>
+</position>
+<position type="obj_type_text">
+	<rect>443.66668701172 366 462.66668701172 387</rect>
+	<index>132</index>
+</position>
+<position type="obj_type_text">
+	<rect>464 366 483 387</rect>
+	<index>133</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 405 58 426</rect>
+	<index>134</index>
+</position>
+<position type="obj_type_text">
+	<rect>59 405 78 426</rect>
+	<index>135</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 405 98 426</rect>
+	<index>136</index>
+</position>
+<position type="obj_type_text">
+	<rect>99 405 118 426</rect>
+	<index>137</index>
+</position>
+<position type="obj_type_text">
+	<rect>119 405 138 426</rect>
+	<index>138</index>
+</position>
+<position type="obj_type_text">
+	<rect>139 405 158 426</rect>
+	<index>139</index>
+</position>
+<position type="obj_type_text">
+	<rect>159 405 178 426</rect>
+	<index>140</index>
+</position>
+<position type="obj_type_text">
+	<rect>179 405 198 426</rect>
+	<index>141</index>
+</position>
+<position type="obj_type_text">
+	<rect>199 405 218 426</rect>
+	<index>142</index>
+</position>
+<position type="obj_type_text">
+	<rect>219 405 238 426</rect>
+	<index>143</index>
+</position>
+<position type="obj_type_text">
+	<rect>239 405 258 426</rect>
+	<index>144</index>
+</position>
+<position type="obj_type_text">
+	<rect>259 405 278 426</rect>
+	<index>145</index>
+</position>
+<position type="obj_type_text">
+	<rect>279 405 298 426</rect>
+	<index>146</index>
+</position>
+<position type="obj_type_text">
+	<rect>299 405 318 426</rect>
+	<index>147</index>
+</position>
+<position type="obj_type_text">
+	<rect>319 405 338 426</rect>
+	<index>148</index>
+</position>
+<position type="obj_type_text">
+	<rect>339 405 358 426</rect>
+	<index>149</index>
+</position>
+<position type="obj_type_text">
+	<rect>359 405 378 426</rect>
+	<index>150</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 444 88 465</rect>
+	<index>151</index>
+</position>
+<position type="obj_type_text">
+	<rect>89 444 93 465</rect>
+	<index>152</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 444 114 465</rect>
+	<index>153</index>
+</position>
+<position type="obj_type_text">
+	<rect>114.55000305176 444 134.55000305176 465</rect>
+	<index>154</index>
+</position>
+<position type="obj_type_text">
+	<rect>135.10000610352 444 155.10000610352 465</rect>
+	<index>155</index>
+</position>
+<position type="obj_type_text">
+	<rect>155.66667175293 444 175.66667175293 465</rect>
+	<index>156</index>
+</position>
+<position type="obj_type_text">
+	<rect>176.2166595459 444 196.2166595459 465</rect>
+	<index>157</index>
+</position>
+<position type="obj_type_text">
+	<rect>196.76666259766 444 216.76666259766 465</rect>
+	<index>158</index>
+</position>
+<position type="obj_type_text">
+	<rect>217.33332824707 444 237.33332824707 465</rect>
+	<index>159</index>
+</position>
+<position type="obj_type_text">
+	<rect>237.88333129883 444 257.88333129883 465</rect>
+	<index>160</index>
+</position>
+<position type="obj_type_text">
+	<rect>258.43333435059 444 278.43333435059 465</rect>
+	<index>161</index>
+</position>
+<position type="obj_type_text">
+	<rect>279 444 299 465</rect>
+	<index>162</index>
+</position>
+<position type="obj_type_text">
+	<rect>299.54998779297 444 319.54998779297 465</rect>
+	<index>163</index>
+</position>
+<position type="obj_type_text">
+	<rect>320.10000610352 444 340.10000610352 465</rect>
+	<index>164</index>
+</position>
+<position type="obj_type_text">
+	<rect>340.66668701172 444 360.66668701172 465</rect>
+	<index>165</index>
+</position>
+<position type="obj_type_text">
+	<rect>361.21667480469 444 381.21667480469 465</rect>
+	<index>166</index>
+</position>
+<position type="obj_type_text">
+	<rect>381.76666259766 444 401.76666259766 465</rect>
+	<index>167</index>
+</position>
+<position type="obj_type_text">
+	<rect>402.33331298828 444 422.33331298828 465</rect>
+	<index>168</index>
+</position>
+<position type="obj_type_text">
+	<rect>422.88333129883 444 442.88333129883 465</rect>
+	<index>169</index>
+</position>
+<position type="obj_type_text">
+	<rect>443.43334960938 444 463.43334960938 465</rect>
+	<index>170</index>
+</position>
+<position type="obj_type_text">
+	<rect>464 444 483 465</rect>
+	<index>171</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 483 59 504</rect>
+	<index>172</index>
+</position>
+<position type="obj_type_text">
+	<rect>60.300003051758 483 80.300003051758 504</rect>
+	<index>173</index>
+</position>
+<position type="obj_type_text">
+	<rect>81.616668701172 483 101.61666870117 504</rect>
+	<index>174</index>
+</position>
+<position type="obj_type_text">
+	<rect>102.93333435059 483 121.93333435059 504</rect>
+	<index>175</index>
+</position>
+<position type="obj_type_text">
+	<rect>122.93333435059 483 142.93333435059 504</rect>
+	<index>176</index>
+</position>
+<position type="obj_type_text">
+	<rect>144.25 483 164.25 504</rect>
+	<index>177</index>
+</position>
+<position type="obj_type_text">
+	<rect>165.56666564941 483 185.56666564941 504</rect>
+	<index>178</index>
+</position>
+<position type="obj_type_text">
+	<rect>186.88333129883 483 206.88333129883 504</rect>
+	<index>179</index>
+</position>
+<position type="obj_type_text">
+	<rect>208.19999694824 483 228.19999694824 504</rect>
+	<index>180</index>
+</position>
+<position type="obj_type_text">
+	<rect>229.51666259766 483 249.51666259766 504</rect>
+	<index>181</index>
+</position>
+<position type="obj_type_text">
+	<rect>250.83332824707 483 270.83332824707 504</rect>
+	<index>182</index>
+</position>
+<position type="obj_type_text">
+	<rect>272.14999389648 483 292.14999389648 504</rect>
+	<index>183</index>
+</position>
+<position type="obj_type_text">
+	<rect>293.4666595459 483 313.4666595459 504</rect>
+	<index>184</index>
+</position>
+<position type="obj_type_text">
+	<rect>314.78332519531 483 334.78332519531 504</rect>
+	<index>185</index>
+</position>
+<position type="obj_type_text">
+	<rect>336.10000610352 483 356.10000610352 504</rect>
+	<index>186</index>
+</position>
+<position type="obj_type_text">
+	<rect>357.41668701172 483 377.41668701172 504</rect>
+	<index>187</index>
+</position>
+<position type="obj_type_text">
+	<rect>378.73333740234 483 398.73333740234 504</rect>
+	<index>188</index>
+</position>
+<position type="obj_type_text">
+	<rect>400.04998779297 483 420.04998779297 504</rect>
+	<index>189</index>
+</position>
+<position type="obj_type_text">
+	<rect>421.36666870117 483 441.36666870117 504</rect>
+	<index>190</index>
+</position>
+<position type="obj_type_text">
+	<rect>442.68334960938 483 462.68334960938 504</rect>
+	<index>191</index>
+</position>
+<position type="obj_type_text">
+	<rect>464 483 483 504</rect>
+	<index>192</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 522 58 543</rect>
+	<index>193</index>
+</position>
+<position type="obj_type_text">
+	<rect>59 522 78 543</rect>
+	<index>194</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 522 98 543</rect>
+	<index>195</index>
+</position>
+<position type="obj_type_text">
+	<rect>99 522 108 543</rect>
+	<index>196</index>
+</position>
+<position type="obj_type_text">
+	<rect>109 522 128 543</rect>
+	<index>197</index>
+</position>
+<position type="obj_type_text">
+	<rect>129 522 148 543</rect>
+	<index>198</index>
+</position>
+<position type="obj_type_text">
+	<rect>149 522 168 543</rect>
+	<index>199</index>
+</position>
+<position type="obj_type_text">
+	<rect>169 522 188 543</rect>
+	<index>200</index>
+</position>
+<position type="obj_type_text">
+	<rect>189 522 208 543</rect>
+	<index>201</index>
+</position>
+<position type="obj_type_text">
+	<rect>209 522 218 543</rect>
+	<index>202</index>
+</position>
+<position type="obj_type_text">
+	<rect>219 522 238 543</rect>
+	<index>203</index>
+</position>
+<position type="obj_type_text">
+	<rect>239 522 258 543</rect>
+	<index>204</index>
+</position>
+<position type="obj_type_text">
+	<rect>259 522 278 543</rect>
+	<index>205</index>
+</position>
+<position type="obj_type_text">
+	<rect>279 522 298 543</rect>
+	<index>206</index>
+</position>
+<position type="obj_type_text">
+	<rect>299 522 318 543</rect>
+	<index>207</index>
+</position>
+<position type="obj_type_text">
+	<rect>319 522 338 543</rect>
+	<index>208</index>
+</position>
+<position type="obj_type_text">
+	<rect>339 522 358 543</rect>
+	<index>209</index>
+</position>
+<position type="obj_type_text">
+	<rect>359 522 378 543</rect>
+	<index>210</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 561 88 582</rect>
+	<index>211</index>
+</position>
+<position type="obj_type_text">
+	<rect>89 561 93 582</rect>
+	<index>212</index>
+</position>
+<position type="obj_type_text">
+	<rect>94 561 114 582</rect>
+	<index>213</index>
+</position>
+<position type="obj_type_text">
+	<rect>114.55000305176 561 134.55000305176 582</rect>
+	<index>214</index>
+</position>
+<position type="obj_type_text">
+	<rect>135.10000610352 561 155.10000610352 582</rect>
+	<index>215</index>
+</position>
+<position type="obj_type_text">
+	<rect>155.66667175293 561 175.66667175293 582</rect>
+	<index>216</index>
+</position>
+<position type="obj_type_text">
+	<rect>176.2166595459 561 196.2166595459 582</rect>
+	<index>217</index>
+</position>
+<position type="obj_type_text">
+	<rect>196.76666259766 561 216.76666259766 582</rect>
+	<index>218</index>
+</position>
+<position type="obj_type_text">
+	<rect>217.33332824707 561 237.33332824707 582</rect>
+	<index>219</index>
+</position>
+<position type="obj_type_text">
+	<rect>237.88333129883 561 257.88333129883 582</rect>
+	<index>220</index>
+</position>
+<position type="obj_type_text">
+	<rect>258.43333435059 561 278.43333435059 582</rect>
+	<index>221</index>
+</position>
+<position type="obj_type_text">
+	<rect>279 561 299 582</rect>
+	<index>222</index>
+</position>
+<position type="obj_type_text">
+	<rect>299.54998779297 561 319.54998779297 582</rect>
+	<index>223</index>
+</position>
+<position type="obj_type_text">
+	<rect>320.10000610352 561 340.10000610352 582</rect>
+	<index>224</index>
+</position>
+<position type="obj_type_text">
+	<rect>340.66668701172 561 360.66668701172 582</rect>
+	<index>225</index>
+</position>
+<position type="obj_type_text">
+	<rect>361.21667480469 561 381.21667480469 582</rect>
+	<index>226</index>
+</position>
+<position type="obj_type_text">
+	<rect>381.76666259766 561 401.76666259766 582</rect>
+	<index>227</index>
+</position>
+<position type="obj_type_text">
+	<rect>402.33331298828 561 422.33331298828 582</rect>
+	<index>228</index>
+</position>
+<position type="obj_type_text">
+	<rect>422.88333129883 561 442.88333129883 582</rect>
+	<index>229</index>
+</position>
+<position type="obj_type_text">
+	<rect>443.43334960938 561 463.43334960938 582</rect>
+	<index>230</index>
+</position>
+<position type="obj_type_text">
+	<rect>464 561 483 582</rect>
+	<index>231</index>
+</position>
+<position type="obj_type_text">
+	<rect>39 600 58 621</rect>
+	<index>232</index>
+</position>
+<position type="obj_type_text">
+	<rect>59 600 78 621</rect>
+	<index>233</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 600 98 621</rect>
+	<index>234</index>
+</position>
+<position type="obj_type_text">
+	<rect>99 600 118 621</rect>
+	<index>235</index>
+</position>
+<position type="obj_type_text">
+	<rect>119 600 138 621</rect>
+	<index>236</index>
+</position>
+<position type="obj_type_text">
+	<rect>139 600 158 621</rect>
+	<index>237</index>
+</position>
+<position type="obj_type_text">
+	<rect>159 600 178 621</rect>
+	<index>238</index>
+</position>
+<position type="obj_type_text">
+	<rect>79 639 98 660</rect>
+	<index>239</index>
+</position>
+<position type="obj_type_text">
+	<rect>99 639 118 660</rect>
+	<index>240</index>
+</position>
+<position type="obj_type_text">
+	<rect>119 639 123 660</rect>
+	<index>241</index>
+</position>
+<position type="obj_type_text">
+	<rect>124 639 143 660</rect>
+	<index>242</index>
+</position>
+<position type="obj_type_text">
+	<rect>144 639 163 660</rect>
+	<index>243</index>
+</position>
+<position type="obj_type_text">
+	<rect>164 639 183 660</rect>
+	<index>244</index>
+</position>
+<position type="obj_type_text">
+	<rect>184 639 203 660</rect>
+	<index>245</index>
+</position>
+<position type="obj_type_text">
+	<rect>204 639 223 660</rect>
+	<index>246</index>
+</position>
+<position type="obj_type_text">
+	<rect>224 639 243 660</rect>
+	<index>247</index>
+</position>
+<position type="obj_type_text">
+	<rect>244 639 263 660</rect>
+	<index>248</index>
+</position>
+<position type="obj_type_text">
+	<rect>264 639 283 660</rect>
+	<index>249</index>
+</position>
+<position type="obj_type_text">
+	<rect>284 639 303 660</rect>
+	<index>250</index>
+</position>
+<position type="obj_type_text">
+	<rect>304 639 323 660</rect>
+	<index>251</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 90 602 111</rect>
+	<index>252</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 90 622 111</rect>
+	<index>253</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 90 642 111</rect>
+	<index>254</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 90 662 111</rect>
+	<index>255</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 90 682 111</rect>
+	<index>256</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 90 702 111</rect>
+	<index>257</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 90 722 111</rect>
+	<index>258</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 90 742 111</rect>
+	<index>259</index>
+</position>
+<position type="obj_type_text">
+	<rect>743 90 762 111</rect>
+	<index>260</index>
+</position>
+<position type="obj_type_text">
+	<rect>763 90 782 111</rect>
+	<index>261</index>
+</position>
+<position type="obj_type_text">
+	<rect>783 90 802 111</rect>
+	<index>262</index>
+</position>
+<position type="obj_type_text">
+	<rect>803 90 822 111</rect>
+	<index>263</index>
+</position>
+<position type="obj_type_text">
+	<rect>823 90 842 111</rect>
+	<index>264</index>
+</position>
+<position type="obj_type_text">
+	<rect>843 90 862 111</rect>
+	<index>265</index>
+</position>
+<position type="obj_type_text">
+	<rect>863 90 882 111</rect>
+	<index>266</index>
+</position>
+<position type="obj_type_text">
+	<rect>883 90 902 111</rect>
+	<index>267</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 131.6 602 152.6</rect>
+	<index>268</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 131.6 622 152.6</rect>
+	<index>269</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 131.6 642 152.6</rect>
+	<index>270</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 131.6 662 152.6</rect>
+	<index>271</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 131.6 682 152.6</rect>
+	<index>272</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 131.6 702 152.6</rect>
+	<index>273</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 131.6 722 152.6</rect>
+	<index>274</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 131.6 742 152.6</rect>
+	<index>275</index>
+</position>
+<position type="obj_type_text">
+	<rect>743 131.6 762 152.6</rect>
+	<index>276</index>
+</position>
+<position type="obj_type_text">
+	<rect>763 131.6 782 152.6</rect>
+	<index>277</index>
+</position>
+<position type="obj_type_text">
+	<rect>783 131.6 802 152.6</rect>
+	<index>278</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 173.2 602 194.2</rect>
+	<index>279</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 173.2 622 194.2</rect>
+	<index>280</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 173.2 642 194.2</rect>
+	<index>281</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 173.2 662 194.2</rect>
+	<index>282</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 173.2 682 194.2</rect>
+	<index>283</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 173.2 702 194.2</rect>
+	<index>284</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 173.2 722 194.2</rect>
+	<index>285</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 173.2 742 194.2</rect>
+	<index>286</index>
+</position>
+<position type="obj_type_text">
+	<rect>743 173.2 762 194.2</rect>
+	<index>287</index>
+</position>
+<position type="obj_type_text">
+	<rect>763 173.2 782 194.2</rect>
+	<index>288</index>
+</position>
+<position type="obj_type_text">
+	<rect>783 173.2 802 194.2</rect>
+	<index>289</index>
+</position>
+<position type="obj_type_text">
+	<rect>803 173.2 822 194.2</rect>
+	<index>290</index>
+</position>
+<position type="obj_type_text">
+	<rect>823 173.2 842 194.2</rect>
+	<index>291</index>
+</position>
+<position type="obj_type_text">
+	<rect>843 173.2 862 194.2</rect>
+	<index>292</index>
+</position>
+<position type="obj_type_text">
+	<rect>863 173.2 882 194.2</rect>
+	<index>293</index>
+</position>
+<position type="obj_type_text">
+	<rect>883 173.2 902 194.2</rect>
+	<index>294</index>
+</position>
+<position type="obj_type_text">
+	<rect>903 173.2 922 194.2</rect>
+	<index>295</index>
+</position>
+<position type="obj_type_text">
+	<rect>923 173.2 942 194.2</rect>
+	<index>296</index>
+</position>
+<position type="obj_type_text">
+	<rect>943 173.2 962 194.2</rect>
+	<index>297</index>
+</position>
+<position type="obj_type_text">
+	<rect>543 214.8 562 235.8</rect>
+	<index>298</index>
+</position>
+<position type="obj_type_text">
+	<rect>563 214.8 582 235.8</rect>
+	<index>299</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 214.8 602 235.8</rect>
+	<index>300</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 214.8 622 235.8</rect>
+	<index>301</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 214.8 642 235.8</rect>
+	<index>302</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 214.8 662 235.8</rect>
+	<index>303</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 214.8 682 235.8</rect>
+	<index>304</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 214.8 702 235.8</rect>
+	<index>305</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 214.8 722 235.8</rect>
+	<index>306</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 214.8 742 235.8</rect>
+	<index>307</index>
+</position>
+<position type="obj_type_text">
+	<rect>743 214.8 762 235.8</rect>
+	<index>308</index>
+</position>
+<position type="obj_type_text">
+	<rect>763 214.8 782 235.8</rect>
+	<index>309</index>
+</position>
+<position type="obj_type_text">
+	<rect>783 214.8 802 235.8</rect>
+	<index>310</index>
+</position>
+<position type="obj_type_text">
+	<rect>803 214.8 822 235.8</rect>
+	<index>311</index>
+</position>
+<position type="obj_type_text">
+	<rect>823 214.8 842 235.8</rect>
+	<index>312</index>
+</position>
+<position type="obj_type_text">
+	<rect>843 214.8 862 235.8</rect>
+	<index>313</index>
+</position>
+<position type="obj_type_text">
+	<rect>543 270 566 298</rect>
+	<index>314</index>
+</position>
+<position type="obj_type_text">
+	<rect>567 270 590 298</rect>
+	<index>315</index>
+</position>
+<position type="obj_type_text">
+	<rect>591 270 614 298</rect>
+	<index>316</index>
+</position>
+<position type="obj_type_text">
+	<rect>615 270 638 298</rect>
+	<index>317</index>
+</position>
+<position type="obj_type_text">
+	<rect>639 270 649 298</rect>
+	<index>318</index>
+</position>
+<position type="obj_type_text">
+	<rect>650 270 673 298</rect>
+	<index>319</index>
+</position>
+<position type="obj_type_text">
+	<rect>674 270 697 298</rect>
+	<index>320</index>
+</position>
+<position type="obj_type_text">
+	<rect>698 270 721 298</rect>
+	<index>321</index>
+</position>
+<position type="obj_type_text">
+	<rect>722 270 745 298</rect>
+	<index>322</index>
+</position>
+<position type="obj_type_text">
+	<rect>746 270 769 298</rect>
+	<index>323</index>
+</position>
+<position type="obj_type_text">
+	<rect>770 270 780 298</rect>
+	<index>324</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 310 602 331</rect>
+	<index>325</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 310 622 331</rect>
+	<index>326</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 310 642 331</rect>
+	<index>327</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 310 662 331</rect>
+	<index>328</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 310 682 331</rect>
+	<index>329</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 310 702 331</rect>
+	<index>330</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 310 722 331</rect>
+	<index>331</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 310 742 331</rect>
+	<index>332</index>
+</position>
+<position type="obj_type_text">
+	<rect>743 310 762 331</rect>
+	<index>333</index>
+</position>
+<position type="obj_type_text">
+	<rect>763 310 782 331</rect>
+	<index>334</index>
+</position>
+<position type="obj_type_text">
+	<rect>783 310 802 331</rect>
+	<index>335</index>
+</position>
+<position type="obj_type_text">
+	<rect>803 310 822 331</rect>
+	<index>336</index>
+</position>
+<position type="obj_type_text">
+	<rect>823 310 842 331</rect>
+	<index>337</index>
+</position>
+<position type="obj_type_text">
+	<rect>843 310 862 331</rect>
+	<index>338</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 349 592 370</rect>
+	<index>339</index>
+</position>
+<position type="obj_type_text">
+	<rect>593 349 597 370</rect>
+	<index>340</index>
+</position>
+<position type="obj_type_text">
+	<rect>598 349 618 370</rect>
+	<index>341</index>
+</position>
+<position type="obj_type_text">
+	<rect>619.4666595459 349 639.4666595459 370</rect>
+	<index>342</index>
+</position>
+<position type="obj_type_text">
+	<rect>640.93333435059 349 660.93333435059 370</rect>
+	<index>343</index>
+</position>
+<position type="obj_type_text">
+	<rect>662.39999389648 349 682.39999389648 370</rect>
+	<index>344</index>
+</position>
+<position type="obj_type_text">
+	<rect>683.86666870117 349 703.86666870117 370</rect>
+	<index>345</index>
+</position>
+<position type="obj_type_text">
+	<rect>705.35000610352 349 725.35000610352 370</rect>
+	<index>346</index>
+</position>
+<position type="obj_type_text">
+	<rect>726.81666564941 349 746.81666564941 370</rect>
+	<index>347</index>
+</position>
+<position type="obj_type_text">
+	<rect>748.2833404541 349 768.2833404541 370</rect>
+	<index>348</index>
+</position>
+<position type="obj_type_text">
+	<rect>769.75 349 789.75 370</rect>
+	<index>349</index>
+</position>
+<position type="obj_type_text">
+	<rect>791.23333740234 349 811.23333740234 370</rect>
+	<index>350</index>
+</position>
+<position type="obj_type_text">
+	<rect>812.70001220703 349 832.70001220703 370</rect>
+	<index>351</index>
+</position>
+<position type="obj_type_text">
+	<rect>834.16668701172 349 854.16668701172 370</rect>
+	<index>352</index>
+</position>
+<position type="obj_type_text">
+	<rect>855.63333129883 349 875.63333129883 370</rect>
+	<index>353</index>
+</position>
+<position type="obj_type_text">
+	<rect>877.11666870117 349 897.11666870117 370</rect>
+	<index>354</index>
+</position>
+<position type="obj_type_text">
+	<rect>898.58331298828 349 918.58331298828 370</rect>
+	<index>355</index>
+</position>
+<position type="obj_type_text">
+	<rect>920.04998779297 349 940.04998779297 370</rect>
+	<index>356</index>
+</position>
+<position type="obj_type_text">
+	<rect>941.51666259766 349 961.51666259766 370</rect>
+	<index>357</index>
+</position>
+<position type="obj_type_text">
+	<rect>963 349 982 370</rect>
+	<index>358</index>
+</position>
+<position type="obj_type_text">
+	<rect>543 388 563 409</rect>
+	<index>359</index>
+</position>
+<position type="obj_type_text">
+	<rect>564.10000610352 388 583.10000610352 409</rect>
+	<index>360</index>
+</position>
+<position type="obj_type_text">
+	<rect>584.10000610352 388 604.10000610352 409</rect>
+	<index>361</index>
+</position>
+<position type="obj_type_text">
+	<rect>605.2166595459 388 625.2166595459 409</rect>
+	<index>362</index>
+</position>
+<position type="obj_type_text">
+	<rect>626.33332824707 388 646.33332824707 409</rect>
+	<index>363</index>
+</position>
+<position type="obj_type_text">
+	<rect>647.43333435059 388 667.43333435059 409</rect>
+	<index>364</index>
+</position>
+<position type="obj_type_text">
+	<rect>668.55000305176 388 688.55000305176 409</rect>
+	<index>365</index>
+</position>
+<position type="obj_type_text">
+	<rect>689.66667175293 388 709.66667175293 409</rect>
+	<index>366</index>
+</position>
+<position type="obj_type_text">
+	<rect>710.76666259766 388 730.76666259766 409</rect>
+	<index>367</index>
+</position>
+<position type="obj_type_text">
+	<rect>731.88333129883 388 750.88333129883 409</rect>
+	<index>368</index>
+</position>
+<position type="obj_type_text">
+	<rect>751.88333129883 388 771.88333129883 409</rect>
+	<index>369</index>
+</position>
+<position type="obj_type_text">
+	<rect>773 388 793 409</rect>
+	<index>370</index>
+</position>
+<position type="obj_type_text">
+	<rect>794.10000610352 388 814.10000610352 409</rect>
+	<index>371</index>
+</position>
+<position type="obj_type_text">
+	<rect>815.21667480469 388 835.21667480469 409</rect>
+	<index>372</index>
+</position>
+<position type="obj_type_text">
+	<rect>836.33331298828 388 856.33331298828 409</rect>
+	<index>373</index>
+</position>
+<position type="obj_type_text">
+	<rect>857.43334960938 388 877.43334960938 409</rect>
+	<index>374</index>
+</position>
+<position type="obj_type_text">
+	<rect>878.54998779297 388 898.54998779297 409</rect>
+	<index>375</index>
+</position>
+<position type="obj_type_text">
+	<rect>899.66668701172 388 919.66668701172 409</rect>
+	<index>376</index>
+</position>
+<position type="obj_type_text">
+	<rect>920.76666259766 388 940.76666259766 409</rect>
+	<index>377</index>
+</position>
+<position type="obj_type_text">
+	<rect>941.88333129883 388 961.88333129883 409</rect>
+	<index>378</index>
+</position>
+<position type="obj_type_text">
+	<rect>963 388 982 409</rect>
+	<index>379</index>
+</position>
+<position type="obj_type_text">
+	<rect>543 427 562 448</rect>
+	<index>380</index>
+</position>
+<position type="obj_type_text">
+	<rect>563 427 582 448</rect>
+	<index>381</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 466 592 487</rect>
+	<index>382</index>
+</position>
+<position type="obj_type_text">
+	<rect>593 466 597 487</rect>
+	<index>383</index>
+</position>
+<position type="obj_type_text">
+	<rect>598 466 617 487</rect>
+	<index>384</index>
+</position>
+<position type="obj_type_text">
+	<rect>618.2833404541 466 637.2833404541 487</rect>
+	<index>385</index>
+</position>
+<position type="obj_type_text">
+	<rect>638.58332824707 466 657.58332824707 487</rect>
+	<index>386</index>
+</position>
+<position type="obj_type_text">
+	<rect>658.86666870117 466 677.86666870117 487</rect>
+	<index>387</index>
+</position>
+<position type="obj_type_text">
+	<rect>679.16667175293 466 698.16667175293 487</rect>
+	<index>388</index>
+</position>
+<position type="obj_type_text">
+	<rect>699.4666595459 466 718.4666595459 487</rect>
+	<index>389</index>
+</position>
+<position type="obj_type_text">
+	<rect>719.75 466 738.75 487</rect>
+	<index>390</index>
+</position>
+<position type="obj_type_text">
+	<rect>740.05000305176 466 759.05000305176 487</rect>
+	<index>391</index>
+</position>
+<position type="obj_type_text">
+	<rect>760.35000610352 466 779.35000610352 487</rect>
+	<index>392</index>
+</position>
+<position type="obj_type_text">
+	<rect>780.63333129883 466 799.63333129883 487</rect>
+	<index>393</index>
+</position>
+<position type="obj_type_text">
+	<rect>800.93334960938 466 819.93334960938 487</rect>
+	<index>394</index>
+</position>
+<position type="obj_type_text">
+	<rect>821.23333740234 466 840.23333740234 487</rect>
+	<index>395</index>
+</position>
+<position type="obj_type_text">
+	<rect>841.23333740234 466 860.23333740234 487</rect>
+	<index>396</index>
+</position>
+<position type="obj_type_text">
+	<rect>861.51666259766 466 880.51666259766 487</rect>
+	<index>397</index>
+</position>
+<position type="obj_type_text">
+	<rect>881.81665039062 466 900.81665039062 487</rect>
+	<index>398</index>
+</position>
+<position type="obj_type_text">
+	<rect>902.11666870117 466 921.11666870117 487</rect>
+	<index>399</index>
+</position>
+<position type="obj_type_text">
+	<rect>922.39999389648 466 941.39999389648 487</rect>
+	<index>400</index>
+</position>
+<position type="obj_type_text">
+	<rect>942.70001220703 466 961.70001220703 487</rect>
+	<index>401</index>
+</position>
+<position type="obj_type_text">
+	<rect>963 466 982 487</rect>
+	<index>402</index>
+</position>
+<position type="obj_type_text">
+	<rect>543 505 562 526</rect>
+	<index>403</index>
+</position>
+<position type="obj_type_text">
+	<rect>563 505 582 526</rect>
+	<index>404</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 505 602 526</rect>
+	<index>405</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 505 622 526</rect>
+	<index>406</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 505 642 526</rect>
+	<index>407</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 505 662 526</rect>
+	<index>408</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 505 682 526</rect>
+	<index>409</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 505 702 526</rect>
+	<index>410</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 505 722 526</rect>
+	<index>411</index>
+</position>
+<position type="obj_type_text">
+	<rect>723 505 742 526</rect>
+	<index>412</index>
+</position>
+<position type="obj_type_text">
+	<rect>743 505 762 526</rect>
+	<index>413</index>
+</position>
+<position type="obj_type_text">
+	<rect>763 505 782 526</rect>
+	<index>414</index>
+</position>
+<position type="obj_type_text">
+	<rect>783 505 802 526</rect>
+	<index>415</index>
+</position>
+<position type="obj_type_text">
+	<rect>803 505 822 526</rect>
+	<index>416</index>
+</position>
+<position type="obj_type_text">
+	<rect>823 505 842 526</rect>
+	<index>417</index>
+</position>
+<position type="obj_type_text">
+	<rect>843 505 862 526</rect>
+	<index>418</index>
+</position>
+<position type="obj_type_text">
+	<rect>863 505 882 526</rect>
+	<index>419</index>
+</position>
+<position type="obj_type_text">
+	<rect>883 505 902 526</rect>
+	<index>420</index>
+</position>
+<position type="obj_type_text">
+	<rect>903 505 922 526</rect>
+	<index>421</index>
+</position>
+<position type="obj_type_text">
+	<rect>923 505 942 526</rect>
+	<index>422</index>
+</position>
+<position type="obj_type_text">
+	<rect>943 505 962 526</rect>
+	<index>423</index>
+</position>
+<position type="obj_type_text">
+	<rect>963 505 982 526</rect>
+	<index>424</index>
+</position>
+<position type="obj_type_text">
+	<rect>543 544 562 565</rect>
+	<index>425</index>
+</position>
+<position type="obj_type_text">
+	<rect>563 544 582 565</rect>
+	<index>426</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 544 602 565</rect>
+	<index>427</index>
+</position>
+<position type="obj_type_text">
+	<rect>603 544 622 565</rect>
+	<index>428</index>
+</position>
+<position type="obj_type_text">
+	<rect>623 544 642 565</rect>
+	<index>429</index>
+</position>
+<position type="obj_type_text">
+	<rect>643 544 662 565</rect>
+	<index>430</index>
+</position>
+<position type="obj_type_text">
+	<rect>663 544 682 565</rect>
+	<index>431</index>
+</position>
+<position type="obj_type_text">
+	<rect>683 544 702 565</rect>
+	<index>432</index>
+</position>
+<position type="obj_type_text">
+	<rect>703 544 722 565</rect>
+	<index>433</index>
+</position>
+<position type="obj_type_text">
+	<rect>583 583 592 604</rect>
+	<index>434</index>
+</position>
+<position type="obj_type_text">
+	<rect>593 583 597 604</rect>
+	<index>435</index>
+</position>
+<position type="obj_type_text">
+	<rect>598 583 617 604</rect>
+	<index>436</index>
+</position>
+<position type="obj_type_text">
+	<rect>618 583 637 604</rect>
+	<index>437</index>
+</position>
+<position type="obj_type_text">
+	<rect>638 583 657 604</rect>
+	<index>438</index>
+</position>
+<position type="obj_type_text">
+	<rect>658 583 677 604</rect>
+	<index>439</index>
+</position>
+<position type="obj_type_text">
+	<rect>678 583 697 604</rect>
+	<index>440</index>
+</position>
+<position type="obj_type_text">
+	<rect>698 583 717 604</rect>
+	<index>441</index>
+</position>
+<position type="obj_type_text">
+	<rect>718 583 737 604</rect>
+	<index>442</index>
+</position>
+<position type="obj_type_text">
+	<rect>738 583 757 604</rect>
+	<index>443</index>
+</position>
+<position type="obj_type_text">
+	<rect>758 583 777 604</rect>
+	<index>444</index>
+</position>
+<position type="obj_type_text">
+	<rect>778 583 797 604</rect>
+	<index>445</index>
+</position>
+</positions>
+<epubPageText>瑞吉论“环境”在瑞吉欧学前教育理论中，环境被视为儿童的第三位老师。1.环境对幼儿、教师、家长均具有重要意义。2.环境应体现儿童文化性和多种选择性。瑞吉欧学前教育理论——提倡方案教学马拉古齐反对“漏斗式”教学，提倡方案（project）教学，儿童可以在综合性活动中自由探究、选择、欣赏，实现、拓展其潜能。1.方案教学的课程。他认为应该从儿童身上发现课程，儿童生活中的一切均可以成为课程的材料，有“一百种世界”等待儿童去梦想。2.方案教学的方法。马拉古齐的方案教学中常用的方法包括：第一 ，开展各种图像创作；第二，教师与儿童开展交流、对话。第三，让儿童充分探究。第四，教师应该使用各种方法将方案教学的过程以及幼儿的发展状况记录下来。瑞吉欧论“教师和家长”瑞吉欧对教师和家长的观点为：1.教师的职责是为儿童提供经验和创造的机会，观察和倾听儿童，同儿童一起开展开放性讨论。2.家长参与幼儿学校的活动，为孩子提供安全和幸福感，确保家长和教师相互了解，激发家长思考儿童的教育问题。3.教师与家长应该合作。</epubPageText>
+</epubPage>
+</epubChapter>

@@ -18,24 +18,22 @@
 @synthesize scale = _scalel;
 @synthesize moviePlayer = _moviePlayer;
 @synthesize fRView = _fRView;
+@synthesize isPlaying = _isPlaying;
 
 - (void)dealloc
 {
-    [self.moviePlayer release];
-    self.moviePlayer = nil;
     [self.fRView release];
     self.fRView = nil;
+    [self.moviePlayer release];
+    self.moviePlayer = nil;
     [pressView release];
+    pressView = nil;
     [musicTitle release];
+    musicTitle = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     [super dealloc];
 }
 
-- (void)first
-{
-    isPanNow = NO;
-    isPinchNow = NO;
-    isRotationNow = NO;
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -50,14 +48,17 @@
 - (void)initIncomingData:(PageVideo *)pageVideo
 {
     pVideo = pageVideo;
+
+    self.isPlaying = NO;
 }
+
 - (void)composition
 {
     [self initTitle:self.frame];
     [self initSelfInfo:self.frame];
     [self initPressPlay:self.frame];
-    
     [self pressViewImage];
+    [self loadMovie];
 }
 
 - (void)initTitle:(CGRect)frame
@@ -147,6 +148,9 @@
     }
     [p setFont:strFont];
     [p setSize:fontsize];
+    
+    
+    
     CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
     ctv = [[CTView alloc]initWithFrame:CGRectMake(0, 0, SFSW, size.height)];
@@ -231,29 +235,28 @@
 
 -(void)pressButton:(id)sender
 {
-//    return;
+    [self.delegate newMovieView];
     [pressView sendSubviewToBack:self];
     pressView.alpha = 0;
     pressView.hidden = YES;
+    self.isPlaying = YES;
     [self.fRView bringSubviewToFront:self];
-//    [self.delegate newMovieView];
-    
-    [self loadMovie];
+    [self playMovie];
 }
+
 
 - (void)loadMovie
 {
     NSString *bookPath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"medias"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pVideo->strPath.c_str()]];
     NSURL *url = [NSURL fileURLWithPath:bookPath];
     self.moviePlayer = [[MPMoviePlayerController  alloc]initWithContentURL:url];
-    [self playMovie];
+    
 }
 
 -(void)playMovie
 {
     self.moviePlayer.scalingMode = MPMovieScalingModeAspectFill;
     self.moviePlayer.view.backgroundColor = [UIColor clearColor];
-//    设置播放器风格
     [self.moviePlayer setControlStyle:MPMovieControlStyleEmbedded];
     [self.moviePlayer.view setFrame:self.fRView.bounds];
     self.moviePlayer.initialPlaybackTime = -1;
@@ -263,22 +266,36 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
+- (void)next
+{
+    [self.moviePlayer stop];
+    self.moviePlayer.currentPlaybackTime = 0;
+    self.isPlaying = NO;
+}
+
+- (void)pause
+{
+    pressView.userInteractionEnabled = NO;
+}
+
 - (void)moviePlayBackDidFinish:(NSNotification*)notification
 {
-    self.moviePlayer.currentPlaybackTime = 0;
     [self.moviePlayer pause];
-    
+    self.moviePlayer.currentPlaybackTime = 0;
+    self.isPlaying = NO;
     if (self.fRView.frame.origin.x == self.frame.origin.x && self.fRView.frame.origin.y == self.frame.origin.y)
     {
-    
         [self endStateTwoCase:nil];
     }
     
 //    MPMoviePlayerController * theMovie = [notification object];
-////    销毁播放通知中心
 //    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:theMovie];
 //    [theMovie.view removeFromSuperview];
 //    [theMovie release];
+    
+    [self bringSubviewToFront:pressView];
+    pressView.alpha = 1.0;
+    pressView.hidden = NO;
 }
 
 - (void)endStateTwoCase:(UIGestureRecognizer *)gestureRecognizer
@@ -286,13 +303,13 @@
     [self.moviePlayer setControlStyle:MPMovieControlStyleEmbedded];
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5f];
-    self.fRView.transform = CGAffineTransformScale(gestureRecognizer.view.transform, 1.0, 1.0);
-    self.fRView.transform = CGAffineTransformMakeRotation(M_PI * 2);
+//    self.fRView.transform = CGAffineTransformScale(gestureRecognizer.view.transform, 1.0, 1.0);
+//    self.fRView.transform = CGAffineTransformMakeRotation(M_PI * 2);
     self.fRView.frame = startRect;
     self.moviePlayer.view.frame =self.fRView.bounds;
     self.lastRotation = 0;
     self.fRView.layer.shadowOpacity = 0.0;
-    distancePoint = CGPointMake(0, 0);
+//    distancePoint = CGPointMake(0, 0);
     isMovieBig = YES;
     self.backgroundColor = [UIColor clearColor];
     [UIView commitAnimations];

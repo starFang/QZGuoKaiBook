@@ -1,0 +1,89 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica </font_family>
+<text>测验 2.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 自我检测</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_5">
+	<rect>241 114 870 664</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<questionobj type="selector">
+<question>【单选题】学前教育理论是有关学前教育现象和学前教育问题的解释性或 （     ）陈述。</question>
+<options>
+<option>解答性</option>
+<option>解说性</option>
+<option>描述性</option>
+<option>解决性</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】关于学前儿童的人性分析、道德价值判断等属于（     ）。</question>
+<options>
+<option>科学理论</option>
+<option>哲学理论</option>
+<option>实践理论</option>
+<option>人文理论</option>
+</options>
+<answers>
+<answer>1</answer>
+</answers>
+</questionobj> 
+</epubPageObject> 
+</position>
+
+<position type="obj_type_3">
+	<rect>915 623 1002 718</rect>
+<epubPageObject>
+<text>您已经学完了“概念与涵义”的所有内容。接下来，我们提供了三种路径，请您进行选择：</text>
+<width>538</width>
+<height>198</height>
+<subbutton>
+<chapter>2</chapter>
+<page>2</page>
+<text>复习本知识点</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>1</page>
+<text>返回导图页</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>5</page>
+<text>进入下一节</text>
+</subbutton>
+</epubPageObject>
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

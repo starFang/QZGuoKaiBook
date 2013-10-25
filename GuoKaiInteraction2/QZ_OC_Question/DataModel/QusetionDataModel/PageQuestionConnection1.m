@@ -28,8 +28,11 @@
 - (void)dealloc
 {
     [self.vAnswers release];
+    self.vAnswers = nil;
     [self.vLeftSide release];
+    self.vLeftSide = nil;
     [self.vRightSide release];
+    self.vRightSide = nil;
     [super dealloc];
 }
 

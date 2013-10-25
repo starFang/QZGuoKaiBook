@@ -1,0 +1,117 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_begin_tool1">
+<text_indent>40</text_indent>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#444444</font_color>
+<font_size>20</font_size>
+<font_family>Palatino</font_family>
+<text>主张实行胎教，对儿童及早教育。</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_begin_tool1">
+<text_indent>40</text_indent>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#444444</font_color>
+<font_size>20</font_size>
+<font_family>Palatino</font_family>
+<text>留下名作《颜世家训》，提倡及早施教、以身作则、严慈相济、一视同仁等儿童家庭教育主张。</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_begin_tool1">
+<text_indent>40</text_indent>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#444444</font_color>
+<font_size>20</font_size>
+<font_family>Palatino</font_family>
+<text>编写了《童蒙须知》，主张小学“学其事”，通过格言、故事等教给儿童道德观念，学习基本行为规范。</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+<richText type="complextext"><rich_text_item type="text_type_begin_tool1">
+<text_indent>40</text_indent>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#444444</font_color>
+<font_size>20</font_size>
+<font_family>Palatino</font_family>
+<text>对压抑儿童的传统教育方法提出批判，主张儿童教育要顺应童子之情，倡导以生动活泼的方法教儿童，歌诗、习礼、读书是儿童学习的内容。</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_1">
+	<rect>54 272 192 472</rect>
+<epubPageObject>
+<width>280</width>
+<height>81</height>
+<bgcolor>#ffffff</bgcolor>
+<tiptext>
+<richTextIndex>0</richTextIndex></tiptext>
+<buttonimage>c2p8n1.png</buttonimage>
+<buttontext></buttontext>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_1">
+	<rect>250 277 419 470</rect>
+<epubPageObject>
+<width>280</width>
+<height>128</height>
+<bgcolor>#ffffff</bgcolor>
+<tiptext>
+<richTextIndex>1</richTextIndex></tiptext>
+<buttonimage>c2p8n2.png</buttonimage>
+<buttontext></buttontext>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_1">
+	<rect>497 275 677 470</rect>
+<epubPageObject>
+<width>280</width>
+<height>126</height>
+<bgcolor>#ffffff</bgcolor>
+<tiptext>
+<richTextIndex>2</richTextIndex></tiptext>
+<buttonimage>c2p8n3.png</buttonimage>
+<buttontext></buttontext>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_1">
+	<rect>753 277 933 470</rect>
+<epubPageObject>
+<width>277</width>
+<height>178</height>
+<bgcolor>#ffffff</bgcolor>
+<tiptext>
+<richTextIndex>3</richTextIndex></tiptext>
+<buttonimage>c2p8n4.png</buttonimage>
+<buttontext></buttontext>
+</epubPageObject> 
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

@@ -1,0 +1,713 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_text">
+	<rect>250 192 269 213</rect>
+	<index>0</index>
+</position>
+<position type="obj_type_text">
+	<rect>270.33332824707 192 289.33332824707 213</rect>
+	<index>1</index>
+</position>
+<position type="obj_type_text">
+	<rect>290.68333435059 192 309.68333435059 213</rect>
+	<index>2</index>
+</position>
+<position type="obj_type_text">
+	<rect>311.0333404541 192 330.0333404541 213</rect>
+	<index>3</index>
+</position>
+<position type="obj_type_text">
+	<rect>331.38333129883 192 350.38333129883 213</rect>
+	<index>4</index>
+</position>
+<position type="obj_type_text">
+	<rect>351.73333740234 192 370.73333740234 213</rect>
+	<index>5</index>
+</position>
+<position type="obj_type_text">
+	<rect>372.08332824707 192 391.08332824707 213</rect>
+	<index>6</index>
+</position>
+<position type="obj_type_text">
+	<rect>392.43333435059 192 411.43333435059 213</rect>
+	<index>7</index>
+</position>
+<position type="obj_type_text">
+	<rect>412.7833404541 192 431.7833404541 213</rect>
+	<index>8</index>
+</position>
+<position type="obj_type_text">
+	<rect>433.13333129883 192 452.13333129883 213</rect>
+	<index>9</index>
+</position>
+<position type="obj_type_text">
+	<rect>453.48333740234 192 472.48333740234 213</rect>
+	<index>10</index>
+</position>
+<position type="obj_type_text">
+	<rect>473.83331298828 192 492.83331298828 213</rect>
+	<index>11</index>
+</position>
+<position type="obj_type_text">
+	<rect>494.18334960938 192 513.18334960938 213</rect>
+	<index>12</index>
+</position>
+<position type="obj_type_text">
+	<rect>514.53332519531 192 533.53332519531 213</rect>
+	<index>13</index>
+</position>
+<position type="obj_type_text">
+	<rect>534.88333129883 192 553.88333129883 213</rect>
+	<index>14</index>
+</position>
+<position type="obj_type_text">
+	<rect>555.23333740234 192 574.23333740234 213</rect>
+	<index>15</index>
+</position>
+<position type="obj_type_text">
+	<rect>575.58331298828 192 594.58331298828 213</rect>
+	<index>16</index>
+</position>
+<position type="obj_type_text">
+	<rect>595.93334960938 192 614.93334960938 213</rect>
+	<index>17</index>
+</position>
+<position type="obj_type_text">
+	<rect>616.28332519531 192 635.28332519531 213</rect>
+	<index>18</index>
+</position>
+<position type="obj_type_text">
+	<rect>636.63333129883 192 655.63333129883 213</rect>
+	<index>19</index>
+</position>
+<position type="obj_type_text">
+	<rect>656.98333740234 192 675.98333740234 213</rect>
+	<index>20</index>
+</position>
+<position type="obj_type_text">
+	<rect>677.33331298828 192 696.33331298828 213</rect>
+	<index>21</index>
+</position>
+<position type="obj_type_text">
+	<rect>697.68334960938 192 708.68334960938 213</rect>
+	<index>22</index>
+</position>
+<position type="obj_type_text">
+	<rect>709.79998779297 192 728.79998779297 213</rect>
+	<index>23</index>
+</position>
+<position type="obj_type_text">
+	<rect>730.15002441406 192 749.15002441406 213</rect>
+	<index>24</index>
+</position>
+<position type="obj_type_text">
+	<rect>750.5 192 769.5 213</rect>
+	<index>25</index>
+</position>
+<position type="obj_type_text">
+	<rect>770.84997558594 192 789.84997558594 213</rect>
+	<index>26</index>
+</position>
+<position type="obj_type_text">
+	<rect>791.20001220703 192 810.20001220703 213</rect>
+	<index>27</index>
+</position>
+<position type="obj_type_text">
+	<rect>811.54998779297 192 830.54998779297 213</rect>
+	<index>28</index>
+</position>
+<position type="obj_type_text">
+	<rect>831.90002441406 192 850.90002441406 213</rect>
+	<index>29</index>
+</position>
+<position type="obj_type_text">
+	<rect>852.25 192 871.25 213</rect>
+	<index>30</index>
+</position>
+<position type="obj_type_text">
+	<rect>872.59997558594 192 891.59997558594 213</rect>
+	<index>31</index>
+</position>
+<position type="obj_type_text">
+	<rect>892.95001220703 192 911.95001220703 213</rect>
+	<index>32</index>
+</position>
+<position type="obj_type_text">
+	<rect>913.29998779297 192 932.29998779297 213</rect>
+	<index>33</index>
+</position>
+<position type="obj_type_text">
+	<rect>933.65002441406 192 952.65002441406 213</rect>
+	<index>34</index>
+</position>
+<position type="obj_type_text">
+	<rect>954 192 973 213</rect>
+	<index>35</index>
+</position>
+<position type="obj_type_text">
+	<rect>210 231 230 252</rect>
+	<index>36</index>
+</position>
+<position type="obj_type_text">
+	<rect>230.7166595459 231 250.7166595459 252</rect>
+	<index>37</index>
+</position>
+<position type="obj_type_text">
+	<rect>251.44999694824 231 271.44999694824 252</rect>
+	<index>38</index>
+</position>
+<position type="obj_type_text">
+	<rect>272.16667175293 231 292.16667175293 252</rect>
+	<index>39</index>
+</position>
+<position type="obj_type_text">
+	<rect>292.89999389648 231 312.89999389648 252</rect>
+	<index>40</index>
+</position>
+<position type="obj_type_text">
+	<rect>313.63333129883 231 333.63333129883 252</rect>
+	<index>41</index>
+</position>
+<position type="obj_type_text">
+	<rect>334.35000610352 231 354.35000610352 252</rect>
+	<index>42</index>
+</position>
+<position type="obj_type_text">
+	<rect>355.08332824707 231 375.08332824707 252</rect>
+	<index>43</index>
+</position>
+<position type="obj_type_text">
+	<rect>375.81666564941 231 395.81666564941 252</rect>
+	<index>44</index>
+</position>
+<position type="obj_type_text">
+	<rect>396.5333404541 231 416.5333404541 252</rect>
+	<index>45</index>
+</position>
+<position type="obj_type_text">
+	<rect>417.26666259766 231 437.26666259766 252</rect>
+	<index>46</index>
+</position>
+<position type="obj_type_text">
+	<rect>438 231 458 252</rect>
+	<index>47</index>
+</position>
+<position type="obj_type_text">
+	<rect>458.7166595459 231 478.7166595459 252</rect>
+	<index>48</index>
+</position>
+<position type="obj_type_text">
+	<rect>479.45001220703 231 499.45001220703 252</rect>
+	<index>49</index>
+</position>
+<position type="obj_type_text">
+	<rect>500.16668701172 231 520.16668701172 252</rect>
+	<index>50</index>
+</position>
+<position type="obj_type_text">
+	<rect>520.89999389648 231 540.89999389648 252</rect>
+	<index>51</index>
+</position>
+<position type="obj_type_text">
+	<rect>541.63333129883 231 561.63333129883 252</rect>
+	<index>52</index>
+</position>
+<position type="obj_type_text">
+	<rect>562.35000610352 231 571.35000610352 252</rect>
+	<index>53</index>
+</position>
+<position type="obj_type_text">
+	<rect>572.35000610352 231 581.35000610352 252</rect>
+	<index>54</index>
+</position>
+<position type="obj_type_text">
+	<rect>582.35000610352 231 591.35000610352 252</rect>
+	<index>55</index>
+</position>
+<position type="obj_type_text">
+	<rect>592.35000610352 231 601.35000610352 252</rect>
+	<index>56</index>
+</position>
+<position type="obj_type_text">
+	<rect>602.35000610352 231 622.35000610352 252</rect>
+	<index>57</index>
+</position>
+<position type="obj_type_text">
+	<rect>623.08331298828 231 642.08331298828 252</rect>
+	<index>58</index>
+</position>
+<position type="obj_type_text">
+	<rect>643.08331298828 231 663.08331298828 252</rect>
+	<index>59</index>
+</position>
+<position type="obj_type_text">
+	<rect>663.81665039062 231 683.81665039062 252</rect>
+	<index>60</index>
+</position>
+<position type="obj_type_text">
+	<rect>684.53332519531 231 704.53332519531 252</rect>
+	<index>61</index>
+</position>
+<position type="obj_type_text">
+	<rect>705.26666259766 231 725.26666259766 252</rect>
+	<index>62</index>
+</position>
+<position type="obj_type_text">
+	<rect>726 231 746 252</rect>
+	<index>63</index>
+</position>
+<position type="obj_type_text">
+	<rect>746.71667480469 231 766.71667480469 252</rect>
+	<index>64</index>
+</position>
+<position type="obj_type_text">
+	<rect>767.45001220703 231 787.45001220703 252</rect>
+	<index>65</index>
+</position>
+<position type="obj_type_text">
+	<rect>788.16668701172 231 808.16668701172 252</rect>
+	<index>66</index>
+</position>
+<position type="obj_type_text">
+	<rect>808.90002441406 231 828.90002441406 252</rect>
+	<index>67</index>
+</position>
+<position type="obj_type_text">
+	<rect>829.63330078125 231 849.63330078125 252</rect>
+	<index>68</index>
+</position>
+<position type="obj_type_text">
+	<rect>850.34997558594 231 870.34997558594 252</rect>
+	<index>69</index>
+</position>
+<position type="obj_type_text">
+	<rect>871.08331298828 231 891.08331298828 252</rect>
+	<index>70</index>
+</position>
+<position type="obj_type_text">
+	<rect>891.81665039062 231 911.81665039062 252</rect>
+	<index>71</index>
+</position>
+<position type="obj_type_text">
+	<rect>912.53332519531 231 932.53332519531 252</rect>
+	<index>72</index>
+</position>
+<position type="obj_type_text">
+	<rect>933.26666259766 231 953.26666259766 252</rect>
+	<index>73</index>
+</position>
+<position type="obj_type_text">
+	<rect>954 231 973 252</rect>
+	<index>74</index>
+</position>
+<position type="obj_type_text">
+	<rect>210 270 230 291</rect>
+	<index>75</index>
+</position>
+<position type="obj_type_text">
+	<rect>230.81666564941 270 250.81666564941 291</rect>
+	<index>76</index>
+</position>
+<position type="obj_type_text">
+	<rect>251.64999389648 270 270.64999389648 291</rect>
+	<index>77</index>
+</position>
+<position type="obj_type_text">
+	<rect>271.64999389648 270 291.64999389648 291</rect>
+	<index>78</index>
+</position>
+<position type="obj_type_text">
+	<rect>292.48333740234 270 312.48333740234 291</rect>
+	<index>79</index>
+</position>
+<position type="obj_type_text">
+	<rect>313.30000305176 270 333.30000305176 291</rect>
+	<index>80</index>
+</position>
+<position type="obj_type_text">
+	<rect>334.13333129883 270 354.13333129883 291</rect>
+	<index>81</index>
+</position>
+<position type="obj_type_text">
+	<rect>354.9666595459 270 374.9666595459 291</rect>
+	<index>82</index>
+</position>
+<position type="obj_type_text">
+	<rect>375.80000305176 270 395.80000305176 291</rect>
+	<index>83</index>
+</position>
+<position type="obj_type_text">
+	<rect>396.61666870117 270 416.61666870117 291</rect>
+	<index>84</index>
+</position>
+<position type="obj_type_text">
+	<rect>417.44999694824 270 437.44999694824 291</rect>
+	<index>85</index>
+</position>
+<position type="obj_type_text">
+	<rect>438.2833404541 270 458.2833404541 291</rect>
+	<index>86</index>
+</position>
+<position type="obj_type_text">
+	<rect>459.11666870117 270 479.11666870117 291</rect>
+	<index>87</index>
+</position>
+<position type="obj_type_text">
+	<rect>479.93334960938 270 499.93334960938 291</rect>
+	<index>88</index>
+</position>
+<position type="obj_type_text">
+	<rect>500.76666259766 270 520.76666259766 291</rect>
+	<index>89</index>
+</position>
+<position type="obj_type_text">
+	<rect>521.60000610352 270 541.60000610352 291</rect>
+	<index>90</index>
+</position>
+<position type="obj_type_text">
+	<rect>542.41668701172 270 562.41668701172 291</rect>
+	<index>91</index>
+</position>
+<position type="obj_type_text">
+	<rect>563.25 270 583.25 291</rect>
+	<index>92</index>
+</position>
+<position type="obj_type_text">
+	<rect>584.08331298828 270 604.08331298828 291</rect>
+	<index>93</index>
+</position>
+<position type="obj_type_text">
+	<rect>604.91668701172 270 624.91668701172 291</rect>
+	<index>94</index>
+</position>
+<position type="obj_type_text">
+	<rect>625.73333740234 270 645.73333740234 291</rect>
+	<index>95</index>
+</position>
+<position type="obj_type_text">
+	<rect>646.56665039062 270 666.56665039062 291</rect>
+	<index>96</index>
+</position>
+<position type="obj_type_text">
+	<rect>667.39999389648 270 676.39999389648 291</rect>
+	<index>97</index>
+</position>
+<position type="obj_type_text">
+	<rect>677.39999389648 270 697.39999389648 291</rect>
+	<index>98</index>
+</position>
+<position type="obj_type_text">
+	<rect>698.23333740234 270 717.23333740234 291</rect>
+	<index>99</index>
+</position>
+<position type="obj_type_text">
+	<rect>718.23333740234 270 738.23333740234 291</rect>
+	<index>100</index>
+</position>
+<position type="obj_type_text">
+	<rect>739.04998779297 270 759.04998779297 291</rect>
+	<index>101</index>
+</position>
+<position type="obj_type_text">
+	<rect>759.88330078125 270 765.88330078125 291</rect>
+	<index>102</index>
+</position>
+<position type="obj_type_text">
+	<rect>766.53332519531 270 786.53332519531 291</rect>
+	<index>103</index>
+</position>
+<position type="obj_type_text">
+	<rect>787.36669921875 270 807.36669921875 291</rect>
+	<index>104</index>
+</position>
+<position type="obj_type_text">
+	<rect>808.18334960938 270 828.18334960938 291</rect>
+	<index>105</index>
+</position>
+<position type="obj_type_text">
+	<rect>829.01666259766 270 849.01666259766 291</rect>
+	<index>106</index>
+</position>
+<position type="obj_type_text">
+	<rect>849.84997558594 270 869.84997558594 291</rect>
+	<index>107</index>
+</position>
+<position type="obj_type_text">
+	<rect>870.68334960938 270 890.68334960938 291</rect>
+	<index>108</index>
+</position>
+<position type="obj_type_text">
+	<rect>891.5 270 911.5 291</rect>
+	<index>109</index>
+</position>
+<position type="obj_type_text">
+	<rect>912.33331298828 270 932.33331298828 291</rect>
+	<index>110</index>
+</position>
+<position type="obj_type_text">
+	<rect>933.16668701172 270 953.16668701172 291</rect>
+	<index>111</index>
+</position>
+<position type="obj_type_text">
+	<rect>954 270 973 291</rect>
+	<index>112</index>
+</position>
+<position type="obj_type_text">
+	<rect>210 309 229 330</rect>
+	<index>113</index>
+</position>
+<position type="obj_type_text">
+	<rect>230.11666870117 309 249.11666870117 330</rect>
+	<index>114</index>
+</position>
+<position type="obj_type_text">
+	<rect>250.23333740234 309 269.23333740234 330</rect>
+	<index>115</index>
+</position>
+<position type="obj_type_text">
+	<rect>270.35000610352 309 289.35000610352 330</rect>
+	<index>116</index>
+</position>
+<position type="obj_type_text">
+	<rect>290.4666595459 309 309.4666595459 330</rect>
+	<index>117</index>
+</position>
+<position type="obj_type_text">
+	<rect>310.58332824707 309 329.58332824707 330</rect>
+	<index>118</index>
+</position>
+<position type="obj_type_text">
+	<rect>330.69999694824 309 349.69999694824 330</rect>
+	<index>119</index>
+</position>
+<position type="obj_type_text">
+	<rect>350.81666564941 309 369.81666564941 330</rect>
+	<index>120</index>
+</position>
+<position type="obj_type_text">
+	<rect>370.93333435059 309 389.93333435059 330</rect>
+	<index>121</index>
+</position>
+<position type="obj_type_text">
+	<rect>391.05000305176 309 410.05000305176 330</rect>
+	<index>122</index>
+</position>
+<position type="obj_type_text">
+	<rect>411.16667175293 309 430.16667175293 330</rect>
+	<index>123</index>
+</position>
+<position type="obj_type_text">
+	<rect>431.2833404541 309 450.2833404541 330</rect>
+	<index>124</index>
+</position>
+<position type="obj_type_text">
+	<rect>451.39999389648 309 470.39999389648 330</rect>
+	<index>125</index>
+</position>
+<position type="obj_type_text">
+	<rect>471.51666259766 309 490.51666259766 330</rect>
+	<index>126</index>
+</position>
+<position type="obj_type_text">
+	<rect>491.63333129883 309 510.63333129883 330</rect>
+	<index>127</index>
+</position>
+<position type="obj_type_text">
+	<rect>511.75 309 530.75 330</rect>
+	<index>128</index>
+</position>
+<position type="obj_type_text">
+	<rect>531.86666870117 309 550.86666870117 330</rect>
+	<index>129</index>
+</position>
+<position type="obj_type_text">
+	<rect>552 309 571 330</rect>
+	<index>130</index>
+</position>
+<position type="obj_type_text">
+	<rect>572.11666870117 309 591.11666870117 330</rect>
+	<index>131</index>
+</position>
+<position type="obj_type_text">
+	<rect>592.23333740234 309 611.23333740234 330</rect>
+	<index>132</index>
+</position>
+<position type="obj_type_text">
+	<rect>612.35000610352 309 631.35000610352 330</rect>
+	<index>133</index>
+</position>
+<position type="obj_type_text">
+	<rect>632.46667480469 309 651.46667480469 330</rect>
+	<index>134</index>
+</position>
+<position type="obj_type_text">
+	<rect>652.58331298828 309 671.58331298828 330</rect>
+	<index>135</index>
+</position>
+<position type="obj_type_text">
+	<rect>672.70001220703 309 691.70001220703 330</rect>
+	<index>136</index>
+</position>
+<position type="obj_type_text">
+	<rect>692.81665039062 309 711.81665039062 330</rect>
+	<index>137</index>
+</position>
+<position type="obj_type_text">
+	<rect>712.93334960938 309 731.93334960938 330</rect>
+	<index>138</index>
+</position>
+<position type="obj_type_text">
+	<rect>733.04998779297 309 752.04998779297 330</rect>
+	<index>139</index>
+</position>
+<position type="obj_type_text">
+	<rect>753.16668701172 309 772.16668701172 330</rect>
+	<index>140</index>
+</position>
+<position type="obj_type_text">
+	<rect>773.28332519531 309 792.28332519531 330</rect>
+	<index>141</index>
+</position>
+<position type="obj_type_text">
+	<rect>793.40002441406 309 812.40002441406 330</rect>
+	<index>142</index>
+</position>
+<position type="obj_type_text">
+	<rect>813.51666259766 309 832.51666259766 330</rect>
+	<index>143</index>
+</position>
+<position type="obj_type_text">
+	<rect>833.63330078125 309 852.63330078125 330</rect>
+	<index>144</index>
+</position>
+<position type="obj_type_text">
+	<rect>853.75 309 872.75 330</rect>
+	<index>145</index>
+</position>
+<position type="obj_type_text">
+	<rect>873.86669921875 309 882.86669921875 330</rect>
+	<index>146</index>
+</position>
+<position type="obj_type_text">
+	<rect>883.86669921875 309 892.86669921875 330</rect>
+	<index>147</index>
+</position>
+<position type="obj_type_text">
+	<rect>893.86669921875 309 902.86669921875 330</rect>
+	<index>148</index>
+</position>
+<position type="obj_type_text">
+	<rect>903.86669921875 309 912.86669921875 330</rect>
+	<index>149</index>
+</position>
+<position type="obj_type_text">
+	<rect>913.86669921875 309 932.86669921875 330</rect>
+	<index>150</index>
+</position>
+<position type="obj_type_text">
+	<rect>934 309 953 330</rect>
+	<index>151</index>
+</position>
+<position type="obj_type_text">
+	<rect>954 309 973 330</rect>
+	<index>152</index>
+</position>
+<position type="obj_type_text">
+	<rect>210 348 229 369</rect>
+	<index>153</index>
+</position>
+<position type="obj_type_text">
+	<rect>230 348 249 369</rect>
+	<index>154</index>
+</position>
+<position type="obj_type_text">
+	<rect>250 348 269 369</rect>
+	<index>155</index>
+</position>
+<position type="obj_type_text">
+	<rect>270 348 289 369</rect>
+	<index>156</index>
+</position>
+<position type="obj_type_text">
+	<rect>290 348 299 369</rect>
+	<index>157</index>
+</position>
+<position type="obj_type_text">
+	<rect>300 348 319 369</rect>
+	<index>158</index>
+</position>
+<position type="obj_type_text">
+	<rect>320 348 339 369</rect>
+	<index>159</index>
+</position>
+<position type="obj_type_text">
+	<rect>340 348 359 369</rect>
+	<index>160</index>
+</position>
+<position type="obj_type_text">
+	<rect>360 348 379 369</rect>
+	<index>161</index>
+</position>
+<position type="obj_type_text">
+	<rect>380 348 399 369</rect>
+	<index>162</index>
+</position>
+<position type="obj_type_text">
+	<rect>400 348 419 369</rect>
+	<index>163</index>
+</position>
+<position type="obj_type_text">
+	<rect>420 348 439 369</rect>
+	<index>164</index>
+</position>
+<position type="obj_type_text">
+	<rect>440 348 459 369</rect>
+	<index>165</index>
+</position>
+<position type="obj_type_text">
+	<rect>460 348 479 369</rect>
+	<index>166</index>
+</position>
+<position type="obj_type_text">
+	<rect>480 348 499 369</rect>
+	<index>167</index>
+</position>
+<position type="obj_type_3">
+	<rect>917 623 1004 718</rect>
+<epubPageObject>
+<text>您已经学完了“多元智力学前教育理论”的所有内容。接下来，我们提供了三种路径，请您进行选择：</text>
+<width>538</width>
+<height>198</height>
+<subbutton>
+<chapter>2</chapter>
+<page>47</page>
+<text>复习本知识点</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>1</page>
+<text>返回导图页</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>48</page>
+<text>进入下一知识点</text>
+</subbutton>
+</epubPageObject>
+</position>
+
+</positions>
+<epubPageText>多元智力学前教育理论是指受美国心理学家霍华德•加德纳的多元智力理论影响而形成的学前教育理论或学前教育方案。1983年，美国心理学家加德纳出版《智能的结构》，提出了多元智力的理论。最初确定的智力有7种：语言-言语智力、逻辑数理智力、音乐智力、视觉空间智力、身体运动智力、自我反省智力、人际智力。1989年，又提出了第8种智力，即自然智力。</epubPageText>
+</epubPage>
+</epubChapter>

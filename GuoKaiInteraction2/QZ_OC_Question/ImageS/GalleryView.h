@@ -16,16 +16,7 @@
 @interface GalleryView : UIView<UIScrollViewDelegate>
 {
     UIScrollView *_gallerySCV;
-    //    图片数据源
-    NSMutableArray * _mArrayImages;
-    //    标题
-    
-    //    翻页指示
-    UIPageControl * _mPageCtrol;
-    //    背景色UIView
-    UIView * _mTipView;
     UITapGestureRecognizer *_tapOneGesture;
-
 #pragma mark - 数据
     NSMutableString *tit;
     PageImageList1 *_pageImageList;
@@ -34,12 +25,12 @@
     CTView *ctv;
 //    判断是否是全屏
     BOOL isBigScreen;
+//    第几张图片
+    NSInteger imageNum;
 }
 
 @property (nonatomic, retain) UIScrollView *gallerySCV;
 @property (nonatomic, retain) NSMutableArray *imageArray;
-@property (retain, nonatomic) NSArray * mArrayImages;
-@property (retain, nonatomic) UIView * mTipView;
 @property (retain, nonatomic) PageImageList1 *pageImageList;
 
 - (void)composition;

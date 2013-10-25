@@ -1,0 +1,85 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica </font_family>
+<text>测验 3.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 自我检测</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>826 18 1009 65</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_5">
+	<rect>196 104 825 654</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<questionobj type="liner">
+<backimage>c2p7n1.jpg</backimage>
+<question>【匹配题】请将下列早期学前教育思想家与其思想遗产进行匹配。</question>
+<options>
+	<rect>58 205 88 235</rect>
+<answerindex>1</answerindex>
+	<rect>220 205 250 235</rect>
+<answerindex>0</answerindex>
+	<rect>377 205 407 235</rect>
+<answerindex>3</answerindex>
+	<rect>511 205 541 235</rect>
+<answerindex>2</answerindex>
+</options>
+<answers>
+<answer>自然教育</answer>
+<answer>教育心理化</answer>
+<answer>白板说</answer>
+<answer>母育学校</answer>
+</answers>
+</questionobj> 
+</epubPageObject> 
+</position>
+
+<position type="obj_type_3">
+	<rect>915 623 1002 718</rect>
+<epubPageObject>
+<text>您已经学完了“国外早期学前教育思想遗产”的所有内容。接下来，我们提供了三种路径，请您进行选择：</text>
+<width>538</width>
+<height>198</height>
+<subbutton>
+<chapter>2</chapter>
+<page>6</page>
+<text>复习本知识点</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>1</page>
+<text>返回导图页</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>8</page>
+<text>进入下一知识点</text>
+</subbutton>
+</epubPageObject>
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

@@ -28,6 +28,7 @@
 
 @synthesize pageName;
 @synthesize delegate;
+@synthesize pageNumbder;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -51,6 +52,7 @@
     indexVoice = 0;
     indexTextRoll = 0;
     indexWebLink = 0;
+    isPlay = NO;
 }
 - (void)initIncomingData:(NSArray *)imageName
 {
@@ -94,6 +96,16 @@
         }
         
     }
+    for (int i = 0; i < indexVideo; i++)
+    {
+        MovieView *movieView = (MovieView *)[self viewWithTag:VIDEO + i];
+        if (movieView.isPlaying)
+        {
+            [movieView next];
+        }
+        
+    }
+    
     [self.delegate up:sender];
 }
 
@@ -108,6 +120,15 @@
         }
         
     }
+    for (int i = 0; i < indexVideo; i++)
+    {
+        MovieView *movieView = (MovieView *)[self viewWithTag:VIDEO + i];
+        if (movieView.isPlaying)
+        {
+        [movieView next];
+        }
+    }
+    
     [self.delegate down:sender];
 }
 
@@ -171,15 +192,17 @@
                 [self imageList:pImageList];
             }
                 break;
+                
             case PAGE_OBJECT_VOICE:
             {
                 PageVoice *pVoice = (PageVoice *)pObj;
                 [self voice:pVoice];
             }
                 break;
+                
             case PAGE_OBJECT_TEXT_ROLL:
             {
-            PageTextRoll *pTextRoll = (PageTextRoll *)pObj;
+                PageTextRoll *pTextRoll = (PageTextRoll *)pObj;
                 [self TextRoll:pTextRoll];
             }
                 break;
@@ -338,6 +361,10 @@
     movieView.tag = VIDEO + indexVideo;
     [movieView initIncomingData:pVideo];
     [movieView composition];
+    if (indexVideo)
+    {
+        [movieView pause];
+    }
     [self addSubview:movieView];
     [movieView release];
     indexVideo++;
@@ -345,16 +372,15 @@
 
 - (void)newMovieView
 {
-    if (indexVideo > 1)
+    if (isPlay)
     {
         for (int i = 0; i < indexVideo; i++)
         {
             MovieView *movieView = (MovieView *)[self viewWithTag:VIDEO + i];
-            [movieView removeFromSuperview];
-//            PageVideo *pVideo = m_vpVideo[i];
-//            [self video:pVideo];
+            [movieView next];
         }
     }
+    isPlay = !isPlay;
 }
 
 //单张图片
@@ -437,12 +463,43 @@
     }
     
     UIView *view = (UIView *)[self viewWithTag:500];
-    [view removeFromSuperview];
+    if (view)
+    {
+        [view removeFromSuperview];
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self];
+    QZ_POS pos;
+    pos.X = location.x;
+    pos.Y = location.y;
+    const PageBaseElements* pTarObj = pageObj.HitTestElement(pos);
+    if (pTarObj != NULL) {
+        switch (pTarObj->m_elementType) {
+            case PAGE_OBJECT_VIDEO:
+            {
+            
+                NSLog(@"点击的是视频");
+            }
+                break;
+                case PAGE_OBJECT_CHARACTER:
+            {
+                NSLog(@"点击的是文字");
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
 }
 
 - (void)dealloc
 {
-  
     [super dealloc];
 }
 
@@ -501,7 +558,6 @@
     popView.frame = rectPop;
     [self addSubview:popView];
     [popView release];
-    
     [self pressButton:pNavButton];
 }
 
@@ -545,22 +601,36 @@
     }
 }
 
-
 - (void)pressSkip:(UIButton *)button
 {
     [self.delegate skipPage: button.tag - NVACHILDBUTTON];
-    UIView *view = (UIView *)[self viewWithTag:500];
-    [view removeFromSuperview];
+   UIView *view = (UIView *)[self viewWithTag:500];
+    if (view)
+    {
+        [view removeFromSuperview];
+    }
 }
 
 - (void)closeBtnView:(PageNavButton *)pageNavButton
 {
     UIView *view = (UIView *)[self viewWithTag:500];
-    [view removeFromSuperview];
+    if (view)
+    {
+        [view removeFromSuperview];
+    }
 }
 
 -(void)skip:(QZ_INT)pageNum
 {
+    if (indexVoice != 0)
+    {
+        for (int i = 0; i < indexVoice; i++)
+        {
+            MusicToolView *musciView = (MusicToolView *)[self viewWithTag:VOICE+i];
+            [musciView stop];
+        }
+        
+    }
     [self.delegate skipPage:pageNum];
 }
 

@@ -30,9 +30,6 @@
 
 - (void)composition
 {
-    return;
-    [self createView];
-    [self text];
     [self createPress];
 }
 
@@ -104,35 +101,15 @@
 
 - (void)isYesRichText:(PageToolTip *)pageToolTip
 {
-    
     NSMutableString *strBegin = [[NSMutableString alloc]initWithString:@""];
     NSMutableString *string = [[NSMutableString alloc]initWithString:@""];
     NSMutableString * strFont = [NSMutableString string];
     CGFloat fontsize;
-    MarkupParser *p = [[[MarkupParser alloc]init]autorelease];
     for (int i = 0; i < pageToolTip->strTipText.vTextItemList.size(); i++)
     {
         switch (pageToolTip->strTipText.vTextItemList[i].pieceType)
         {
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_BEGIN:
-            {
-                if (![strBegin length]) {
-                    
-                }else{
-                    [strBegin appendString:@"\n"];
-                    [string appendString:@"\n"];
-                }
-                UIFont *font = [UIFont fontWithName:[NSString stringWithUTF8String:pageToolTip->strTipText.vTextItemList[i].fontFamily.c_str()] size:pageToolTip->strTipText.vTextItemList[i].fontSize];
-                
-                CGSize sizek = [@" " sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
-                NSInteger countK = (int)ceilf(pageToolTip->strTipText.vTextItemList[i].nLength/sizek.width);
-                for (int j =0 ; j < countK; j++)
-                {
-                    [strBegin appendString:@" "];
-                    [string appendString:@" "];
-                }
-            }
-                break;
+
             case PAGE_RICH_TEXT_PIECE_TEXT:
             {
                 [string appendString:[NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:pageToolTip->strTipText.vTextItemList[i].strText.c_str()]]];
@@ -143,46 +120,14 @@
                 
             }
                 break;
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_END:
-            {
-                
-            }
-                break;
-            case PAGE_RICH_TEXT_PIECE_DOT:
-            {
-                
-            }
-                break;
+
             default:
                 break;
         }
     }
-    
-    BOOL isEqual;
-    for (int i = 0; i < [[UIFont familyNames] count]; i++)
-    {
-        if ([strFont isEqualToString:[[UIFont familyNames] objectAtIndex:i]])
-        {
-            isEqual = YES;
-            break;
-        }else{
-            isEqual = NO;
-        }
-    }
-    if (isEqual == NO)
-    {
-        [strFont setString:@"Arial Rounded MT Bold"];
-    }
-    else if( isEqual == YES && [strFont isEqualToString:@"Palatino"])
-    {
-        [strFont setString:@"Avenir"];
-    }
-    [p setFont:strFont];
-    [p setSize:fontsize];
-    
-    
+
     UIFont *font = [UIFont fontWithName:strFont size:fontsize*1.1];
-    CGSize size = [string sizeWithFont:font constrainedToSize:CGSizeMake(textView.FSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByTruncatingTail];
+//    CGSize size = [string sizeWithFont:font constrainedToSize:CGSizeMake(textView.FSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByTruncatingTail];
     UILabel *label = [[UILabel alloc]init];
     label.frame = textView.bounds;
     label.backgroundColor = [UIColor clearColor];
@@ -193,6 +138,7 @@
     [label release];
     
 //    暂时用UILabel显示
+//    MarkupParser *p = [[[MarkupParser alloc]init]autorelease];
 //    self.ctv.frame  = CGRectMake(0, 0, textView.FSW , textView.FSH);
 //    NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
 //    [self.ctv setAttString:attString];
@@ -218,10 +164,18 @@
     [button addTarget:self action:@selector(handleSingleTap:) forControlEvents:UIControlEventTouchUpInside];
     button.selected = NO;
     [self addSubview:button];
+    isApp = NO;
 }
 
 - (void)handleSingleTap:(UIButton *)btn
 {
+    if (!isApp)
+    {
+        [self createView];
+        [self text];
+    }
+    isApp = YES;
+    
     [self.delegate closeOtherToolTip];
     btn.selected = !btn.selected;
     if (btn.selected)
@@ -244,6 +198,5 @@
     [textView release];
     [super dealloc];
 }
-
 
 @end

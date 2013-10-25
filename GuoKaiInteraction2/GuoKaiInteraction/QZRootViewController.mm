@@ -50,6 +50,7 @@
     pageListView.frame = CGRectMake(ZERO , ZERO , DW , DH-20);
     pageListView.tag = 200;
     pageListView.delegate = self;
+    [pageListView setPageNumbder:indexImage];
     [pageListView initIncomingData:[arrayImage objectAtIndex:pNumber]];
     [pageListView composition];
     [self.view addSubview:pageListView];

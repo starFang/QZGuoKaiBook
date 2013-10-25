@@ -14,8 +14,6 @@
 
 @synthesize imageArray = _imageArray;
 @synthesize gallerySCV = _gallerySCV;
-@synthesize mArrayImages = _mArrayImages;
-@synthesize mTipView = _mTipView;
 @synthesize pageImageList = _pageImageList;
 
 - (void)dealloc
@@ -24,14 +22,7 @@
     self.gallerySCV = nil;
     [self.imageArray release];
     self.imageArray = nil;
-    [self.mArrayImages release];
-    self.mArrayImages = nil;
-    [_mPageCtrol release];
-    [self.mTipView release];
-    self.mTipView = nil;
     [self.pageImageList release];
-    self.pageImageList = nil;
-    
     [tit release];
     [super dealloc];
  }
@@ -41,6 +32,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         tit = [[NSMutableString alloc]initWithString:@""];
+        imageNum = 0;
     }
     return self;
 }
@@ -91,7 +83,7 @@
     isBigScreen = NO;
     [self initTitle:frame];
     [self initImageDetail:frame];
-//    [self initPageControl:frame];
+    [self initPageControl:frame];
     [self initImageScrollView:frame];
 } 
 #pragma mark - 设置标题
@@ -119,25 +111,7 @@
     {
         switch (pImageList->stTitle.vTextItemList[i].pieceType)
         {
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_BEGIN:
-            {
-                if (![strBegin length]) {
-                    
-                }else{
-                    [strBegin appendString:@"\n"];
-                    [string appendString:@"\n"];
-                }
-                UIFont *font = [UIFont fontWithName:[NSString stringWithUTF8String:pImageList->stTitle.vTextItemList[i].fontFamily.c_str()] size:pImageList->stTitle.vTextItemList[i].fontSize];
-                
-                CGSize sizek = [@" " sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
-                NSInteger countK = (int)ceilf(pImageList->stTitle.vTextItemList[i].nLength/sizek.width);
-                for (int j =0 ; j < countK; j++)
-                {
-                    [strBegin appendString:@" "];
-                    [string appendString:@" "];
-                }
-            }
-                break;
+            
             case PAGE_RICH_TEXT_PIECE_TEXT:
             {
                 [string appendString:[NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:pImageList->stTitle.vTextItemList[i].strText.c_str()]]];
@@ -148,23 +122,12 @@
                 
             }
                 break;
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_END:
-            {
-                
-            }
-                break;
-            case PAGE_RICH_TEXT_PIECE_DOT:
-            {
-                
-            }
-                break;
             default:
                 break;
         }
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    
     [tit setString:string];
     CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
@@ -284,56 +247,27 @@
 
 - (void)initPageControl:(CGRect)frame
 {
+    UIPageControl *pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, SFSH-20, SFSW, 20)];
+    pageControl.currentPage = 0;
+    pageControl.tag = 398;
+    pageControl.backgroundColor = [UIColor lightGrayColor];
+    [pageControl addTarget:self action:@selector(pageControlWithSC:) forControlEvents:UIControlEventValueChanged];
+    [pageControl setNumberOfPages:[self.pageImageList.vImages count]];
+    pageControl.hidesForSinglePage = NO;
+    pageControl.userInteractionEnabled = NO;
+    [self addSubview:pageControl];
+    [pageControl release];
     
-//    return;
-//    if (self.pageImageList.isSmallImage == NO)
-//    {
-        CGRect tipRect = CGRectMake(0, SFSH-30, SFSW, 30);
-        _mTipView = [[UIView alloc]initWithFrame:tipRect];
-        [_mTipView setAlpha:0.7];
-        [self addSubview:_mTipView];
-        _mTipView.backgroundColor = [UIColor clearColor];
-        _mPageCtrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 10, SFSW, 20)];
-        _mPageCtrol.currentPage = 0;
-        [_mPageCtrol addTarget:self action:@selector(pageControlWithSC:) forControlEvents:UIControlEventValueChanged];
-        [_mPageCtrol setNumberOfPages:[self.pageImageList.vImages count]];
-        _mPageCtrol.hidesForSinglePage = NO;
-        [_mTipView addSubview:_mPageCtrol];
-        UIImage *image1 = [UIImage imageNamed:@"a1.png"];
-        UIImage *image2 = [UIImage imageNamed:@"a2.png"];
-        UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 10, 20,20)];
-        UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(_mTipView.frame.size.width-20, 10, 20, 20)];
-        [imageView1 setImage:image1];
-        [imageView2 setImage:image2];
-        [_mTipView addSubview:imageView1];
-        [_mTipView addSubview:imageView2];
-        [imageView1 release];
-        [imageView2 release];
-//        
-//    }else{
-//        
-//        CGRect tipRect = CGRectMake(0, SFSH-85, SFSW, 85);
-//        _mTipView = [[UIView alloc]initWithFrame:tipRect];
-//        [_mTipView setAlpha:1.0];
-//        [self addSubview:_mTipView];
-//        _mTipView.backgroundColor = [UIColor clearColor];
-//        _mPageCtrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 65, SFSW, 20)];
-//        _mPageCtrol.currentPage = 0;
-//        [_mPageCtrol addTarget:self action:@selector(pageControlWithSC:) forControlEvents:UIControlEventValueChanged];
-//        [_mPageCtrol setNumberOfPages:[self.imageArray count]];
-//        _mPageCtrol.hidesForSinglePage = NO;
-//        [_mTipView addSubview:_mPageCtrol]; 
-//        UIImage *image1 = [UIImage imageNamed:@"a1.png"];
-//        UIImage *image2 = [UIImage imageNamed:@"a2.png"];
-//        UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 65, 20,20)];
-//        UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(SFSW-20, 65, 20, 20)];
-//        [imageView1 setImage:image1];
-//        [imageView2 setImage:image2];
-//        [_mTipView addSubview:imageView1];
-//        [_mTipView addSubview:imageView2];
-//        [imageView1 release];
-//        [imageView2 release];
-//    }
+    UIButton *btnUp = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btnDown = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnUp setImage:[UIImage imageNamed:@"a1.png"] forState:UIControlStateNormal];
+    [btnDown setImage:[UIImage imageNamed:@"a2.png"] forState:UIControlStateNormal];
+    btnUp.frame = CGRectMake(0, SFSH-20, 20,20);
+    btnDown.frame = CGRectMake(SFSW-20, SFSH-20, 20, 20);
+    [btnUp addTarget:self action:@selector(upImage:) forControlEvents:UIControlEventTouchUpInside];
+    [btnDown addTarget:self action:@selector(downImage:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:btnUp];
+    [self addSubview:btnDown];
 }
 
 -(void)handleSingleTap:(UITapGestureRecognizer *)gestureRecognizer
@@ -451,23 +385,50 @@ static int indexNum;
     {
         curPageView = 0;
     }
+    imageNum = curPageView;
     PageImageListSubImage1 *pageFirst = (PageImageListSubImage1 *)[self.pageImageList.vImages objectAtIndex:curPageView];
     UILabel * _mTitleText = (UILabel *)[self viewWithTag:202];
     if (isBigScreen == NO)
     {
         _mTitleText.text = pageFirst.stImgComment;
-        [_mPageCtrol setCurrentPage:curPageView];
+        UIPageControl *pageControl = (UIPageControl *)[self viewWithTag:398];
+        pageControl.currentPage = imageNum;
     }else{
         UILabel * footLabel = (UILabel *)[self.superview viewWithTag:HUALANG_FOOTLABEL_TAG];
         [footLabel setText:pageFirst.stImgComment];
     }
 }
 
-- (void)pageControlWithSC:(id)sender
+- (void)upImage:(id)sender
 {
-    int page = _mPageCtrol.currentPage;
-    [self.gallerySCV setContentOffset:CGPointMake(SFSW * page, 0)];
-    PageImageListSubImage1 *pageFirst = (PageImageListSubImage1 *)[self.pageImageList.vImages objectAtIndex:page];
+    if (imageNum > 0)
+    {
+        imageNum--;
+    }else{
+        imageNum = 0;
+    }
+    [self.gallerySCV setContentOffset:CGPointMake(SFSW * imageNum, 0)];
+    PageImageListSubImage1 *pageFirst = (PageImageListSubImage1 *)[self.pageImageList.vImages objectAtIndex:imageNum];
+    UIPageControl *pageControl = (UIPageControl *)[self viewWithTag:398];
+    pageControl.currentPage = imageNum;
+    UILabel * _mTitleText = (UILabel *)[self viewWithTag:202];
+    _mTitleText.text  = pageFirst.stImgComment;
+    
+}
+
+- (void)downImage:(id)sender
+{
+    if (imageNum >= [self.pageImageList.vImages count] - 1)
+    {
+        imageNum = [self.pageImageList.vImages count] - 1;
+    }else{
+        imageNum++;
+    }
+    
+    [self.gallerySCV setContentOffset:CGPointMake(SFSW * imageNum, 0)]; 
+    PageImageListSubImage1 *pageFirst = (PageImageListSubImage1 *)[self.pageImageList.vImages objectAtIndex:imageNum];
+    UIPageControl *pageControl = (UIPageControl *)[self viewWithTag:398];
+    pageControl.currentPage = imageNum;
     UILabel * _mTitleText = (UILabel *)[self viewWithTag:202];
     _mTitleText.text  = pageFirst.stImgComment;
 }

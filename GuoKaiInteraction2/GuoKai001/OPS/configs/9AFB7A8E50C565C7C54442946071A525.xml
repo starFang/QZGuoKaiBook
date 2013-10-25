@@ -1,0 +1,125 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>测验 5.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 自我检测</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_5">
+	<rect>196 103 825 653</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<questionobj type="selector">
+<question>【单选题】学会抓握的婴儿当看见床上的玩具，会反复用抓握的动作去获得玩具。即小孩建立了（     ）。</question>
+<options>
+<option>图式</option>
+<option>同化</option>
+<option>顺应</option>
+<option>平衡</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】学会抓握的婴儿为了得到远处的玩具，反复抓握，偶然地，他抓到床单一拉，玩具从远处来到了近处，这一动作过程称为（     ）。</question>
+<options>
+<option>图式</option>
+<option>同化</option>
+<option>顺应</option>
+<option>平衡</option>
+</options>
+<answers>
+<answer>3</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】学会抓握的婴儿，当他独自一个人，玩具又较远婴儿手够不着（看得见）时，他仍然用抓握的动作试图得到玩具，这一动作过程称为（     ）。</question>
+<options>
+<option>图式</option>
+<option>同化</option>
+<option>顺应</option>
+<option>平衡</option>
+</options>
+<answers>
+<answer>1</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】皮亚杰认为0-2岁的孩子的认知发展特点是：（     ）。</question>
+<options>
+<option>主要借助头脑中对事物的表象、直觉想象来进行思维。理解事物时往往以自我为中心。</option>
+<option>主要是同过手摸、眼看、耳听等感官动作来获得对外界的认知的</option>
+<option>可以进行一些逻辑运算，这些运算不是依靠动作，而是在自己的内心进行操作。</option>
+<option>孩子不单从内心进行运算，还能进行假设、命题，能够运用逻辑思维解决问题。</option>
+</options>
+<answers>
+<answer>1</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】皮亚杰认为2-7岁的孩子的认知发展特点是（     ）。</question>
+<options>
+<option>孩子可以进行一些逻辑运算，这些运算不是依靠动作，而是在自己的内心进行操作。</option>
+<option>孩子不单从内心进行运算，还能进行假设、命题，能够运用逻辑思维解决问题。</option>
+<option>主要借助头脑中对事物的表象、直觉想象来进行思维。理解事物时往往以自我为中心。</option>
+<option>要是同过手摸、眼看、耳听等感官动作来获得对外界的认知的。</option>
+</options>
+<answers>
+<answer>2</answer>
+</answers>
+</questionobj> 
+</epubPageObject> 
+</position>
+
+<position type="obj_type_3">
+	<rect>917 623 1004 718</rect>
+<epubPageObject>
+<text>您已经学完了“结构主义学前教育理论”的所有内容。接下来，我们提供了三种路径，请您进行选择：</text>
+<width>538</width>
+<height>198</height>
+<subbutton>
+<chapter>2</chapter>
+<page>40</page>
+<text>复习本知识点</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>1</page>
+<text>返回导叶图</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>46</page>
+<text>进入下一知识点</text>
+</subbutton>
+</epubPageObject>
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

@@ -14,7 +14,6 @@
 @protocol MoviePlayDelegate <NSObject>
 
 - (void)newMovieView;
-
 @end
 
 @interface MovieView : UIView<MoviePlayDelegate>
@@ -33,23 +32,21 @@
     
 //    点击视图
     UIImageView * pressView;
-    
-//    设置监听
-    BOOL isPanNow;
-    BOOL isPinchNow;
-    BOOL isRotationNow;
+
     
 //    是否是最大屏幕显示
     BOOL isMovieBig;
-    
     id<MoviePlayDelegate>delegate;
  }
-@property (nonatomic, retain) MPMoviePlayerController *moviePlayer;
+@property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 @property (nonatomic, retain) UIView *fRView;
 @property (nonatomic, assign) CGFloat lastRotation;
 @property (nonatomic, assign) CGFloat scale;
 @property (nonatomic, assign) id<MoviePlayDelegate>delegate;
+@property (nonatomic, assign) BOOL isPlaying;
 
 - (void)initIncomingData:(PageVideo *)pageVideo;
 - (void)composition;
+- (void)next;
+- (void)pause;
 @end

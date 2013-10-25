@@ -1,0 +1,114 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>测验 4.4</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 自我检测</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_3">
+	<rect>915 623 1002 718</rect>
+<epubPageObject>
+<text>您已经学完了“近代学前教育理论流派——陈鹤琴”的所有内容。接下来，我们提供了三种路径，请您进行选择：</text>
+<width>538</width>
+<height>198</height>
+<subbutton>
+<chapter>2</chapter>
+<page>27</page>
+<text>复习本知识点</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>1</page>
+<text>返回导页图</text>
+</subbutton>
+<subbutton>
+<chapter>2</chapter>
+<page>31</page>
+<text>进入下一知识点</text>
+</subbutton>
+</epubPageObject>
+</position>
+
+<position type="obj_type_5">
+	<rect>196 103 825 653</rect>
+<epubPageObject>
+<title><richTextIndex>0</richTextIndex></title>
+<questionobj type="selector">
+<question>【单选题】陈鹤琴创办的第一所幼稚园是（    ）</question>
+<options>
+<option>幼儿学校</option>
+<option>湖北幼稚园</option>
+<option>南京鼓楼幼稚园</option>
+<option>上海幼稚园</option>
+</options>
+<answers>
+<answer>2</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】根据陈鹤琴对学前儿童的分期，运动技能形成，语言开始发展的是（     ）</question>
+<options>
+<option>新生婴儿时期</option>
+<option>乳儿时期</option>
+<option>步儿时期</option>
+<option>幼儿时期</option>
+</options>
+<answers>
+<answer>2</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【单选题】陈鹤琴认为，1个月到1周岁左右的儿童的特征是（     ）</question>
+<options>
+<option>在反射和感觉活动的基础上，联合运动开始发生</option>
+<option>开始本能的反射活动</option>
+<option>课程应采用游戏式、小团体式等教学方法</option>
+</options>
+<answers>
+<answer>0</answer>
+</answers>
+</questionobj> 
+<questionobj type="selector">
+<question>【多选题】下列哪些选项属于陈鹤琴幼稚园课程理论的内容？</question>
+<options>
+<option>课程应为目标服务</option>
+<option>课程应采取分科教学的形式</option>
+<option>课程应采用游戏式、小团体式等教学方法</option>
+<option>五指活动</option>
+</options>
+<answers>
+<answer>0</answer>
+<answer>2</answer>
+<answer>3</answer>
+</answers>
+</questionobj> 
+</epubPageObject> 
+</position>
+
+</positions>
+<epubPageText></epubPageText>
+</epubPage>
+</epubChapter>

@@ -1,0 +1,340 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text>影片 5.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 当代导语</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 999 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_4">
+	<rect>70 242 585 646</rect>
+<epubPageObject>
+<title>
+<richTextIndex>0</richTextIndex></title>
+<path>c2p38当代导语.mp4</path>
+<startimage>c2p38当代导语34.png</startimage>
+</epubPageObject>
+</position>
+
+<position type="obj_type_text">
+	<rect>655 271 674 292</rect>
+	<index>0</index>
+</position>
+<position type="obj_type_text">
+	<rect>675 271 694 292</rect>
+	<index>1</index>
+</position>
+<position type="obj_type_text">
+	<rect>695 271 714 292</rect>
+	<index>2</index>
+</position>
+<position type="obj_type_text">
+	<rect>715 271 734 292</rect>
+	<index>3</index>
+</position>
+<position type="obj_type_text">
+	<rect>735 271 754 292</rect>
+	<index>4</index>
+</position>
+<position type="obj_type_text">
+	<rect>755 271 774 292</rect>
+	<index>5</index>
+</position>
+<position type="obj_type_text">
+	<rect>775 271 794 292</rect>
+	<index>6</index>
+</position>
+<position type="obj_type_text">
+	<rect>795 271 814 292</rect>
+	<index>7</index>
+</position>
+<position type="obj_type_text">
+	<rect>815 271 834 292</rect>
+	<index>8</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 271 854 292</rect>
+	<index>9</index>
+</position>
+<position type="obj_type_text">
+	<rect>855 271 874 292</rect>
+	<index>10</index>
+</position>
+<position type="obj_type_text">
+	<rect>875 271 894 292</rect>
+	<index>11</index>
+</position>
+<position type="obj_type_text">
+	<rect>895 271 914 292</rect>
+	<index>12</index>
+</position>
+<position type="obj_type_text">
+	<rect>915 271 934 292</rect>
+	<index>13</index>
+</position>
+<position type="obj_type_text">
+	<rect>935 271 954 292</rect>
+	<index>14</index>
+</position>
+<position type="obj_type_text">
+	<rect>615 310 634 331</rect>
+	<index>15</index>
+</position>
+<position type="obj_type_text">
+	<rect>635 310 654 331</rect>
+	<index>16</index>
+</position>
+<position type="obj_type_text">
+	<rect>655 310 674 331</rect>
+	<index>17</index>
+</position>
+<position type="obj_type_text">
+	<rect>675 310 694 331</rect>
+	<index>18</index>
+</position>
+<position type="obj_type_text">
+	<rect>695 310 714 331</rect>
+	<index>19</index>
+</position>
+<position type="obj_type_text">
+	<rect>715 310 734 331</rect>
+	<index>20</index>
+</position>
+<position type="obj_type_text">
+	<rect>735 310 754 331</rect>
+	<index>21</index>
+</position>
+<position type="obj_type_text">
+	<rect>755 310 774 331</rect>
+	<index>22</index>
+</position>
+<position type="obj_type_text">
+	<rect>775 310 794 331</rect>
+	<index>23</index>
+</position>
+<position type="obj_type_text">
+	<rect>795 310 814 331</rect>
+	<index>24</index>
+</position>
+<position type="obj_type_text">
+	<rect>815 310 834 331</rect>
+	<index>25</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 310 854 331</rect>
+	<index>26</index>
+</position>
+<position type="obj_type_text">
+	<rect>855 310 874 331</rect>
+	<index>27</index>
+</position>
+<position type="obj_type_text">
+	<rect>875 310 894 331</rect>
+	<index>28</index>
+</position>
+<position type="obj_type_text">
+	<rect>895 310 914 331</rect>
+	<index>29</index>
+</position>
+<position type="obj_type_text">
+	<rect>915 310 934 331</rect>
+	<index>30</index>
+</position>
+<position type="obj_type_text">
+	<rect>615 349 634 370</rect>
+	<index>31</index>
+</position>
+<position type="obj_type_text">
+	<rect>635 349 654 370</rect>
+	<index>32</index>
+</position>
+<position type="obj_type_text">
+	<rect>655 349 674 370</rect>
+	<index>33</index>
+</position>
+<position type="obj_type_text">
+	<rect>675 349 694 370</rect>
+	<index>34</index>
+</position>
+<position type="obj_type_text">
+	<rect>695 349 714 370</rect>
+	<index>35</index>
+</position>
+<position type="obj_type_text">
+	<rect>715 349 734 370</rect>
+	<index>36</index>
+</position>
+<position type="obj_type_text">
+	<rect>735 349 754 370</rect>
+	<index>37</index>
+</position>
+<position type="obj_type_text">
+	<rect>755 349 774 370</rect>
+	<index>38</index>
+</position>
+<position type="obj_type_text">
+	<rect>775 349 794 370</rect>
+	<index>39</index>
+</position>
+<position type="obj_type_text">
+	<rect>795 349 814 370</rect>
+	<index>40</index>
+</position>
+<position type="obj_type_text">
+	<rect>815 349 834 370</rect>
+	<index>41</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 349 854 370</rect>
+	<index>42</index>
+</position>
+<position type="obj_type_text">
+	<rect>855 349 874 370</rect>
+	<index>43</index>
+</position>
+<position type="obj_type_text">
+	<rect>875 349 894 370</rect>
+	<index>44</index>
+</position>
+<position type="obj_type_text">
+	<rect>895 349 914 370</rect>
+	<index>45</index>
+</position>
+<position type="obj_type_text">
+	<rect>915 349 934 370</rect>
+	<index>46</index>
+</position>
+<position type="obj_type_text">
+	<rect>935 349 954 370</rect>
+	<index>47</index>
+</position>
+<position type="obj_type_text">
+	<rect>615 388 634 409</rect>
+	<index>48</index>
+</position>
+<position type="obj_type_text">
+	<rect>635 388 654 409</rect>
+	<index>49</index>
+</position>
+<position type="obj_type_text">
+	<rect>655 388 674 409</rect>
+	<index>50</index>
+</position>
+<position type="obj_type_text">
+	<rect>675 388 694 409</rect>
+	<index>51</index>
+</position>
+<position type="obj_type_text">
+	<rect>695 388 714 409</rect>
+	<index>52</index>
+</position>
+<position type="obj_type_text">
+	<rect>715 388 734 409</rect>
+	<index>53</index>
+</position>
+<position type="obj_type_text">
+	<rect>735 388 754 409</rect>
+	<index>54</index>
+</position>
+<position type="obj_type_text">
+	<rect>755 388 774 409</rect>
+	<index>55</index>
+</position>
+<position type="obj_type_text">
+	<rect>775 388 794 409</rect>
+	<index>56</index>
+</position>
+<position type="obj_type_text">
+	<rect>795 388 814 409</rect>
+	<index>57</index>
+</position>
+<position type="obj_type_text">
+	<rect>815 388 834 409</rect>
+	<index>58</index>
+</position>
+<position type="obj_type_text">
+	<rect>835 388 854 409</rect>
+	<index>59</index>
+</position>
+<position type="obj_type_text">
+	<rect>855 388 874 409</rect>
+	<index>60</index>
+</position>
+<position type="obj_type_text">
+	<rect>875 388 894 409</rect>
+	<index>61</index>
+</position>
+<position type="obj_type_text">
+	<rect>895 388 914 409</rect>
+	<index>62</index>
+</position>
+<position type="obj_type_text">
+	<rect>915 388 934 409</rect>
+	<index>63</index>
+</position>
+<position type="obj_type_text">
+	<rect>935 388 954 409</rect>
+	<index>64</index>
+</position>
+<position type="obj_type_text">
+	<rect>615 427 634 448</rect>
+	<index>65</index>
+</position>
+<position type="obj_type_text">
+	<rect>635 427 654 448</rect>
+	<index>66</index>
+</position>
+<position type="obj_type_text">
+	<rect>655 427 674 448</rect>
+	<index>67</index>
+</position>
+<position type="obj_type_text">
+	<rect>675 427 694 448</rect>
+	<index>68</index>
+</position>
+<position type="obj_type_text">
+	<rect>695 427 714 448</rect>
+	<index>69</index>
+</position>
+<position type="obj_type_text">
+	<rect>715 427 734 448</rect>
+	<index>70</index>
+</position>
+<position type="obj_type_text">
+	<rect>735 427 754 448</rect>
+	<index>71</index>
+</position>
+<position type="obj_type_text">
+	<rect>755 427 774 448</rect>
+	<index>72</index>
+</position>
+<position type="obj_type_text">
+	<rect>775 427 794 448</rect>
+	<index>73</index>
+</position>
+</positions>
+<epubPageText>同近现代学前教育理论流派相比，当代学前教育理论流派往往不是现成的、完整的学前教育理论体系，而是受某种或多种理论影响而提出的各种学前教育的思想、方案。</epubPageText>
+</epubPage>
+</epubChapter>

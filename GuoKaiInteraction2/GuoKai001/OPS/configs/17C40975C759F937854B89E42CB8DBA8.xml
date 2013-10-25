@@ -1,0 +1,476 @@
+<epubChapter>
+<epubPage>
+<richtexts>
+<richText type="complextext"><rich_text_item type="text_type_text_tool1">
+<font_color>#48678e</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica </font_family>
+<text>影片 3.1</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+<rich_text_item type="text_type_text_tool1">
+<font_color>#000000</font_color>
+<font_size>15</font_size>
+<font_family>Helvetica</font_family>
+<text> 早期导语</text>
+<is_italic>false</is_italic>
+<is_bold>false</is_bold>
+</rich_text_item>
+</richText>
+</richtexts>
+<positions>
+<position type="obj_type_2">
+	<rect>816 17 1002 64</rect>
+<epubPageObject>
+<chapter>2</chapter>
+<page>1</page>
+</epubPageObject> 
+</position>
+
+<position type="obj_type_4">
+	<rect>36 233 551 636</rect>
+<epubPageObject>
+<title>
+<richTextIndex>0</richTextIndex></title>
+<path>早期导语.mp4</path>
+<startimage>c2p5vidao.png</startimage>
+</epubPageObject>
+</position>
+
+<position type="obj_type_text">
+	<rect>647 262 666 284</rect>
+	<index>0</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 262 676 284</rect>
+	<index>1</index>
+</position>
+<position type="obj_type_text">
+	<rect>677 262 686 284</rect>
+	<index>2</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 262 706 284</rect>
+	<index>3</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 262 716 284</rect>
+	<index>4</index>
+</position>
+<position type="obj_type_text">
+	<rect>717 262 726 284</rect>
+	<index>5</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 262 746 284</rect>
+	<index>6</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 262 766 284</rect>
+	<index>7</index>
+</position>
+<position type="obj_type_text">
+	<rect>767 262 786 284</rect>
+	<index>8</index>
+</position>
+<position type="obj_type_text">
+	<rect>787 262 806 284</rect>
+	<index>9</index>
+</position>
+<position type="obj_type_text">
+	<rect>807 262 826 284</rect>
+	<index>10</index>
+</position>
+<position type="obj_type_text">
+	<rect>827 262 846 284</rect>
+	<index>11</index>
+</position>
+<position type="obj_type_text">
+	<rect>847 262 866 284</rect>
+	<index>12</index>
+</position>
+<position type="obj_type_text">
+	<rect>867 262 886 284</rect>
+	<index>13</index>
+</position>
+<position type="obj_type_text">
+	<rect>887 262 906 284</rect>
+	<index>14</index>
+</position>
+<position type="obj_type_text">
+	<rect>907 262 926 284</rect>
+	<index>15</index>
+</position>
+<position type="obj_type_text">
+	<rect>927 262 946 284</rect>
+	<index>16</index>
+</position>
+<position type="obj_type_text">
+	<rect>607 301 626 323</rect>
+	<index>17</index>
+</position>
+<position type="obj_type_text">
+	<rect>627 301 646 323</rect>
+	<index>18</index>
+</position>
+<position type="obj_type_text">
+	<rect>647 301 666 323</rect>
+	<index>19</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 301 686 323</rect>
+	<index>20</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 301 706 323</rect>
+	<index>21</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 301 726 323</rect>
+	<index>22</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 301 746 323</rect>
+	<index>23</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 301 766 323</rect>
+	<index>24</index>
+</position>
+<position type="obj_type_text">
+	<rect>767 301 786 323</rect>
+	<index>25</index>
+</position>
+<position type="obj_type_text">
+	<rect>787 301 806 323</rect>
+	<index>26</index>
+</position>
+<position type="obj_type_text">
+	<rect>807 301 826 323</rect>
+	<index>27</index>
+</position>
+<position type="obj_type_text">
+	<rect>827 301 846 323</rect>
+	<index>28</index>
+</position>
+<position type="obj_type_text">
+	<rect>847 301 866 323</rect>
+	<index>29</index>
+</position>
+<position type="obj_type_text">
+	<rect>867 301 886 323</rect>
+	<index>30</index>
+</position>
+<position type="obj_type_text">
+	<rect>887 301 906 323</rect>
+	<index>31</index>
+</position>
+<position type="obj_type_text">
+	<rect>907 301 926 323</rect>
+	<index>32</index>
+</position>
+<position type="obj_type_text">
+	<rect>927 301 946 323</rect>
+	<index>33</index>
+</position>
+<position type="obj_type_text">
+	<rect>607 340 626 362</rect>
+	<index>34</index>
+</position>
+<position type="obj_type_text">
+	<rect>627 340 646 362</rect>
+	<index>35</index>
+</position>
+<position type="obj_type_text">
+	<rect>647 340 666 362</rect>
+	<index>36</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 340 686 362</rect>
+	<index>37</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 340 706 362</rect>
+	<index>38</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 340 726 362</rect>
+	<index>39</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 340 746 362</rect>
+	<index>40</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 340 766 362</rect>
+	<index>41</index>
+</position>
+<position type="obj_type_text">
+	<rect>767 340 786 362</rect>
+	<index>42</index>
+</position>
+<position type="obj_type_text">
+	<rect>787 340 806 362</rect>
+	<index>43</index>
+</position>
+<position type="obj_type_text">
+	<rect>807 340 826 362</rect>
+	<index>44</index>
+</position>
+<position type="obj_type_text">
+	<rect>827 340 846 362</rect>
+	<index>45</index>
+</position>
+<position type="obj_type_text">
+	<rect>847 340 866 362</rect>
+	<index>46</index>
+</position>
+<position type="obj_type_text">
+	<rect>867 340 886 362</rect>
+	<index>47</index>
+</position>
+<position type="obj_type_text">
+	<rect>887 340 906 362</rect>
+	<index>48</index>
+</position>
+<position type="obj_type_text">
+	<rect>907 340 926 362</rect>
+	<index>49</index>
+</position>
+<position type="obj_type_text">
+	<rect>927 340 946 362</rect>
+	<index>50</index>
+</position>
+<position type="obj_type_text">
+	<rect>607 379 626 401</rect>
+	<index>51</index>
+</position>
+<position type="obj_type_text">
+	<rect>627 379 646 401</rect>
+	<index>52</index>
+</position>
+<position type="obj_type_text">
+	<rect>647 379 666 401</rect>
+	<index>53</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 379 686 401</rect>
+	<index>54</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 379 706 401</rect>
+	<index>55</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 379 726 401</rect>
+	<index>56</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 379 746 401</rect>
+	<index>57</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 379 766 401</rect>
+	<index>58</index>
+</position>
+<position type="obj_type_text">
+	<rect>767 379 786 401</rect>
+	<index>59</index>
+</position>
+<position type="obj_type_text">
+	<rect>787 379 806 401</rect>
+	<index>60</index>
+</position>
+<position type="obj_type_text">
+	<rect>807 379 826 401</rect>
+	<index>61</index>
+</position>
+<position type="obj_type_text">
+	<rect>827 379 846 401</rect>
+	<index>62</index>
+</position>
+<position type="obj_type_text">
+	<rect>847 379 866 401</rect>
+	<index>63</index>
+</position>
+<position type="obj_type_text">
+	<rect>867 379 886 401</rect>
+	<index>64</index>
+</position>
+<position type="obj_type_text">
+	<rect>887 379 906 401</rect>
+	<index>65</index>
+</position>
+<position type="obj_type_text">
+	<rect>907 379 926 401</rect>
+	<index>66</index>
+</position>
+<position type="obj_type_text">
+	<rect>607 418 626 440</rect>
+	<index>67</index>
+</position>
+<position type="obj_type_text">
+	<rect>627 418 646 440</rect>
+	<index>68</index>
+</position>
+<position type="obj_type_text">
+	<rect>647 418 666 440</rect>
+	<index>69</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 418 686 440</rect>
+	<index>70</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 418 706 440</rect>
+	<index>71</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 418 726 440</rect>
+	<index>72</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 418 746 440</rect>
+	<index>73</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 418 766 440</rect>
+	<index>74</index>
+</position>
+<position type="obj_type_text">
+	<rect>767 418 786 440</rect>
+	<index>75</index>
+</position>
+<position type="obj_type_text">
+	<rect>787 418 806 440</rect>
+	<index>76</index>
+</position>
+<position type="obj_type_text">
+	<rect>807 418 826 440</rect>
+	<index>77</index>
+</position>
+<position type="obj_type_text">
+	<rect>827 418 846 440</rect>
+	<index>78</index>
+</position>
+<position type="obj_type_text">
+	<rect>847 418 866 440</rect>
+	<index>79</index>
+</position>
+<position type="obj_type_text">
+	<rect>867 418 886 440</rect>
+	<index>80</index>
+</position>
+<position type="obj_type_text">
+	<rect>887 418 906 440</rect>
+	<index>81</index>
+</position>
+<position type="obj_type_text">
+	<rect>907 418 926 440</rect>
+	<index>82</index>
+</position>
+<position type="obj_type_text">
+	<rect>927 418 946 440</rect>
+	<index>83</index>
+</position>
+<position type="obj_type_text">
+	<rect>607 457 626 479</rect>
+	<index>84</index>
+</position>
+<position type="obj_type_text">
+	<rect>627 457 646 479</rect>
+	<index>85</index>
+</position>
+<position type="obj_type_text">
+	<rect>647 457 666 479</rect>
+	<index>86</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 457 686 479</rect>
+	<index>87</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 457 706 479</rect>
+	<index>88</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 457 726 479</rect>
+	<index>89</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 457 746 479</rect>
+	<index>90</index>
+</position>
+<position type="obj_type_text">
+	<rect>747 457 766 479</rect>
+	<index>91</index>
+</position>
+<position type="obj_type_text">
+	<rect>767 457 786 479</rect>
+	<index>92</index>
+</position>
+<position type="obj_type_text">
+	<rect>787 457 806 479</rect>
+	<index>93</index>
+</position>
+<position type="obj_type_text">
+	<rect>807 457 826 479</rect>
+	<index>94</index>
+</position>
+<position type="obj_type_text">
+	<rect>827 457 846 479</rect>
+	<index>95</index>
+</position>
+<position type="obj_type_text">
+	<rect>847 457 866 479</rect>
+	<index>96</index>
+</position>
+<position type="obj_type_text">
+	<rect>867 457 886 479</rect>
+	<index>97</index>
+</position>
+<position type="obj_type_text">
+	<rect>887 457 906 479</rect>
+	<index>98</index>
+</position>
+<position type="obj_type_text">
+	<rect>907 457 926 479</rect>
+	<index>99</index>
+</position>
+<position type="obj_type_text">
+	<rect>927 457 946 479</rect>
+	<index>100</index>
+</position>
+<position type="obj_type_text">
+	<rect>607 496 626 518</rect>
+	<index>101</index>
+</position>
+<position type="obj_type_text">
+	<rect>627 496 646 518</rect>
+	<index>102</index>
+</position>
+<position type="obj_type_text">
+	<rect>647 496 666 518</rect>
+	<index>103</index>
+</position>
+<position type="obj_type_text">
+	<rect>667 496 686 518</rect>
+	<index>104</index>
+</position>
+<position type="obj_type_text">
+	<rect>687 496 706 518</rect>
+	<index>105</index>
+</position>
+<position type="obj_type_text">
+	<rect>707 496 726 518</rect>
+	<index>106</index>
+</position>
+<position type="obj_type_text">
+	<rect>727 496 746 518</rect>
+	<index>107</index>
+</position>
+</positions>
+<epubPageText>在18、19世纪社会学前教育诞生以前，虽然未能形成有影响的学前教育理论流派，但中外思想家们已经有了关于儿童早期教育、家庭教育的设计与思考，留下了丰富的思想资源。这为学前教育学独立以后学前教育理论流派的形成奠定了基础。</epubPageText>
+</epubPage>
+</epubChapter>

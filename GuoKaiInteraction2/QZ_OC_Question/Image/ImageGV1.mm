@@ -21,6 +21,7 @@
     [self.imageView release];
     self.imageView = nil;
     [self.ctV  release];
+    self.ctV = nil;
     [super dealloc];
 }
 
