@@ -116,3 +116,89 @@ QZ_BOOL QZEpubPage::HasVerticalIntersection(QZ_BOX rect1,QZ_BOX rect2)
 	else
 		return QZ_FALSE;
 }
+
+//通过字符index获取该字符
+std::string QZEpubPage::GetCharacterByIndex(QZ_LONG lIndex)
+{
+	QZ_LONG length = GetCharacterBeginPos(lIndex);
+
+	if (length == -1)
+	{
+		return "";
+	}
+
+	if (length < m_strContent.length())
+	{
+		QZ_LONG lenChar = GetCharSize(m_strContent[length]);
+		if (length + lenChar - 1< m_strContent.length())
+		{
+			return m_strContent.substr(length,lenChar);
+		}
+	}
+
+	return "";
+}
+
+std::string QZEpubPage::GetCharacterPiece(QZ_LONG lBegin,QZ_LONG lEnd)
+{
+	if (lEnd < lBegin)
+	{
+		return "";
+	}
+
+	QZ_LONG lBeginPos = GetCharacterBeginPos(lBegin);
+	if (lBeginPos < 0)
+		return "";
+
+	QZ_LONG lEndPos = GetCharacterBeginPos(lEnd);
+	if (lEndPos < 0)
+		return "";
+
+	lEndPos = lEndPos + GetCharSize(m_strContent[lEndPos]);
+
+	return m_strContent.substr(lBeginPos,lEndPos - lBeginPos);
+}
+
+QZ_LONG QZEpubPage::GetCharacterBeginPos(QZ_LONG index)
+{
+	QZ_LONG length = 0;
+
+	for (QZ_LONG nCount = 0; nCount < index;nCount++)
+	{
+		if (length < m_strContent.length())
+		{
+			length += GetCharSize(m_strContent[length]);
+		}
+		else
+		{
+			return -1;
+		}
+	}
+
+	return length;
+}
+
+
+//得到当前解析字符的长度
+QZ_UINT QZEpubPage::GetCharSize(QZ_BYTE ch)
+{
+	QZ_INT i = 0;
+	for (i =0 ;i <4;i++)
+	{
+		QZ_BYTE ua = 1;
+		ua = ua << (8-i-1);
+		QZ_BYTE result = ua&ch;
+		if (0==result)
+			break;
+	}
+	if (i==0)
+		return 1;
+	else if (i == 2)
+		return 2;
+	else if (i == 3)
+		return 3;
+	else
+		return 4;
+}
+
+
