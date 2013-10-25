@@ -361,10 +361,6 @@
     movieView.tag = VIDEO + indexVideo;
     [movieView initIncomingData:pVideo];
     [movieView composition];
-    if (indexVideo)
-    {
-        [movieView pause];
-    }
     [self addSubview:movieView];
     [movieView release];
     indexVideo++;

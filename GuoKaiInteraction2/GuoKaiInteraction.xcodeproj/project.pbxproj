@@ -75,7 +75,6 @@
 		CE657D27181285BE006CA86F /* GalleryView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D24181285BE006CA86F /* GalleryView.mm */; };
 		CE657D311812E1C4006CA86F /* ImageGV1.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D2E1812E1C4006CA86F /* ImageGV1.mm */; };
 		CE657D321812E1C4006CA86F /* IViewGV1.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D301812E1C4006CA86F /* IViewGV1.mm */; };
-		CE954BEA181A6F39006AE882 /* GuoKai001.zip in Resources */ = {isa = PBXBuildFile; fileRef = CE954BE9181A6F38006AE882 /* GuoKai001.zip */; };
 		CE9693A81818B9E5001F8873 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9693A71818B9E4001F8873 /* QuartzCore.framework */; };
 		CEFB425B18125C4600988117 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425818125C4600988117 /* CTView.m */; };
 		CEFB425C18125C4600988117 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425A18125C4600988117 /* MarkupParser.m */; };
@@ -211,7 +210,6 @@
 		CE657D2E1812E1C4006CA86F /* ImageGV1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageGV1.mm; sourceTree = "<group>"; };
 		CE657D2F1812E1C4006CA86F /* IViewGV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IViewGV1.h; sourceTree = "<group>"; };
 		CE657D301812E1C4006CA86F /* IViewGV1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IViewGV1.mm; sourceTree = "<group>"; };
-		CE954BE9181A6F38006AE882 /* GuoKai001.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = GuoKai001.zip; sourceTree = "<group>"; };
 		CE9693A71818B9E4001F8873 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFB425718125C4600988117 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
 		CEFB425818125C4600988117 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
@@ -269,7 +267,6 @@
 		CE0EB1B6180FBA1F0043BA33 = {
 			isa = PBXGroup;
 			children = (
-				CE954BE9181A6F38006AE882 /* GuoKai001.zip */,
 				CEFE7A2C18160F2F000BF21E /* QZ_ZipEpub */,
 				CE0EB31F180FE3D20043BA33 /* Pic */,
 				CE0EB41B180FE5580043BA33 /* CPlusPlusModel */,
@@ -732,7 +729,6 @@
 				CE657D0C1812700D006CA86F /* m2.png in Resources */,
 				CE657D0D1812700D006CA86F /* m3.png in Resources */,
 				CE03BE291817BDF700534403 /* play.png in Resources */,
-				CE954BEA181A6F39006AE882 /* GuoKai001.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

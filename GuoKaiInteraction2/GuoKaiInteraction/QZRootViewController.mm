@@ -55,7 +55,6 @@
     [pageListView composition];
     [self.view addSubview:pageListView];
     [pageListView release];
-    
     CATransition * si = [[CATransition alloc]init];
     si.type = @"rippleEffect";
     si.subtype = kCATransitionFromRight;

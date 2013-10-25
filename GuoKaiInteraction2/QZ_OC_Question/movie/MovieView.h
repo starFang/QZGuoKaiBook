@@ -39,6 +39,7 @@
     id<MoviePlayDelegate>delegate;
  }
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
+
 @property (nonatomic, retain) UIView *fRView;
 @property (nonatomic, assign) CGFloat lastRotation;
 @property (nonatomic, assign) CGFloat scale;

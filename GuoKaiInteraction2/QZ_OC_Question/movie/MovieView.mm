@@ -83,25 +83,6 @@
     {
         switch (pVideo->stTitle.vTextItemList[i].pieceType)
         {
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_BEGIN:
-            {
-                if (![strBegin length])
-                {}else{
-                    [strBegin appendString:@"\n"];
-                    [string appendString:@"\n"];
-                }
-                UIFont *font = [UIFont fontWithName:[NSString stringWithUTF8String:pVideo->stTitle.vTextItemList[i].fontFamily.c_str()] size:pVideo->stTitle.vTextItemList[i].fontSize];
-                
-                CGSize sizek = [@" " sizeWithFont:font constrainedToSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
-                NSInteger countK = (int)ceilf(pVideo->stTitle.vTextItemList[i].nLength/sizek.width);
-                for (int j =0 ; j < countK; j++)
-                {
-                    [strBegin appendString:@" "];
-                    [string appendString:@" "];
-                }
-                
-            }
-                break;
             case PAGE_RICH_TEXT_PIECE_TEXT:
             {
                 [string appendString:[NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:pVideo->stTitle.vTextItemList[i].strText.c_str()]]];
@@ -109,24 +90,12 @@
                 [strBegin appendString:strText];
                 [strFont setString:[NSString stringWithUTF8String:pVideo->stTitle.vTextItemList[i].fontFamily.c_str()]];
                 fontsize = (float)pVideo->stTitle.vTextItemList[i].fontSize;
-                
-            }
-                break;
-            case PAGE_RICH_TEXT_PIECE_PARAGRAPH_END:
-            {
-                
-            }
-                break;
-            case PAGE_RICH_TEXT_PIECE_DOT:
-            {
-                
             }
                 break;
             default:
                 break;
          }
     }
-        
     BOOL isEqual;
     for (int i = 0; i < [[UIFont familyNames] count]; i++)
     {
@@ -148,9 +117,6 @@
     }
     [p setFont:strFont];
     [p setSize:fontsize];
-    
-    
-    
     CGSize size = [string sizeWithFont:[UIFont fontWithName:strFont size:fontsize] constrainedToSize:CGSizeMake(SFSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     NSAttributedString *attString = [p attrStringFromMarkup:strBegin];
     ctv = [[CTView alloc]initWithFrame:CGRectMake(0, 0, SFSW, size.height)];
@@ -181,7 +147,6 @@
     firstPoint = self.fRView.center;
     self.fRView.layer.backgroundColor = [UIColor clearColor].CGColor;
     CGRect frameMovie;
- 
     if ((frame.size.height-MOVIEVIEW_DISTANT-titHeight)/3 >frame.size.width/4 )
     {
         frameMovie= CGRectMake(0, titHeight + MOVIEVIEW_DISTANT+(frame.size.height-titHeight-MOVIEVIEW_DISTANT-3.0*frame.size.width/4)/2, frame.size.width, frame.size.width*3.0/4.0);
@@ -190,10 +155,8 @@
         frameMovie= CGRectMake(frame.size.width/2-(frame.size.height-MOVIEVIEW_DISTANT-titHeight)*2.0/3.0, titHeight + MOVIEVIEW_DISTANT, (frame.size.height-MOVIEVIEW_DISTANT-titHeight)*4.0/3.0,
                                frame.size.height - titHeight - MOVIEVIEW_DISTANT);
     }
-    
     startRect = frameMovie;
     self.fRView = [[UIView alloc]initWithFrame:frameMovie];
-//    设置阴影效果
     [self.fRView.layer setShadowOffset:CGSizeMake(1, 1)];
     [self.fRView.layer setShadowRadius:10.0];
     [self.fRView.layer setShadowColor:[UIColor clearColor].CGColor];
@@ -213,7 +176,6 @@
     frameMovie= CGRectMake(frame.size.width/2-(frame.size.height-MOVIEVIEW_DISTANT-titHeight)*2.0/3.0, titHeight + MOVIEVIEW_DISTANT, (frame.size.height-MOVIEVIEW_DISTANT-titHeight)*4.0/3.0,
         frame.size.height - titHeight - MOVIEVIEW_DISTANT);
     }
-    
     pressView = [[UIImageView alloc]init];
     pressView.frame = frameMovie;
     pressView.userInteractionEnabled = YES;
@@ -235,7 +197,6 @@
 
 -(void)pressButton:(id)sender
 {
-    [self.delegate newMovieView];
     [pressView sendSubviewToBack:self];
     pressView.alpha = 0;
     pressView.hidden = YES;
@@ -250,7 +211,6 @@
     NSString *bookPath = [[[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:@"medias"] stringByAppendingPathComponent:[NSString stringWithUTF8String:pVideo->strPath.c_str()]];
     NSURL *url = [NSURL fileURLWithPath:bookPath];
     self.moviePlayer = [[MPMoviePlayerController  alloc]initWithContentURL:url];
-    
 }
 
 -(void)playMovie
@@ -269,30 +229,15 @@
 - (void)next
 {
     [self.moviePlayer stop];
-    self.moviePlayer.currentPlaybackTime = 0;
     self.isPlaying = NO;
-}
-
-- (void)pause
-{
-    pressView.userInteractionEnabled = NO;
 }
 
 - (void)moviePlayBackDidFinish:(NSNotification*)notification
 {
-    [self.moviePlayer pause];
-    self.moviePlayer.currentPlaybackTime = 0;
-    self.isPlaying = NO;
-    if (self.fRView.frame.origin.x == self.frame.origin.x && self.fRView.frame.origin.y == self.frame.origin.y)
+    if (self.moviePlayer.fullscreen)
     {
         [self endStateTwoCase:nil];
     }
-    
-//    MPMoviePlayerController * theMovie = [notification object];
-//    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:theMovie];
-//    [theMovie.view removeFromSuperview];
-//    [theMovie release];
-    
     [self bringSubviewToFront:pressView];
     pressView.alpha = 1.0;
     pressView.hidden = NO;
@@ -303,13 +248,10 @@
     [self.moviePlayer setControlStyle:MPMovieControlStyleEmbedded];
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5f];
-//    self.fRView.transform = CGAffineTransformScale(gestureRecognizer.view.transform, 1.0, 1.0);
-//    self.fRView.transform = CGAffineTransformMakeRotation(M_PI * 2);
     self.fRView.frame = startRect;
     self.moviePlayer.view.frame =self.fRView.bounds;
     self.lastRotation = 0;
     self.fRView.layer.shadowOpacity = 0.0;
-//    distancePoint = CGPointMake(0, 0);
     isMovieBig = YES;
     self.backgroundColor = [UIColor clearColor];
     [UIView commitAnimations];
