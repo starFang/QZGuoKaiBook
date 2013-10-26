@@ -70,12 +70,25 @@ vector<const PageBaseElements*> QZEpubPage::GetDrawableObjList()
 
 vector<QZ_BOX> QZEpubPage::GetSelectTextRects(BookIndex begin,BookIndex end)
 {
+    if (begin.nCharacter > end.nCharacter)
+    {
+        begin.nCharacter = begin.nCharacter + end.nCharacter;
+        end.nCharacter = begin.nCharacter - end.nCharacter;
+        begin.nCharacter = begin.nCharacter - end.nCharacter;
+    }
 	vector<QZ_BOX>  vBoxs;
-	
-	for (QZ_LONG i = begin.nCharacter ;i < (QZ_LONG)m_vPosList.size() && i < end.nCharacter; i++)
+    
+	for (QZ_LONG i = begin.nCharacter ,j = begin.nCharacter ;i < (QZ_LONG)m_vPosList.size() && j <= end.nCharacter; i++)
 	{
 		if (m_vPosList[i]->m_elementType == PAGE_OBJECT_CHARACTER)
 		{
+            PageCharacter* p = (PageCharacter*)m_vPosList[i];
+            if (p->nIndex.nCharacter != j)
+            {
+                continue;
+            }
+            
+            //            cout << "("<<i<<")";
 			if (vBoxs.empty())
 			{
 				vBoxs.push_back(m_vPosList[i]->rect);
@@ -102,9 +115,9 @@ vector<QZ_BOX> QZEpubPage::GetSelectTextRects(BookIndex begin,BookIndex end)
 					vBoxs.push_back(m_vPosList[i]->rect);
 				}
 			}
-		}
+            j++;
+        }
 	}
-
 	return vBoxs;
 }
 

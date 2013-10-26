@@ -11,8 +11,11 @@ class RefPos
 {
 	std::string		m_strChapterID;					//章节文件的ID，文档内唯一
 	long			m_lOffSet;						//章节文件内的二进制偏移量，从0开始
+    
 	long			m_lChapterIndex;				//（可选）引用点的章节索引，从0开始
+    //临时工程中 表示第几页
 	long			m_lParaIndex;					//（可选）引用点的段索引，从0开始
+    //临时工程中 表示一页中的第几个字
 	long			m_lAtomIndex;					//（可选）引用点所在段的原子索引，从0开始
 
 public:

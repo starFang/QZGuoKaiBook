@@ -9,6 +9,7 @@
 
 #import "QZPageListView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DrawLine.h"
 
 #import "QuestionRootView.h"
 #import "QZPageTextRollWebView.h"
@@ -62,6 +63,14 @@
     NSString *path = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[[imageName objectAtIndex:0] objectForKey:@"0"] stringByReplacingOccurrencesOfString:@" " withString:@""]];
     UIImage * image = [UIImage imageWithContentsOfFile:path];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
+    imageView.userInteractionEnabled = YES;
+    DrawLine * draw = [[DrawLine alloc]initWithFrame:CGRectMake(ZERO, ZERO, DW, DH-20)];
+    draw.backgroundColor = [UIColor clearColor];
+    [draw incomingData:&pageObj];
+    [draw composition];
+    [imageView addSubview:draw];
+    [draw release];
+    
     [self addSubview:imageView];
     [imageView release];
 }
@@ -74,7 +83,6 @@
 
 - (void)updateWithPress
 {
-
     leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftButton addTarget:self action:@selector(upPage:) forControlEvents:UIControlEventTouchUpInside];
@@ -463,35 +471,6 @@
     {
         [view removeFromSuperview];
     }
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self];
-    QZ_POS pos;
-    pos.X = location.x;
-    pos.Y = location.y;
-    const PageBaseElements* pTarObj = pageObj.HitTestElement(pos);
-    if (pTarObj != NULL) {
-        switch (pTarObj->m_elementType) {
-            case PAGE_OBJECT_VIDEO:
-            {
-            
-                NSLog(@"点击的是视频");
-            }
-                break;
-                case PAGE_OBJECT_CHARACTER:
-            {
-                NSLog(@"点击的是文字");
-            }
-                break;
-                
-            default:
-                break;
-        }
-    }
-    
 }
 
 - (void)dealloc

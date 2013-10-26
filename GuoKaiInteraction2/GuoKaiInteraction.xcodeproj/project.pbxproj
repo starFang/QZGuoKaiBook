@@ -77,6 +77,8 @@
 		CE657D321812E1C4006CA86F /* IViewGV1.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE657D301812E1C4006CA86F /* IViewGV1.mm */; };
 		CE845744181B493100918002 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE845743181B493100918002 /* Icon.png */; };
 		CE845748181B580100918002 /* GuoKai001.zip in Resources */ = {isa = PBXBuildFile; fileRef = CE845747181B580100918002 /* GuoKai001.zip */; };
+		CE845756181BAB0000918002 /* DrawLine.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE845755181BAB0000918002 /* DrawLine.mm */; };
+		CE84575F181C076200918002 /* QZLineDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84575E181C076200918002 /* QZLineDataModel.m */; };
 		CE9693A81818B9E5001F8873 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9693A71818B9E4001F8873 /* QuartzCore.framework */; };
 		CEFB425B18125C4600988117 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425818125C4600988117 /* CTView.m */; };
 		CEFB425C18125C4600988117 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425A18125C4600988117 /* MarkupParser.m */; };
@@ -214,6 +216,11 @@
 		CE657D301812E1C4006CA86F /* IViewGV1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IViewGV1.mm; sourceTree = "<group>"; };
 		CE845743181B493100918002 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		CE845747181B580100918002 /* GuoKai001.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = GuoKai001.zip; sourceTree = "<group>"; };
+		CE84574E181B95CD00918002 /* ReadingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingData.h; sourceTree = "<group>"; };
+		CE845754181BAB0000918002 /* DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
+		CE845755181BAB0000918002 /* DrawLine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DrawLine.mm; sourceTree = "<group>"; };
+		CE84575D181C076200918002 /* QZLineDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLineDataModel.h; sourceTree = "<group>"; };
+		CE84575E181C076200918002 /* QZLineDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLineDataModel.m; sourceTree = "<group>"; };
 		CE9693A71818B9E4001F8873 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFB425718125C4600988117 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
 		CEFB425818125C4600988117 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
@@ -332,6 +339,7 @@
 		CE0EB2F6180FE3D20043BA33 /* QZ_OC_Question */ = {
 			isa = PBXGroup;
 			children = (
+				CE845753181BAB0000918002 /* PageControl */,
 				CE33E71A1810E64300DE0462 /* PageListView */,
 				CE657D2118128549006CA86F /* View */,
 				CEFB425618125C4600988117 /* RichText */,
@@ -460,6 +468,7 @@
 		CE0EB41F180FE5580043BA33 /* EpubPageHeader */ = {
 			isa = PBXGroup;
 			children = (
+				CE84574E181B95CD00918002 /* ReadingData.h */,
 				CE0EB420180FE5580043BA33 /* CSSCommonFun.h */,
 				CE0EB421180FE5580043BA33 /* QZCommon.h */,
 				CE0EB422180FE5580043BA33 /* QZEpubLibReturnCode.h */,
@@ -609,6 +618,17 @@
 			);
 			name = Image;
 			path = QZ_OC_Question/Image;
+			sourceTree = "<group>";
+		};
+		CE845753181BAB0000918002 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				CE84575D181C076200918002 /* QZLineDataModel.h */,
+				CE84575E181C076200918002 /* QZLineDataModel.m */,
+				CE845754181BAB0000918002 /* DrawLine.h */,
+				CE845755181BAB0000918002 /* DrawLine.mm */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		CEFB425618125C4600988117 /* RichText */ = {
@@ -800,6 +820,8 @@
 				CEFE7A4318160F2F000BF21E /* DataManager.m in Sources */,
 				CEFE7A4418160F2F000BF21E /* XMLParserBookData.m in Sources */,
 				CEFE7A4B18161B0E000BF21E /* QZParsingAndExtractingData.m in Sources */,
+				CE845756181BAB0000918002 /* DrawLine.mm in Sources */,
+				CE84575F181C076200918002 /* QZLineDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
