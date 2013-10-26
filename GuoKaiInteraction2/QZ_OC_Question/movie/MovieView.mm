@@ -234,6 +234,7 @@
 
 - (void)moviePlayBackDidFinish:(NSNotification*)notification
 {
+    NSLog(@"视频播放结束");
     if (self.moviePlayer.fullscreen)
     {
         [self endStateTwoCase:nil];

@@ -34,26 +34,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "QZ_OC_Question/PageListView/QZPageListView.mm"
-         timestampString = "404404353.213288"
+         timestampString = "404444178.320508"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "371"
          endingLineNumber = "371"
          landmarkName = "-newMovieView"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GuoKaiInteraction/main.m"
-         timestampString = "404398763.766684"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "16"
-         endingLineNumber = "16"
-         landmarkName = "main()"
-         landmarkType = "7">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
