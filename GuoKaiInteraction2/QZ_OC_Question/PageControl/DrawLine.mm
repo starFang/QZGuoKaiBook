@@ -174,21 +174,18 @@ using namespace std;
             {
                 pChChar = (PageCharacter*)pChangeChar;
             }
-            if (pChChar != NULL && pChar != NULL)
-            {
-                vBoxes = pageObj->GetSelectTextRects(pChar->nIndex,pChChar->nIndex);
-            }
         }
         
         if (pChar && pChChar)
         {
-            RefPos refPos1("12",0,0,0,pChar->nIndex.nCharacter);
-            RefPos refPos2("123",0,0,0,pChChar->nIndex.nCharacter);
+            RefPos refPos1([BOOKNAME UTF8String],0,0,0,pChar->nIndex.nCharacter);
+            RefPos refPos2([BOOKNAME UTF8String],0,0,0,pChChar->nIndex.nCharacter);
             //    取出一段文字
             string strContent = pageObj->GetCharacterPiece(refPos1.GetAutoIndex(), refPos2.GetAutoIndex());
         }
     }
     
+    NSLog(@"%@",[self date]);
 //    //    引用内容
 //    RefContent refContent(refPos1,refPos2,strContent);
 //    string strContent1 = pageObj->GetCharacterPiece(refPos1.GetAutoIndex(), refPos2.GetAutoIndex());
@@ -266,5 +263,16 @@ using namespace std;
     CGPathRelease(_path);
 }
 
+
+- (NSString *)date
+{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"G:yyyy-MM-dd(EEE) k:mm:ss"];
+    NSString *strDate = [formatter stringFromDate:date];
+    [formatter release];
+    NSLog(@"%@",strDate);
+    return strDate;
+}
 
 @end

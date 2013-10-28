@@ -14,12 +14,16 @@
     NSString *_lineWords;
     NSString *_lineDate;
     NSString *_lineCritique;
-    NSString *_linePageNumber;
+    NSInteger _linePageNumber;
+    NSInteger _lineStartIndex;
+    NSInteger _lineEndIndex;
+    
 }
 @property (nonatomic, retain) NSMutableArray *linePointArray;
 @property (nonatomic, copy) NSString *lineWords;
 @property (nonatomic, copy) NSString *lineDate;
 @property (nonatomic, copy) NSString *lineCritique;
-@property (nonatomic, copy) NSString *linePageNumber;
-
+@property (nonatomic, assign) NSInteger linePageNumber;
+@property (nonatomic, assign) NSInteger lineStartIndex;
+@property (nonatomic, assign) NSInteger lineEndIndex;
 @end

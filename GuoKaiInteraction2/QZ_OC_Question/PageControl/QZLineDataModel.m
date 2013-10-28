@@ -15,6 +15,8 @@
 @synthesize linePageNumber = _linePageNumber;
 @synthesize linePointArray = _linePointArray;
 @synthesize lineWords = _lineWords;
+@synthesize lineStartIndex = _lineStartIndex;
+@synthesize lineEndIndex = _lineEndIndex;
 
 - (id)init
 {

@@ -80,6 +80,12 @@
 		CE845756181BAB0000918002 /* DrawLine.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE845755181BAB0000918002 /* DrawLine.mm */; };
 		CE84575F181C076200918002 /* QZLineDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84575E181C076200918002 /* QZLineDataModel.m */; };
 		CE9693A81818B9E5001F8873 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9693A71818B9E4001F8873 /* QuartzCore.framework */; };
+		CE979894181E7FA800D676CA /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = CE979888181E7FA800D676CA /* Database.m */; };
+		CE979895181E7FA800D676CA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97988B181E7FA800D676CA /* FMDatabase.m */; };
+		CE979896181E7FA800D676CA /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97988D181E7FA800D676CA /* FMDatabaseAdditions.m */; };
+		CE979897181E7FA800D676CA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97988F181E7FA800D676CA /* FMDatabasePool.m */; };
+		CE979898181E7FA800D676CA /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE979891181E7FA800D676CA /* FMDatabaseQueue.m */; };
+		CE979899181E7FA800D676CA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE979893181E7FA800D676CA /* FMResultSet.m */; };
 		CEFB425B18125C4600988117 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425818125C4600988117 /* CTView.m */; };
 		CEFB425C18125C4600988117 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425A18125C4600988117 /* MarkupParser.m */; };
 		CEFB425E18125C5A00988117 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFB425D18125C5A00988117 /* CoreText.framework */; };
@@ -222,6 +228,18 @@
 		CE84575D181C076200918002 /* QZLineDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLineDataModel.h; sourceTree = "<group>"; };
 		CE84575E181C076200918002 /* QZLineDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLineDataModel.m; sourceTree = "<group>"; };
 		CE9693A71818B9E4001F8873 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE979887181E7FA800D676CA /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		CE979888181E7FA800D676CA /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		CE97988A181E7FA800D676CA /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		CE97988B181E7FA800D676CA /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		CE97988C181E7FA800D676CA /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		CE97988D181E7FA800D676CA /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		CE97988E181E7FA800D676CA /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		CE97988F181E7FA800D676CA /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		CE979890181E7FA800D676CA /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		CE979891181E7FA800D676CA /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		CE979892181E7FA800D676CA /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		CE979893181E7FA800D676CA /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		CEFB425718125C4600988117 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
 		CEFB425818125C4600988117 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
 		CEFB425918125C4600988117 /* MarkupParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkupParser.h; sourceTree = "<group>"; };
@@ -623,12 +641,32 @@
 		CE845753181BAB0000918002 /* PageControl */ = {
 			isa = PBXGroup;
 			children = (
+				CE979887181E7FA800D676CA /* Database.h */,
+				CE979888181E7FA800D676CA /* Database.m */,
+				CE979889181E7FA800D676CA /* fmdb */,
 				CE84575D181C076200918002 /* QZLineDataModel.h */,
 				CE84575E181C076200918002 /* QZLineDataModel.m */,
 				CE845754181BAB0000918002 /* DrawLine.h */,
 				CE845755181BAB0000918002 /* DrawLine.mm */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		CE979889181E7FA800D676CA /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				CE97988A181E7FA800D676CA /* FMDatabase.h */,
+				CE97988B181E7FA800D676CA /* FMDatabase.m */,
+				CE97988C181E7FA800D676CA /* FMDatabaseAdditions.h */,
+				CE97988D181E7FA800D676CA /* FMDatabaseAdditions.m */,
+				CE97988E181E7FA800D676CA /* FMDatabasePool.h */,
+				CE97988F181E7FA800D676CA /* FMDatabasePool.m */,
+				CE979890181E7FA800D676CA /* FMDatabaseQueue.h */,
+				CE979891181E7FA800D676CA /* FMDatabaseQueue.m */,
+				CE979892181E7FA800D676CA /* FMResultSet.h */,
+				CE979893181E7FA800D676CA /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		CEFB425618125C4600988117 /* RichText */ = {
@@ -822,6 +860,12 @@
 				CEFE7A4B18161B0E000BF21E /* QZParsingAndExtractingData.m in Sources */,
 				CE845756181BAB0000918002 /* DrawLine.mm in Sources */,
 				CE84575F181C076200918002 /* QZLineDataModel.m in Sources */,
+				CE979894181E7FA800D676CA /* Database.m in Sources */,
+				CE979895181E7FA800D676CA /* FMDatabase.m in Sources */,
+				CE979896181E7FA800D676CA /* FMDatabaseAdditions.m in Sources */,
+				CE979897181E7FA800D676CA /* FMDatabasePool.m in Sources */,
+				CE979898181E7FA800D676CA /* FMDatabaseQueue.m in Sources */,
+				CE979899181E7FA800D676CA /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
