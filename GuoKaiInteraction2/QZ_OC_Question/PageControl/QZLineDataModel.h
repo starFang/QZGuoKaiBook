@@ -10,20 +10,23 @@
 
 @interface QZLineDataModel : NSObject
 {
-    NSMutableArray *_linePointArray;
+    NSString *_lineID;
+    NSString *_linePageNumber;
+    NSString *_lineStartIndex;
+    NSString *_lineEndIndex;
     NSString *_lineWords;
     NSString *_lineDate;
     NSString *_lineCritique;
-    NSInteger _linePageNumber;
-    NSInteger _lineStartIndex;
-    NSInteger _lineEndIndex;
+    NSString *_lineColor;
     
 }
-@property (nonatomic, retain) NSMutableArray *linePointArray;
+@property (nonatomic, copy) NSString *lineID;
 @property (nonatomic, copy) NSString *lineWords;
 @property (nonatomic, copy) NSString *lineDate;
 @property (nonatomic, copy) NSString *lineCritique;
-@property (nonatomic, assign) NSInteger linePageNumber;
-@property (nonatomic, assign) NSInteger lineStartIndex;
-@property (nonatomic, assign) NSInteger lineEndIndex;
+@property (nonatomic, copy) NSString *linePageNumber;
+@property (nonatomic, copy) NSString *lineStartIndex;
+@property (nonatomic, copy) NSString *lineEndIndex;
+@property (nonatomic, copy) NSString *lineColor;
+
 @end

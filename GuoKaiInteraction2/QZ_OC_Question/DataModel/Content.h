@@ -14,6 +14,15 @@
 #define VOICE 440
 #define TEXTROLL 490
 #define WEBLINK 540
+//画线视图
+#define DRAWVIEWTAG 600
+//按钮弹出框
+#define POPBTNVIEW 610
+
+#pragma mark - 单页的画线操作
+#define RED 100
+#define BLUE 110
+#define PURPLE 120
 
 #pragma mark - 简单的替换
 #define SFSW self.frame.size.width

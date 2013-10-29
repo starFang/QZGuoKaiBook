@@ -9,29 +9,19 @@
 #import "QZLineDataModel.h"
 
 @implementation QZLineDataModel
-
+@synthesize lineID = _lineID;
 @synthesize lineCritique = _lineCritique;
 @synthesize lineDate = _lineDate;
 @synthesize linePageNumber = _linePageNumber;
-@synthesize linePointArray = _linePointArray;
 @synthesize lineWords = _lineWords;
 @synthesize lineStartIndex = _lineStartIndex;
 @synthesize lineEndIndex = _lineEndIndex;
+@synthesize lineColor = _lineColor;
 
-- (id)init
+- (NSString *)description
 {
-    self = [super init];
-    if (self) {
-        self.linePointArray = [[NSMutableArray alloc]init];
-    }
-    return self;
-}
 
-- (void)dealloc
-{
-    [self.linePointArray release];
-    self.linePointArray = nil;
-    [super dealloc];
+    return [NSString stringWithFormat:@"%@-%@-%@-%@-%@-%@-%@-%@",self.lineID,self.lineWords,self.lineCritique,self.lineDate,self.linePageNumber,self.lineStartIndex,self.lineEndIndex,self.lineColor];
 }
 
 @end

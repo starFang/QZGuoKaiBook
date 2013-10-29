@@ -29,7 +29,7 @@
 
 @synthesize pageName;
 @synthesize delegate;
-@synthesize pageNumbder;
+@synthesize pageNumber;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -58,14 +58,19 @@
 - (void)initIncomingData:(NSArray *)imageName
 {
     array = [NSArray arrayWithObjects:[imageName objectAtIndex:0],[imageName objectAtIndex:1], nil];
-    
+    NSString *bookPath0 = [DOCUMENT stringByAppendingPathComponent:BOOKNAME];
+    NSString *bookPath = [[bookPath0 stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[array objectAtIndex:1] objectForKey:@"1"]];
+    pageObj.LoadData([bookPath UTF8String]);
     
     NSString *path = [[[DOCUMENT stringByAppendingPathComponent:BOOKNAME] stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[[imageName objectAtIndex:0] objectForKey:@"0"] stringByReplacingOccurrencesOfString:@" " withString:@""]];
     UIImage * image = [UIImage imageWithContentsOfFile:path];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
     imageView.userInteractionEnabled = YES;
+    
     DrawLine * draw = [[DrawLine alloc]initWithFrame:CGRectMake(ZERO, ZERO, DW, DH-20)];
+    draw.tag = DRAWVIEWTAG;
     draw.backgroundColor = [UIColor clearColor];
+    [draw setPageNumber:self.pageNumber];
     [draw incomingData:&pageObj];
     [draw composition];
     [imageView addSubview:draw];
@@ -95,6 +100,11 @@
 
 - (void)upPage:(id)sender
 {
+    DrawLine * draw = (DrawLine *)[self viewWithTag:DRAWVIEWTAG];
+    if (draw)
+    {
+        [draw saveData];
+    }
     if (indexVoice != 0)
     {
         for (int i = 0; i < indexVoice; i++)
@@ -119,6 +129,12 @@
 
 - (void)downPage:(id)sender
 {
+    DrawLine * draw = (DrawLine *)[self viewWithTag:DRAWVIEWTAG];
+    if (draw)
+    {
+        [draw saveData];
+    }
+    
     if (indexVoice != 0)
     {
         for (int i = 0; i < indexVoice; i++)
@@ -142,9 +158,7 @@
 
 - (void)inputPageData
 {
-    NSString *bookPath0 = [DOCUMENT stringByAppendingPathComponent:BOOKNAME];
-    NSString *bookPath = [[bookPath0 stringByAppendingPathComponent:@"OPS"] stringByAppendingPathComponent:[[array objectAtIndex:1] objectForKey:@"1"]];
-    pageObj.LoadData([bookPath UTF8String]);
+    
     vector<const PageBaseElements*> vObjs = pageObj.GetDrawableObjList();
     for (int i = 0; i < vObjs.size(); i++)
     {
@@ -466,7 +480,7 @@
         }
     }
     
-    UIView *view = (UIView *)[self viewWithTag:500];
+    UIView *view = (UIView *)[self viewWithTag:POPBTNVIEW];
     if (view)
     {
         [view removeFromSuperview];
@@ -525,7 +539,7 @@
             rectPop = CGRectMake(x1-toolW,y0-80-toolH,toolW,toolH);
     }
     popView.backgroundColor = [UIColor whiteColor];
-    popView.tag = 500;
+    popView.tag = POPBTNVIEW;
     [popView.layer setShadowOffset:CGSizeMake(1, 1)];
     [popView.layer setShadowRadius:10.0];
     [popView.layer setShadowColor:[UIColor blackColor].CGColor];
@@ -538,7 +552,7 @@
 
 - (void)pressButton:(PageNavButton *)pNavButton
 {
-    UIView *popView = (UIView *)[self viewWithTag:500];
+    UIView *popView = (UIView *)[self viewWithTag:POPBTNVIEW];
     CGSize size = [[NSString stringWithUTF8String:pNavButton->strTipText.c_str()] sizeWithFont:[UIFont systemFontOfSize:21] constrainedToSize:CGSizeMake(popView.FSW, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
     UILabel * textCont = [[UILabel alloc]init];
     textCont.backgroundColor = [UIColor clearColor];
@@ -579,7 +593,7 @@
 - (void)pressSkip:(UIButton *)button
 {
     [self.delegate skipPage: button.tag - NVACHILDBUTTON];
-   UIView *view = (UIView *)[self viewWithTag:500];
+   UIView *view = (UIView *)[self viewWithTag:POPBTNVIEW];
     if (view)
     {
         [view removeFromSuperview];
@@ -588,7 +602,7 @@
 
 - (void)closeBtnView:(PageNavButton *)pageNavButton
 {
-    UIView *view = (UIView *)[self viewWithTag:500];
+    UIView *view = (UIView *)[self viewWithTag:POPBTNVIEW];
     if (view)
     {
         [view removeFromSuperview];

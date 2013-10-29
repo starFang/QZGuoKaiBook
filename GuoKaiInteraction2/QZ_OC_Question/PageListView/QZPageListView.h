@@ -51,9 +51,11 @@
     BOOL isPlay;
     
 }
+
 @property (nonatomic, copy)NSString *pageName;
 @property (nonatomic, assign)id<QZPageListViewDelegate>delegate;
-@property (nonatomic, assign) NSInteger pageNumbder;
+@property (nonatomic, assign)NSInteger pageNumber;
+
 - (void)composition;
 - (void)initIncomingData:(NSArray *)imageName;
 

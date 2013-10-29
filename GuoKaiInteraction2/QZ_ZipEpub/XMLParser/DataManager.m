@@ -74,4 +74,36 @@
     }
 }
 
+#pragma mark- 下划线颜色
+//下划线颜色
++(NSString *) FileColorPath
+{
+    NSString *filepath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/UnderLineColor/UnderLineColor.plist",BOOKNAME];
+    if (![[NSFileManager defaultManager] contentsOfDirectoryAtPath:[DOCUMENT stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/UnderLineColor",BOOKNAME]] error:nil])
+    {
+        [[NSFileManager defaultManager] createDirectoryAtPath:[DOCUMENT stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/UnderLineColor",BOOKNAME]]
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:nil];
+    }
+    return filepath;
+}
+
+
++(NSString *)getStringFromPlist:(NSString *)path
+{
+    NSString *feedBackDict;
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[NSHomeDirectory() stringByAppendingFormat:@"%@",path]])
+    {
+        feedBackDict = [[NSString alloc]initWithContentsOfFile:[NSHomeDirectory() stringByAppendingFormat:@"%@",path] encoding:1 error:NULL];
+        return  [feedBackDict autorelease];
+    }
+    else
+    {
+        return nil;
+    }
+    
+}
+
 @end

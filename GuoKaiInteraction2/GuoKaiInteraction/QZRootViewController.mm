@@ -50,11 +50,12 @@
     pageListView.frame = CGRectMake(ZERO , ZERO , DW , DH-20);
     pageListView.tag = 200;
     pageListView.delegate = self;
-    [pageListView setPageNumbder:indexImage];
+    [pageListView setPageNumber:indexImage];
     [pageListView initIncomingData:[arrayImage objectAtIndex:pNumber]];
     [pageListView composition];
     [self.view addSubview:pageListView];
     [pageListView release];
+    
     CATransition * si = [[CATransition alloc]init];
     si.type = @"rippleEffect";
     si.subtype = kCATransitionFromRight;

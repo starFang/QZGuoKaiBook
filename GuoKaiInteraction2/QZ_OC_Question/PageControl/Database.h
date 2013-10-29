@@ -28,11 +28,18 @@
 -(void)insertArray:(NSArray *)array;
 //读取指定位置startIndex开始的count条记录
 -(NSArray*)selectData:(NSInteger)startIndex count:(NSInteger)count;
+//读取指定页码的数据
+- (NSArray *)selectData:(NSInteger)pageNum;
 //获得数据库中的记录条数
 -(NSInteger)count;
 //查询要插入的新用户是否存在
 -(BOOL)existsItem:(QZLineDataModel*)item;
-
+//删除数据库中的一条数据
+- (void)deleteLine:(NSInteger)lID;
+//删除数据库中的当前页数据
+- (void)deletePageData:(NSString *)pageNumber;
+//修改数据库中，其中一条记录的下划线的颜色
+- (void)update:(NSString *)newStr WithOld:(NSString *)oldStr with:(NSString *)lID;
 @end
 
 

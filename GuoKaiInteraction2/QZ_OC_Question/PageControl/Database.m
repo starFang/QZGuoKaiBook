@@ -49,7 +49,7 @@ static Database * gl_database=nil;
 //创建表PAGEINFORMATION表，记录数据
 -(void)createTable
 {
-    NSArray *array=[NSArray arrayWithObjects:@"CREATE TABLE PageInformation (id integer DEFAULT 0,createTime Timestamp DEFAULT 0,modeTime Timestamp DEFAULT 0,author Varchar(255),isSimepleRef Boolean DEFAULT false,beginChapterId Varchar DEFAULT 0,beginFileOffset integer DEFAULT 0,beginChapterIndex integer DEFAULT NULL,beginParaIndex integer DEFAULT NULL,beginAutoIndex integer DEFAULT NULL,endChapterId Varchar DEFAULT NULL,endFileOffset integer DEFAULT NULL,endChapterIndex integer DEFAULT NULL,endParaIndex integer DEFAULT NULL,endAutoIndex integer DEFAULT NULL,refContent TEXT DEFAULT NULL,comment integer DEFAULT NULL)", nil];
+    NSArray *array=[NSArray arrayWithObjects:@"CREATE TABLE PageInfo (id integer PRIMARY KEY AUTOINCREMENT DEFAULT 0,createTime TEXT DEFAULT NULL,pageNumber TEXT DEFAULT NULL,startIndex TEXT DEFAULT NULL,endIndex TEXT DEFAULT NULL,lineWords TEXT DEFAULT NULL,writeIn TEXT DEFAULT NULL,lineColor TEXT DEFAULT NULL)", nil];
     
     for (NSString *sql in array)
     {
@@ -97,7 +97,9 @@ static Database * gl_database=nil;
             NSLog(@"打开数据库");
             //创建数据表
             [self createTable];
-            [self createTableWithBookMark];
+//            [self createTableWithBookMark];
+        }else{
+            NSLog(@"数据库未打开");
         }
     }
     return self;
@@ -110,10 +112,10 @@ static Database * gl_database=nil;
     {
         return;
     }
-    NSString *sql=[NSString stringWithFormat:@"insert into PageInformation (refContent) values (?)"];
-//     ,createTime,modeTime,author,isSimepleRef,beginChapterId,beginFileOffset,beginChapterIndex,beginParaIndex,beginAutoIndex,endChapterId,endFileOffset,endChapterIndex,endParaIndex ,endAutoIndex,refContent,comment   ,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+             
+    NSString *sql=[NSString stringWithFormat:@"insert into PageInfo (createTime,pageNumber,startIndex,endIndex,writeIn,lineColor) values (?,?,?,?,?,?)"];     
     //变参方法，每个?号代表一个字段值,所有参数必须为对象类类型
-    if ([fmdb executeUpdate:sql,item.linePageNumber])
+    if ([fmdb executeUpdate:sql,item.lineDate,item.linePageNumber,item.lineStartIndex,item.lineEndIndex,item.lineCritique,item.lineColor])
     {
         NSLog(@"数据插入成功");
     }
@@ -132,6 +134,7 @@ static Database * gl_database=nil;
     //提交所有修改
     [fmdb commit];
 }
+
 -(NSArray*)selectData:(NSInteger)startIndex count:(NSInteger)count
 {
     //查询指定位置startIndex开始的count条记录
@@ -145,14 +148,40 @@ static Database * gl_database=nil;
         QZLineDataModel *item=[[[QZLineDataModel alloc] init] autorelease];
         //此方法是一组方法
         //根据字段类型选择不同方法
-        item.lineWords = [rs stringForColumn:@"username"];
-        item.lineCritique=[rs stringForColumn:@"uid"];
-        item.lineDate = [rs stringForColumn:@"headimage"];
-        item.linePageNumber=[rs stringForColumn:@"realname"];
+        item.lineWords = [rs stringForColumn:@"lineWords"];
+        item.lineCritique=[rs stringForColumn:@"writeIn"];
+        item.lineDate = [rs stringForColumn:@"createTime"];
+        item.linePageNumber=[rs stringForColumn:@"pageNumber"];
+        item.lineStartIndex=[rs stringForColumn:@"startIndex"];
+        item.lineEndIndex = [rs stringForColumn:@"endIndex"];
         [array addObject:item];
     }
     return array;
     
+}
+
+- (NSArray *)selectData:(NSInteger)pageNum
+{
+    NSString *sql = [NSString stringWithFormat:@"select * from PageInfo where pageNumber = %d",pageNum];
+    FMResultSet * rs = [fmdb executeQuery:sql];
+    NSMutableArray *array = [[NSMutableArray alloc]init];
+    while ([rs next])
+    {
+        
+        QZLineDataModel *item=[[QZLineDataModel alloc] init];
+        //此方法是一组方法//根据字段类型选择不同方法
+        item.lineID = [rs stringForColumn:@"id"];
+        item.lineWords = [rs stringForColumn:@"lineWords"];
+        item.lineCritique=[rs stringForColumn:@"writeIn"];
+        item.lineDate = [rs stringForColumn:@"createTime"];
+        item.linePageNumber=[rs stringForColumn:@"pageNumber"];
+        item.lineStartIndex=[rs stringForColumn:@"startIndex"];
+        item.lineEndIndex = [rs stringForColumn:@"endIndex"];
+        item.lineColor = [rs stringForColumn:@"lineColor"];
+        [array addObject:item];
+        [item release];
+    }
+    return [array autorelease];
 }
 
 -(BOOL)existsItem:(QZLineDataModel *)item
@@ -165,6 +194,7 @@ static Database * gl_database=nil;
     }
     return NO;
 }
+
 -(NSInteger)count
 {
     NSString *sql=[NSString stringWithFormat:@"select count(uid) from user"];
@@ -175,6 +205,24 @@ static Database * gl_database=nil;
         return [rs intForColumnIndex:0];
     }
     return 0;
+}
+
+- (void)update:(NSString *)newStr WithOld:(NSString *)oldStr with:(NSString *)lID
+{
+   [fmdb executeUpdate:@"UPDATE PageInfo SET lineColor = ? WHERE lineColor = ? AND id = ? ",newStr,newStr,lID];
+    NSLog(@"修改成功");
+}
+
+- (void)deleteLine:(NSInteger)lID
+{
+    [fmdb executeUpdate:@"DELETE FROM PageInfo WHERE id = ?",[NSString stringWithFormat:@"%d",lID]];
+    NSLog(@"删除成功！！！");
+}
+
+- (void)deletePageData:(NSString *)pageNumber
+{
+    [fmdb executeUpdate:@"DELETE FROM PageInfo WHERE pageNumber = ?",pageNumber];
+    NSLog(@"删除当前页数据成功");
 }
 
 @end
