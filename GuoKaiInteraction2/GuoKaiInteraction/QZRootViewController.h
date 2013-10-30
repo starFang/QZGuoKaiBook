@@ -16,5 +16,6 @@
     NSInteger indexImage;
    
 }
+- (void)saveDate;
 
 @end

@@ -86,6 +86,15 @@
     [self inputPageData];
 }
 
+- (void)saveData
+{
+    DrawLine * draw = (DrawLine *)[self viewWithTag:DRAWVIEWTAG];
+    if (draw)
+    {
+        [draw saveData];
+    }
+}
+
 - (void)updateWithPress
 {
     leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -100,11 +109,7 @@
 
 - (void)upPage:(id)sender
 {
-    DrawLine * draw = (DrawLine *)[self viewWithTag:DRAWVIEWTAG];
-    if (draw)
-    {
-        [draw saveData];
-    }
+    
     if (indexVoice != 0)
     {
         for (int i = 0; i < indexVoice; i++)
@@ -129,11 +134,6 @@
 
 - (void)downPage:(id)sender
 {
-    DrawLine * draw = (DrawLine *)[self viewWithTag:DRAWVIEWTAG];
-    if (draw)
-    {
-        [draw saveData];
-    }
     
     if (indexVoice != 0)
     {

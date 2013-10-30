@@ -96,6 +96,9 @@
 		CE979897181E7FA800D676CA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97988F181E7FA800D676CA /* FMDatabasePool.m */; };
 		CE979898181E7FA800D676CA /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE979891181E7FA800D676CA /* FMDatabaseQueue.m */; };
 		CE979899181E7FA800D676CA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE979893181E7FA800D676CA /* FMResultSet.m */; };
+		CEA4652D1820B33E003DF543 /* r_bijikuang.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA4652A1820B33E003DF543 /* r_bijikuang.png */; };
+		CEA4652E1820B33E003DF543 /* r_quxiao.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA4652B1820B33E003DF543 /* r_quxiao.png */; };
+		CEA4652F1820B33E003DF543 /* r_wancheng.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA4652C1820B33E003DF543 /* r_wancheng.png */; };
 		CEFB425B18125C4600988117 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425818125C4600988117 /* CTView.m */; };
 		CEFB425C18125C4600988117 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFB425A18125C4600988117 /* MarkupParser.m */; };
 		CEFB425E18125C5A00988117 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFB425D18125C5A00988117 /* CoreText.framework */; };
@@ -240,7 +243,7 @@
 		CE8443B5181F9E06001E5D7E /* r_zi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r_zi.png; sourceTree = "<group>"; };
 		CE8443B6181F9E06001E5D7E /* r_zixuanzhong.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r_zixuanzhong.png.png; sourceTree = "<group>"; };
 		CE8443B7181F9E06001E5D7E /* r_zuobiji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r_zuobiji.png; sourceTree = "<group>"; };
-		CE845743181B493100918002 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CE845743181B493100918002 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		CE845747181B580100918002 /* GuoKai001.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = GuoKai001.zip; sourceTree = "<group>"; };
 		CE84574E181B95CD00918002 /* ReadingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingData.h; sourceTree = "<group>"; };
 		CE845754181BAB0000918002 /* DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
@@ -260,6 +263,9 @@
 		CE979891181E7FA800D676CA /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		CE979892181E7FA800D676CA /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		CE979893181E7FA800D676CA /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		CEA4652A1820B33E003DF543 /* r_bijikuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r_bijikuang.png; sourceTree = "<group>"; };
+		CEA4652B1820B33E003DF543 /* r_quxiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r_quxiao.png; sourceTree = "<group>"; };
+		CEA4652C1820B33E003DF543 /* r_wancheng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r_wancheng.png; sourceTree = "<group>"; };
 		CEFB425718125C4600988117 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
 		CEFB425818125C4600988117 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
 		CEFB425918125C4600988117 /* MarkupParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkupParser.h; sourceTree = "<group>"; };
@@ -309,6 +315,9 @@
 		CE03BE271817BDF700534403 /* QZPicture */ = {
 			isa = PBXGroup;
 			children = (
+				CEA4652A1820B33E003DF543 /* r_bijikuang.png */,
+				CEA4652B1820B33E003DF543 /* r_quxiao.png */,
+				CEA4652C1820B33E003DF543 /* r_wancheng.png */,
 				CE8443AF181F9E06001E5D7E /* r_hong.png */,
 				CE8443B0181F9E06001E5D7E /* r_hongxuanzhong.png */,
 				CE8443B1181F9E06001E5D7E /* r_kk.png */,
@@ -328,8 +337,6 @@
 			children = (
 				CE060D25181F446800A9996E /* libsqlite3.dylib */,
 				CE845747181B580100918002 /* GuoKai001.zip */,
-				CE657D2C1812E1C4006CA86F /* Image */,
-				CE845743181B493100918002 /* Icon.png */,
 				CEFE7A2C18160F2F000BF21E /* QZ_ZipEpub */,
 				CE0EB31F180FE3D20043BA33 /* Pic */,
 				CE0EB41B180FE5580043BA33 /* CPlusPlusModel */,
@@ -462,6 +469,7 @@
 		CE0EB31F180FE3D20043BA33 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				CE845743181B493100918002 /* Icon.png */,
 				CE03BE271817BDF700534403 /* QZPicture */,
 				CE0EB320180FE3D20043BA33 /* 1222.png */,
 				CE0EB328180FE3D20043BA33 /* a1.png */,
@@ -636,6 +644,7 @@
 		CE657D2118128549006CA86F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE657D2C1812E1C4006CA86F /* Image */,
 				CE657D22181285BE006CA86F /* ImageS */,
 				CE44F8E918117BD800409A46 /* PageNAv */,
 				CE657D1218127BBA006CA86F /* movie4 */,
@@ -665,8 +674,7 @@
 				CE657D2F1812E1C4006CA86F /* IViewGV1.h */,
 				CE657D301812E1C4006CA86F /* IViewGV1.mm */,
 			);
-			name = Image;
-			path = QZ_OC_Question/Image;
+			path = Image;
 			sourceTree = "<group>";
 		};
 		CE845753181BAB0000918002 /* PageControl */ = {
@@ -836,6 +844,9 @@
 				CE8443BE181F9E06001E5D7E /* r_zi.png in Resources */,
 				CE8443BF181F9E06001E5D7E /* r_zixuanzhong.png.png in Resources */,
 				CE8443C0181F9E06001E5D7E /* r_zuobiji.png in Resources */,
+				CEA4652D1820B33E003DF543 /* r_bijikuang.png in Resources */,
+				CEA4652E1820B33E003DF543 /* r_quxiao.png in Resources */,
+				CEA4652F1820B33E003DF543 /* r_wancheng.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

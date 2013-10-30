@@ -43,6 +43,7 @@
     QZPageListView *pageListV = (QZPageListView *)[self.view viewWithTag:200];
     if (pageListV)
     {
+        [pageListV saveData];
         [pageListV removeFromSuperview];
     }
     
@@ -62,6 +63,15 @@
     si.duration = 0.5;
     [self.view addAnimation:si forKey:nil];
     [si release];
+}
+
+- (void)saveDate
+{
+    QZPageListView *pageListV = (QZPageListView *)[self.view viewWithTag:200];
+    if (pageListV)
+    {
+        [pageListV save];
+    }
 }
 
 - (void)up:(id)sender

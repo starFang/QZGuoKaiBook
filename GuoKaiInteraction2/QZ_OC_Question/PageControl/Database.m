@@ -112,7 +112,7 @@ static Database * gl_database=nil;
     {
         return;
     }
-             
+    NSLog(@"createTime : %@",item.lineDate);
     NSString *sql=[NSString stringWithFormat:@"insert into PageInfo (createTime,pageNumber,startIndex,endIndex,writeIn,lineColor) values (?,?,?,?,?,?)"];     
     //变参方法，每个?号代表一个字段值,所有参数必须为对象类类型
     if ([fmdb executeUpdate:sql,item.lineDate,item.linePageNumber,item.lineStartIndex,item.lineEndIndex,item.lineCritique,item.lineColor])
@@ -167,7 +167,6 @@ static Database * gl_database=nil;
     NSMutableArray *array = [[NSMutableArray alloc]init];
     while ([rs next])
     {
-        
         QZLineDataModel *item=[[QZLineDataModel alloc] init];
         //此方法是一组方法//根据字段类型选择不同方法
         item.lineID = [rs stringForColumn:@"id"];

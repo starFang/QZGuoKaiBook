@@ -23,6 +23,8 @@ using namespace std;
 {
     [self.headView release];
     [arraySQL release];
+    [noteFrame release];
+    [textView release];
     [super dealloc];
 }
 
@@ -32,6 +34,7 @@ using namespace std;
     if (self)
     {
         [self initAllDataSetting];
+        [self initAllSmallView];
     }
     return self;
 }
@@ -42,13 +45,13 @@ using namespace std;
 
 - (void)composition
 {
-
+    [self readSQLData];
+    [self setNeedsDisplay];
 }
 
 - (void)readSQLData
 {
     [arraySQL setArray:[[Database sharedDatabase]selectData:self.pageNumber]];
-    [[Database sharedDatabase]deletePageData:[NSString stringWithFormat:@"%d",self.pageNumber]];
 }
 
 - (void)initAllDataSetting
@@ -58,7 +61,6 @@ using namespace std;
     insertDate = [[NSMutableString alloc]init];
     arraySQL = [[NSMutableArray alloc]init];
     lineColor = [[NSMutableString alloc]init];
-    [self readSQLData];
     
 #pragma mark - 将线的颜色数据，读进来
     if ([[DataManager getStringFromPlist:[NSString stringWithFormat:@"/Documents/%@/UnderLineColor/UnderLineColor.plist",BOOKNAME]]retain])
@@ -90,6 +92,54 @@ using namespace std;
 
 }
 
+- (void)initAllSmallView
+{
+    noteFrame = [[UIImageView alloc]initWithFrame:CGRectMake((self.bounds.size.width-400)/2, self.bounds.size.height, 440, 267)];//画完下划线后点笔记弹出的框框
+    
+    noteFrame.userInteractionEnabled = YES;
+    noteFrame.image = [UIImage imageNamed:@"r_bijikuang.png"];
+    [self addSubview:noteFrame];
+    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];//框框上的取消按钮
+    cancelBtn.frame = CGRectMake(30, 20, 63, 30);
+    [cancelBtn setBackgroundImage:[UIImage imageNamed:@"r_quxiao.png"] forState:UIControlStateNormal];
+    [cancelBtn addTarget:self action:@selector(quxiao) forControlEvents:UIControlEventTouchUpInside];
+    [noteFrame addSubview:cancelBtn];
+    
+    UIButton *confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];//框框上的确定按钮
+    confirmBtn.frame = CGRectMake(440-93, 20, 63, 30);
+    [confirmBtn addTarget:self action:@selector(wancheng) forControlEvents:UIControlEventTouchUpInside];
+    [confirmBtn setBackgroundImage:[UIImage imageNamed:@"r_wancheng.png"] forState:UIControlStateNormal];
+    [noteFrame addSubview:confirmBtn];
+    
+    textView = [[UITextView alloc]initWithFrame:CGRectMake(30, 70, 380, 170)];//框框里的文本输入框
+    textView.backgroundColor = [UIColor clearColor];
+    textView.font = [UIFont systemFontOfSize:16.0];
+    [noteFrame addSubview:textView];
+}
+
+- (void)quxiao
+{
+    CGRect frame = noteFrame.frame;
+    frame.origin.y +=712;
+    [UIView animateWithDuration:0.5 animations:^{
+        noteFrame.frame = frame;
+    }];
+    [textView resignFirstResponder];
+    textView.text = @"";
+
+}
+
+- (void)wancheng
+{
+    CGRect frame = noteFrame.frame;
+    frame.origin.y +=712;
+    [UIView animateWithDuration:0.5 animations:^{
+    noteFrame.frame = frame;
+    }];
+    [textView resignFirstResponder];
+    
+}
+
 static int tapIndex,tapWords;
 -(void)handleSingleTap:(UITapGestureRecognizer *)gestureRecognizer
 {
@@ -107,7 +157,6 @@ static int tapIndex,tapWords;
         {
             case PAGE_OBJECT_CHARACTER:
             {
-                
                 if (pTapChar != NULL && pTapChar->m_elementType == PAGE_OBJECT_CHARACTER)
                 {
                     pChar = (PageCharacter*)pTapChar;
@@ -121,6 +170,7 @@ static int tapIndex,tapWords;
                         pChar->nIndex.nCharacter <= [lineData.lineEndIndex intValue])
                     {
                         [insertDate setString:lineData.lineDate];
+                        
                         oldColor = lineData.lineColor;
                         isTapWords = YES;
                         break;
@@ -151,7 +201,6 @@ static int tapIndex,tapWords;
         [self pushMenuWithPoint:CGPointMake((pChar->rect.X1 + pChar->rect.X0)/2,(pChar->rect.Y1 + pChar->rect.Y0)/2)];
     }
         
-    
     if (isTapWords)
     {
         tapWords++;
@@ -200,11 +249,13 @@ static int tapIndex,tapWords;
     purpleBtn.frame = CGRectMake(99, 10, 22, 23);
     [purpleBtn addTarget:self action:@selector(changeColor:) forControlEvents:UIControlEventTouchUpInside];
     [imageV addSubview:purpleBtn];
+    
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftBtn setBackgroundImage:[UIImage imageNamed:@"r_quchu.png"] forState:UIControlStateNormal];
     leftBtn.frame = CGRectMake(138, 10, 22, 23);
     [leftBtn addTarget:self action:@selector(deleteUnderLine:) forControlEvents:UIControlEventTouchUpInside];
     [imageV addSubview:leftBtn];
+    
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightBtn setBackgroundImage:[UIImage imageNamed:@"r_zuobiji.png"] forState:UIControlStateNormal];
     rightBtn.frame = CGRectMake(176, 10, 22, 23);
@@ -273,6 +324,7 @@ static int tapIndex,tapWords;
 
 - (void)deleteUnderLine:(id)sender
 {
+    
     for (int i = 0; i < [arraySQL count] ; i++)
     {
         QZLineDataModel * lineData = [arraySQL objectAtIndex:i];
@@ -282,7 +334,6 @@ static int tapIndex,tapWords;
             break;
         }
     }
-    
     [UIView animateWithDuration:0.5 animations:^{
         [self removeFromSuperviewWithPop];
         [self setNeedsDisplay];
@@ -301,7 +352,19 @@ static int tapIndex,tapWords;
 
 - (void)zuobiji:(id)sender
 {
-
+    UIView *temp = (UIView*)[self viewWithTag:1001];
+    if (temp)
+    {
+    [temp removeFromSuperview];
+    }
+    
+    CGRect frame = noteFrame.frame;
+    frame.origin.y -=712;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        noteFrame.frame = frame;
+    }];
+    [textView becomeFirstResponder];
 }
 
 - (void)longPress:(UILongPressGestureRecognizer *)gestureRecognizer
@@ -463,25 +526,74 @@ static int tapIndex,tapWords;
 //    BookComment* bookComent = new BookComment(refContent,"tingyouyisi");
 //    readingData.PushObj(bookComent);
     
-}
+ }
 
 - (void)insertObject:(QZLineDataModel *)lineData
 {
-    [arraySQL addObject:lineData];
-    return;
+    BOOL isAddData;
+    isAddData = NO;
+//    判断数据是否存在
     for (int i = 0; i < [arraySQL count ]; i++)
     {
+        QZLineDataModel *newLineDate = [[QZLineDataModel alloc]init];
         QZLineDataModel *linData = (QZLineDataModel *)[arraySQL objectAtIndex:i];
-        
-        
+        if ([lineData.lineStartIndex integerValue] <= [linData.lineStartIndex integerValue] && [lineData.lineEndIndex integerValue] <= [linData.lineEndIndex integerValue] && [lineData.lineEndIndex integerValue] >= [linData.lineStartIndex integerValue])
+        {
+            [newLineDate setLineColor:lineData.lineColor];
+            [newLineDate setLineDate:[self date]];
+            [newLineDate setLineStartIndex:lineData.lineStartIndex];
+            [newLineDate setLineEndIndex:linData.lineEndIndex];
+            [newLineDate setLinePageNumber:linData.linePageNumber];
+            [arraySQL removeObjectAtIndex:i];
+            [arraySQL addObject:newLineDate];
+            
+            isAddData = YES;
+            return;
+        }else if ([lineData.lineStartIndex integerValue] >= [linData.lineStartIndex integerValue] && [lineData.lineEndIndex integerValue] <= [linData.lineEndIndex integerValue])
+        {
+            isAddData = YES;
+            return;
+        }else if (([lineData.lineStartIndex integerValue] <= [linData.lineStartIndex integerValue]
+                   &&
+                   [lineData.lineStartIndex integerValue] <= [linData.lineEndIndex integerValue])
+                  &&
+                  ([lineData.lineEndIndex integerValue] >= [linData.lineStartIndex integerValue]
+                      &&
+                      [lineData.lineEndIndex integerValue] >= [linData.lineEndIndex integerValue]))
+        {
+            isAddData = YES;
+            [arraySQL removeObjectAtIndex:i];
+            [arraySQL addObject:lineData];
+            return;
+        }else if ([lineData.lineStartIndex integerValue] >= [linData.lineStartIndex integerValue] && [lineData.lineEndIndex integerValue] >= [linData.lineEndIndex integerValue] && [lineData.lineStartIndex integerValue] <= [linData.lineEndIndex integerValue])
+        {
+            isAddData = YES;
+            [newLineDate setLineColor:lineData.lineColor];
+            [newLineDate setLineDate:[self date]];
+            [newLineDate setLineStartIndex:linData.lineStartIndex];
+            [newLineDate setLineEndIndex:lineData.lineEndIndex];
+            [newLineDate setLinePageNumber:linData.linePageNumber];
+            [arraySQL removeObjectAtIndex:i];
+            [arraySQL addObject:newLineDate];
+            return;
+        }
+        [newLineDate release];
+    }
+    
+    if (!isAddData)
+    {
+        [arraySQL addObject:lineData];
     }
 }
 
 - (void)drawRect:(CGRect)rect
 {
     
+    if (isWord)
+    {
         [self lineWithArray:[lineDictionary objectForKey:@"vBoxes"] withColor:lineColor];
-   
+        [lineDictionary removeObjectForKey:@"vBoxes"];
+    }
         for (int i = 0; i < [arraySQL  count]; i++)
         {
             QZLineDataModel * lineData = [arraySQL objectAtIndex:i];
@@ -492,14 +604,14 @@ static int tapIndex,tapWords;
             endIndex.nPage = [lineData.linePageNumber intValue];
             endIndex.nCharacter = [lineData.lineEndIndex intValue];
             std::vector<QZ_BOX> vsBoxes = pageObj->GetSelectTextRects(startIndex,endIndex);
+            
             NSMutableArray *array = [NSMutableArray array];
             for (int j = 0 ; j < vsBoxes.size(); j++)
             {
                 [array addObject:NSStringFromCGRect(CGRectMake(vsBoxes[j].X0, vsBoxes[j].Y1, vsBoxes[j].X1 - vsBoxes[j].X0, vsBoxes[j].Y1 - vsBoxes[j].Y0))];
             }
-    [self lineWithArray:array withColor:lineData.lineColor];
+            [self lineWithArray:array withColor:lineData.lineColor];
         }
-    
 }
 
 - (void)lineWithArray:(NSArray *)lineArray  withColor:(NSString*)colorA
@@ -526,6 +638,11 @@ static int tapIndex,tapWords;
         CGPathAddRect(_path, NULL, fiRect);
     }
     
+    //下划线结束位置的按钮的坐标
+    CGRect lastRect = CGRectFromString([lineArray lastObject]);
+    btnLastPosX = lastRect.origin.x + lastRect.size.width;
+    btnLastPosY = lastRect.origin.y;
+    
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextAddPath(ctx, _path);
     CGContextFillPath(ctx);
@@ -545,20 +662,7 @@ static int tapIndex,tapWords;
 
 - (void)saveData
 {
-//    for (int i = 0; i < [arraySQL  count]-1; i++)
-//    {
-//        QZLineDataModel *lineDataI = [arraySQL objectAtIndex:i];
-//        for (int j = i+1; j < [arraySQL count] ; j++)
-//        {
-//            QZLineDataModel *lineDataJ = [arraySQL objectAtIndex:j];
-//            
-//            if (!lineDataI.lineCritique && !lineDataJ.lineCritique)
-//            {
-//            
-//            }
-//        }
-//    }
-    NSLog(@"没时间吗？");
+    [[Database sharedDatabase]deletePageData:[NSString stringWithFormat:@"%d",self.pageNumber]];
     [[Database sharedDatabase]insertArray:arraySQL];
 }
 

@@ -32,6 +32,13 @@
     NSMutableString *insertDate;
     NSString *newColor;
     NSString *oldColor;
+    
+    //弹出笔记框；
+    UIImageView  *noteFrame;
+    //笔记框的可编辑区域;
+    UITextView *textView;
+    CGFloat btnLastPosX;
+    CGFloat btnLastPosY;
 }
 @property (nonatomic, assign) NSInteger pageNumber;
 @property (nonatomic, retain) UIView *headView;

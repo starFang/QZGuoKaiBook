@@ -56,6 +56,7 @@
 @property (nonatomic, assign)id<QZPageListViewDelegate>delegate;
 @property (nonatomic, assign)NSInteger pageNumber;
 
+- (void)save;
 - (void)composition;
 - (void)initIncomingData:(NSArray *)imageName;
 
